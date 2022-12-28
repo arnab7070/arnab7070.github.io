@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Priority Queue on Code World</title>
+    <link>https://arnab7070.github.io/tags/priority-queue/</link>
+    <description>Recent content in Priority Queue on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Oct 2022 20:14:57 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/priority-queue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Priority Queue</title>
+      <link>https://arnab7070.github.io/posts/priority-queue/</link>
+      <pubDate>Thu, 13 Oct 2022 20:14:57 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/priority-queue/</guid>
+      <description>Question Implement the basic functions of priority queue using C language
+Code /* * C Program to Implement Priority Queue to Add and Delete Elements */ #include &amp;lt;stdio.</description>
+    </item>
+    
+  </channel>
+</rss>

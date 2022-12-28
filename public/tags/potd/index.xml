@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>POTD on Code World</title>
+    <link>https://arnab7070.github.io/tags/potd/</link>
+    <description>Recent content in POTD on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Oct 2022 18:02:11 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/potd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Move to Front</title>
+      <link>https://arnab7070.github.io/posts/move-to-front/</link>
+      <pubDate>Sun, 16 Oct 2022 18:02:11 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/move-to-front/</guid>
+      <description>Question You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.</description>
+    </item>
+    
+    <item>
+      <title>Max Min</title>
+      <link>https://arnab7070.github.io/posts/max-min/</link>
+      <pubDate>Thu, 13 Oct 2022 17:10:45 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/max-min/</guid>
+      <description>Question [Problem of the day 13-10-2022]
+Given an array A of size N of integers. Your task is to find the sum of minimum and maximum element in the array.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    7. Circular Linked List | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/circular-linked-list/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    In this blog we will discuss about different operations of Circular Linked List.
+    "
+/>
+<meta property="og:description" content="
+    In this blog we will discuss about different operations of Circular Linked List.
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/circular-linked-list/Circular.gif" />
+
+
+
+
+
+
+<meta property="og:title" content="7. Circular Linked List" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/circular-linked-list/" /><meta property="article:section" content="sections" />
+<meta property="article:published_time" content="2022-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-27T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="7. Circular Linked List"/>
+<meta name="twitter:description" content="In this blog we will discuss about different operations of Circular Linked List."/>
+
+<meta itemprop="name" content="7. Circular Linked List">
+<meta itemprop="description" content="In this blog we will discuss about different operations of Circular Linked List."><meta itemprop="datePublished" content="2022-12-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="774">
+<meta itemprop="keywords" content="C&#43;&#43;,LAB EXAM,ONESHOT," />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">7. Circular Linked List</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Dec 27, 2022
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://arnab7070.github.io/tags/c&#43;&#43;"><span
+                                    class="tag bg-dark">C&#43;&#43;</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/lab-exam"><span
+                                    class="tag bg-dark">LAB EXAM</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/oneshot"><span
+                                    class="tag bg-dark">ONESHOT</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/circular-linked-list/Circular.gif alt="7. Circular Linked List">
+                </figure>
+                
+
+                <h2 id="some-basic-concepts">Some Basic Concepts</h2>
+<p>A circular linked list is a variation of a linked list in which the last node is connected to the first node, forming a circular list. Each node in a circular linked list contains a value and pointers to the previous and next nodes in the list.</p>
+<p>There are many operations that can be performed on a circular linked list, such as inserting and deleting nodes, searching for a particular value, and reversing the list.</p>
+<p>One advantage of using a circular linked list is that it allows for efficient insertion and deletion at any position in the list, as each node has pointers to both the previous and next nodes. This is similar to a doubly linked list.</p>
+<p>Another advantage of a circular linked list is that it can be used to implement a queue or a stack, as the head node can be treated as the front or back of the queue/stack, respectively.</p>
+<p>However, it is important to note that circular linked lists require more memory than singly linked lists, as each node requires two pointers instead of one. Therefore, it is important to carefully consider the trade-offs involved and choose the appropriate data structure based on the specific requirements of the application.</p>
+<blockquote>
+<p>We are now going to see different kind of operations in Circular Linked List. So let&rsquo;s get straight into the code. I am using C++ for these operations.</p>
+</blockquote>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Let&#39;s see how to implement different operations of circular linked list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// we are creating a node class to create node of linked list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> data;   <span style="color:#75715e">// stores the data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>next; <span style="color:#75715e">// next pointer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>prev; <span style="color:#75715e">// previous pointer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node(<span style="color:#66d9ef">int</span> data) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> data;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// initializing next &amp; prev pointer as NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Insert At Head Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertAtHead</span>(Node <span style="color:#f92672">*&amp;</span>head, <span style="color:#66d9ef">int</span> data) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Corner Case if head == null
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (head <span style="color:#f92672">==</span> NULL) {
+</span></span><span style="display:flex;"><span>    head <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node(data);
+</span></span><span style="display:flex;"><span>    head<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>    head<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// creating new node to connect
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>new_node <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node(data);
+</span></span><span style="display:flex;"><span>  Node <span style="color:#f92672">*</span>copyHead <span style="color:#f92672">=</span> head; <span style="color:#75715e">// copy pointer of head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (copyHead<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> head) {
+</span></span><span style="display:flex;"><span>    copyHead <span style="color:#f92672">=</span> copyHead<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// now copyHead is at last node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// just link the following nodes as you visualize
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  copyHead<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> new_node;
+</span></span><span style="display:flex;"><span>  new_node<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> copyHead;
+</span></span><span style="display:flex;"><span>  new_node<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>  head<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> new_node;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Updating the head pointer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  head <span style="color:#f92672">=</span> new_node;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Insert At Tail Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertAtTail</span>(Node <span style="color:#f92672">*&amp;</span>head, <span style="color:#66d9ef">int</span> data) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (head <span style="color:#f92672">==</span> NULL) {
+</span></span><span style="display:flex;"><span>    insertAtHead(head, data);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  Node <span style="color:#f92672">*</span>temp <span style="color:#f92672">=</span> head; <span style="color:#75715e">// creating a temp pointer that points to head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> head) {
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Now temp pointer is at last node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>new_node <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node(data);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// just link the following nodes with your visualization
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> new_node;
+</span></span><span style="display:flex;"><span>  new_node<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>  new_node<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>  head<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> new_node;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Delete At Begin Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteAtBegin</span>(Node <span style="color:#f92672">*&amp;</span>head) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// corner case if there is no element present in the list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (head <span style="color:#f92672">==</span> NULL) {
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;No element is present to delete&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// now to delete from the begin we need to change the linkages
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>deleteThisNode <span style="color:#f92672">=</span> head; <span style="color:#75715e">// pointer to the head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  deleteThisNode<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> deleteThisNode<span style="color:#f92672">-&gt;</span>prev;
+</span></span><span style="display:flex;"><span>  head<span style="color:#f92672">-&gt;</span>prev<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  head <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// delete the node to free it from memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">delete</span> deleteThisNode;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Delete At End Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteAtEnd</span>(Node <span style="color:#f92672">*&amp;</span>head) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Corner Case
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (head <span style="color:#f92672">==</span> NULL) {
+</span></span><span style="display:flex;"><span>    deleteAtBegin(head);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// new head pointer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Until we reach to the last node we need to traverse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> head) {
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// now temp pointer is at last node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  temp<span style="color:#f92672">-&gt;</span>prev<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>  temp<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>prev;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// delete the temp pointer to free it from memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">delete</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span>(Node <span style="color:#f92672">*</span>head) {
+</span></span><span style="display:flex;"><span>  cout <span style="color:#f92672">&lt;&lt;</span> head<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;-&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>  Node <span style="color:#f92672">*</span>copyHead <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (copyHead<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> head) {
+</span></span><span style="display:flex;"><span>    copyHead <span style="color:#f92672">=</span> copyHead<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> copyHead<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;-&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// to verify it that it is actually circularly attached
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  cout <span style="color:#f92672">&lt;&lt;</span> copyHead<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;(REPEAT)&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//Main driver code to implement the whole thing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// You can use your own testcases 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// You can also make it menu driven program if you want
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// For make it simple I call the functions directly
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Node <span style="color:#f92672">*</span>head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>  insertAtHead(head, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insertAtHead(head, <span style="color:#ae81ff">3</span>); <span style="color:#75715e">// 3-&gt;4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insertAtHead(head, <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 2-&gt;3-&gt;4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insertAtHead(head, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 1-&gt;2-&gt;3-&gt;4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insertAtTail(head, <span style="color:#ae81ff">5</span>); <span style="color:#75715e">// 1-&gt;2-&gt;3-&gt;4-&gt;5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  insertAtTail(head, <span style="color:#ae81ff">6</span>); <span style="color:#75715e">// 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  display(head);
+</span></span><span style="display:flex;"><span>  deleteAtBegin(head); <span style="color:#75715e">// 2-&gt;3-&gt;4-&gt;5-&gt;6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  display(head);
+</span></span><span style="display:flex;"><span>  deleteAtEnd(head); <span style="color:#75715e">// 2-&gt;3-&gt;4-&gt;5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  display(head);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="output">Output</h3>
+<pre tabindex="0"><code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;1(REPEAT)
+2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;2(REPEAT)
+2-&gt;3-&gt;4-&gt;5-&gt;2(REPEAT)
+</code></pre>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=7.%20Circular%20Linked%20List&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f
+			&title=7.%20Circular%20Linked%20List&summary=Some%20Basic%20Concepts%20A%20circular%20linked%20list%20is%20a%20variation%20of%20a%20linked%20list%20in%20which%20the%20last%20node%20is%20connected%20to%20the%20first%20node%2c%20forming%20a%20circular%20list.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=7.%20Circular%20Linked%20List&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2fcircular-linked-list%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>

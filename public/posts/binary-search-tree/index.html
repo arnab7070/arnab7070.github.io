@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Binary Search Tree | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/posts/binary-search-tree/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    C&#43;&#43; code to implement Binary Search Tree.
+    "
+/>
+<meta property="og:description" content="
+    C&#43;&#43; code to implement Binary Search Tree.
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/posts/binary-search-tree/BST.png" />
+
+
+
+
+
+
+<meta property="og:title" content="Binary Search Tree" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/posts/binary-search-tree/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-29T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Binary Search Tree"/>
+<meta name="twitter:description" content="C&#43;&#43; code to implement Binary Search Tree."/>
+
+<meta itemprop="name" content="Binary Search Tree">
+<meta itemprop="description" content="C&#43;&#43; code to implement Binary Search Tree."><meta itemprop="datePublished" content="2022-09-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-29T00:00:00+00:00" />
+<meta itemprop="wordCount" content="632">
+<meta itemprop="keywords" content="DSA,C&#43;&#43;,BST," />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Binary Search Tree</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Sep 29, 2022
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://arnab7070.github.io/tags/dsa"><span
+                                    class="tag bg-dark">DSA</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/c&#43;&#43;"><span
+                                    class="tag bg-dark">C&#43;&#43;</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/bst"><span
+                                    class="tag bg-dark">BST</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/posts/binary-search-tree/BST.png alt="Binary Search Tree">
+                </figure>
+                
+
+                <h1 id="implementation-of-binary-search-tree">Implementation of Binary Search Tree</h1>
+<hr>
+<h1 id="question">Question</h1>
+<hr>
+<blockquote>
+<p>Write a menu driven program in C or C++ to perform the following operations on Binary Search Tree.</p>
+<ol>
+<li>insert a node.</li>
+<li>inorder traversal.</li>
+<li>preorder traversal.</li>
+<li>postorder traversal.</li>
+<li>search an given key.</li>
+<li>Find the smallest element.</li>
+<li>Find the largest element.</li>
+<li>Delete an element.</li>
+<li>Count the total number of nodes.</li>
+<li>Count the total number of external nodes.</li>
+<li>Count the total number of internal nodes.</li>
+<li>Determine the height of the tree.</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="code">Code</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">node</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> data;
+</span></span><span style="display:flex;"><span>    node<span style="color:#f92672">*</span> right;
+</span></span><span style="display:flex;"><span>    node<span style="color:#f92672">*</span> left;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    node(<span style="color:#66d9ef">int</span> data){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> data;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>left <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>right <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BST</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    node<span style="color:#f92672">*</span> insert(node<span style="color:#f92672">*</span> root, <span style="color:#66d9ef">int</span> item){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">node</span>(item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">&gt;</span> item){
+</span></span><span style="display:flex;"><span>            root<span style="color:#f92672">-&gt;</span>left <span style="color:#f92672">=</span> insert(root<span style="color:#f92672">-&gt;</span>left, item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>            root<span style="color:#f92672">-&gt;</span>right <span style="color:#f92672">=</span> insert(root<span style="color:#f92672">-&gt;</span>right, item);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> root;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preorder</span>(node <span style="color:#f92672">*</span>root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>root<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>        preorder(root<span style="color:#f92672">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>        preorder(root<span style="color:#f92672">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postorder</span>(node <span style="color:#f92672">*</span>root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        postorder(root<span style="color:#f92672">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>        postorder(root<span style="color:#f92672">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>root<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">inorder</span>(node <span style="color:#f92672">*</span>root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        inorder(root<span style="color:#f92672">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>root<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>        inorder(root<span style="color:#f92672">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">treeHeight</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h1 <span style="color:#f92672">=</span> treeHeight(root<span style="color:#f92672">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h2 <span style="color:#f92672">=</span> treeHeight(root<span style="color:#f92672">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> max(h1,h2)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">countNodes</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//base case
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> countNodes(root<span style="color:#f92672">-&gt;</span>right)<span style="color:#f92672">+</span>countNodes(root<span style="color:#f92672">-&gt;</span>left)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxNodeVal</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>right<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> root<span style="color:#f92672">-&gt;</span>data;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        maxNodeVal(root<span style="color:#f92672">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minNodeVal</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>left<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> root<span style="color:#f92672">-&gt;</span>data;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        minNodeVal(root<span style="color:#f92672">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">search</span>(node<span style="color:#f92672">*</span> root, <span style="color:#66d9ef">int</span> key){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">while</span>(root<span style="color:#f92672">!=</span>NULL){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">==</span> key){
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span>(key<span style="color:#f92672">&gt;</span>root<span style="color:#f92672">-&gt;</span>data){
+</span></span><span style="display:flex;"><span>				root <span style="color:#f92672">=</span> root<span style="color:#f92672">-&gt;</span>right;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>				root <span style="color:#f92672">=</span> root<span style="color:#f92672">-&gt;</span>left;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">totalInternalNode</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>right<span style="color:#f92672">==</span>NULL <span style="color:#f92672">&amp;&amp;</span> root<span style="color:#f92672">-&gt;</span>left<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> (totalInternalNode(root<span style="color:#f92672">-&gt;</span>left)<span style="color:#f92672">+</span>totalInternalNode(root<span style="color:#f92672">-&gt;</span>right)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">totalExternalNode</span>(node<span style="color:#f92672">*</span> root){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(root<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(root<span style="color:#f92672">-&gt;</span>right<span style="color:#f92672">==</span>NULL <span style="color:#f92672">&amp;&amp;</span> root<span style="color:#f92672">-&gt;</span>left<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> (totalExternalNode(root<span style="color:#f92672">-&gt;</span>left)<span style="color:#f92672">+</span>totalExternalNode(root<span style="color:#f92672">-&gt;</span>right));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    BST bst;
+</span></span><span style="display:flex;"><span>    node<span style="color:#f92672">*</span> root <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>    system(<span style="color:#e6db74">&#34;clear&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>    	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;1.Insert</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">2.Inorder</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">3.Preorder</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">4.Postorder</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">5.Search</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">6.Find Smallest</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">7.Find Largest</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">8.Total Nodes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">9.Total External Nodes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">10.Total Internal Nodes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">11.Height of Tree</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">0.Exit&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;--------------------------------------------------------------------------------&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter any option: &#34;</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">int</span> key;
+</span></span><span style="display:flex;"><span>    	cin<span style="color:#f92672">&gt;&gt;</span>key;
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">switch</span>(key){
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">int</span> element;
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter the value to insert: &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			cin<span style="color:#f92672">&gt;&gt;</span>element;
+</span></span><span style="display:flex;"><span>    			root <span style="color:#f92672">=</span> bst.insert(root,element);
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			bst.inorder(root);
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			bst.preorder(root);
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			bst.postorder(root);
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter an element to search: &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>    			cin<span style="color:#f92672">&gt;&gt;</span>n;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">if</span>(bst.search(root,n)){
+</span></span><span style="display:flex;"><span>    				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Yes element is present&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			}
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>    				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Element is not present&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			}
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;The smallest number is: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.minNodeVal(root)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;The largest number is: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.maxNodeVal(root)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Total nodes in the tree: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.countNodes(root)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Total external node in the tree: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.totalExternalNode(root)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Total internal node in the tree: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.totalInternalNode(root)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Total height of the tree: &#34;</span><span style="color:#f92672">&lt;&lt;</span>bst.treeHeight(root)<span style="color:#f92672">&lt;&lt;</span>endl;\
+</span></span><span style="display:flex;"><span>    			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Thanks for using BST Data Structure&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    	}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="output">Output</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#ae81ff">1.</span> Insert
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2.</span> Inorder
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3.</span> Preorder
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4.</span> Postorder
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5.</span> Search
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6.</span> Find Smallest
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7.</span> Find Largest
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8.</span> Total Nodes
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">9.</span> Total External Nodes
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10.</span> Total Internal Nodes
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">11.</span> Height of Tree
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0.</span> Exit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter the value to insert: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter the value to insert: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter the value to insert: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter the value to insert: <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter the value to insert: <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter an element to search:
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>Yes element is present
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter an element to search:
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>Element is not present
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>The smallest number is: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>The largest number is: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>Total nodes in the tree: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>Total external node in the tree: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>Total internal node in the tree: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">11</span>
+</span></span><span style="display:flex;"><span>Total height of the tree: <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Binary%20Search%20Tree&url=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f
+			&title=Binary%20Search%20Tree&summary=Implementation%20of%20Binary%20Search%20Tree%20Question%20Write%20a%20menu%20driven%20program%20in%20C%20or%20C%2b%2b%20to%20perform%20the%20following%20operations%20on%20Binary%20Search%20Tree.%0ainsert%20a%20node.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=Binary%20Search%20Tree&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fbinary-search-tree%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>

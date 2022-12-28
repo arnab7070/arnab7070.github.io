@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BST on Code World</title>
+    <link>https://arnab7070.github.io/tags/bst/</link>
+    <description>Recent content in BST on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/bst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Search Tree</title>
+      <link>https://arnab7070.github.io/posts/binary-search-tree/</link>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/binary-search-tree/</guid>
+      <description>Implementation of Binary Search Tree Question Write a menu driven program in C or C++ to perform the following operations on Binary Search Tree.
+insert a node.</description>
+    </item>
+    
+  </channel>
+</rss>
