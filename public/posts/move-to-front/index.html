@@ -1,99 +1,511 @@
-<!doctype html><html lang=en-us><head><title>Move to Front |
-Code World</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel=canonical href=https://arnab7070.github.io/posts/move-to-front/><link rel=icon type=image/png href=https://arnab7070.github.io/image/favicon.ico><meta name=description content="
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Move to Front | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/posts/move-to-front/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
     You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.
-    "><meta property="og:description" content="
+    "
+/>
+<meta property="og:description" content="
     You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.
-    "><meta property="og:image" content="https://arnab7070.github.io/posts/move-to-front/POTD.png"><meta property="og:title" content="Move to Front"><meta property="og:type" content="article"><meta property="og:url" content="https://arnab7070.github.io/posts/move-to-front/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-16T18:02:11+05:30"><meta property="article:modified_time" content="2022-10-16T18:02:11+05:30"><meta name=twitter:card content="summary"><meta name=twitter:title content="Move to Front"><meta name=twitter:description content="You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list."><meta itemprop=name content="Move to Front"><meta itemprop=description content="You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list."><meta itemprop=datePublished content="2022-10-16T18:02:11+05:30"><meta itemprop=dateModified content="2022-10-16T18:02:11+05:30"><meta itemprop=wordCount content="256"><meta itemprop=keywords content="POTD,GFG,"><link rel=stylesheet href=https://arnab7070.github.io/main.min.css><script src=https://arnab7070.github.io/bundle.js></script>
-<script data-ad-client=adsense-key async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467" crossorigin=anonymous></script>
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/posts/move-to-front/POTD.png" />
+
+
+
+
+
+
+<meta property="og:title" content="Move to Front" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/posts/move-to-front/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-16T18:02:11+05:30" />
+<meta property="article:modified_time" content="2022-10-16T18:02:11+05:30" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Move to Front"/>
+<meta name="twitter:description" content="You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list."/>
+
+<meta itemprop="name" content="Move to Front">
+<meta itemprop="description" content="You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list."><meta itemprop="datePublished" content="2022-10-16T18:02:11+05:30" />
+<meta itemprop="dateModified" content="2022-10-16T18:02:11+05:30" />
+<meta itemprop="wordCount" content="256">
+<meta itemprop="keywords" content="POTD,GFG," />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","")</script></head><body><header id=header><div class=top-bar><div class=container-md><div class="row align-items-center"><div class="col-3 col-sm-4 social-buttons d-none d-sm-block"><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></div><div class="ra-toggler col-3 col-sm-4 d-block d-sm-none"><button class=bg-dark type=button data-bs-toggle=collapse data-bs-target=#navbarNav>
-<i class="fas fa-bars"></i></button></div><div class="col-6 col-sm-4"><h2 class=title><a href=https://arnab7070.github.io/>Code World</a></h2></div></div></div></div><div class=container-md><nav class="navbar navbar-expand-sm navbar-dark bg-dark"><div class="collapse navbar-collapse" id=navbarNav><ul class="navbar-nav mx-auto"><li class="nav-item d-block d-sm-none"><ul class=social-buttons><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></ul></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/>Home</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>Blog</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/posts/>Posts</a>
-<a class=dropdown-item href=https://arnab7070.github.io/sections/>Sections</a><div class=dropdown-divider></div><a class=dropdown-item href=https://arnab7070.github.io/tags/>Tags</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>About Us</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/about/>About</a>
-<a class=dropdown-item href=https://arnab7070.github.io/privacy/>Privacy Policy</a>
-<a class=dropdown-item href=https://arnab7070.github.io/dmca/>DMCA</a>
-<a class=dropdown-item href=https://arnab7070.github.io/terms/>Terms & Conditions</a></div></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/contact/>Contact</a></li></ul></div></nav></div></header><main class=blog-content><div class=container-md><div class=row><div class="col-lg-2 d-none d-xl-block"><div class=ad-left-offset></div></div><div class="col-md-12 col-lg-8 px-lg-4"><h1 class=title>Move to Front</h1><div class="container-fluid px-0 mb-4"><div class="row align-items-end"><div class="col-md-4 date-time"><span class=date>Oct 16, 2022</span>
-&#183;
-<span class=time-to-read>1 min read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/potd><span class="tag bg-dark">POTD</span></a>
-<a href=https://arnab7070.github.io/tags/gfg><span class="tag bg-dark">GFG</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/posts/move-to-front/POTD.png alt="Move to Front"></figure><h1 id=question>Question</h1><hr><p>You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.</p><h1 id=example>Example</h1><hr><h5 id=input>Input:</h5><pre tabindex=0><code>N = 5
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Move to Front</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Oct 16, 2022
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    1 min read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://arnab7070.github.io/tags/potd"><span
+                                    class="tag bg-dark">POTD</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/gfg"><span
+                                    class="tag bg-dark">GFG</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/posts/move-to-front/POTD.png alt="Move to Front">
+                </figure>
+                
+
+                <h1 id="question">Question</h1>
+<hr>
+<p>You are given the head of a Linked List. You have to move the last element to the front of the Linked List and return the list.</p>
+<h1 id="example">Example</h1>
+<hr>
+<h5 id="input">Input:</h5>
+<pre tabindex="0"><code>N = 5
 List = {2,5,6,2,1}
-</code></pre><h5 id=output>Output:</h5><pre tabindex=0><code>{1,2,5,6,2}
-</code></pre><h5 id=explanation>Explanation:</h5><p>In the given linked list, the last element is <code>1</code>, after <code>moving the last element to the front</code> the linked list will be <code>{1,2,5,6,2}</code>.</p><blockquote><p>Expected Time Complexity: O(N)</p></blockquote><blockquote><p>Expected Auxiliary Space: O(1)</p></blockquote><h1 id=algorithm>Algorithm</h1><hr><p>We just create a newhead and copy the data of the last node into it. Then we need to point it&rsquo;s next to the main head. We should update the head also to the newhead. Most importantly we should convert the last node to NULL & for the corner case we also create a check for a single node.</p><h1 id=code>Code</h1><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;bits/stdc++.h&gt;</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ListNode</span>{
-</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> val;
-</span></span><span style=display:flex><span>    ListNode <span style=color:#f92672>*</span>next;
-</span></span><span style=display:flex><span>    ListNode(<span style=color:#66d9ef>int</span> x){
-</span></span><span style=display:flex><span>        val<span style=color:#f92672>=</span>x;
-</span></span><span style=display:flex><span>        next<span style=color:#f92672>=</span>NULL;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>};
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Solution</span>{
-</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>    ListNode <span style=color:#f92672>*</span>moveToFront(ListNode <span style=color:#f92672>*</span>head){
-</span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:#75715e>//For single node
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span>(head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> head;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        ListNode<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>!=</span>NULL){
-</span></span><span style=display:flex><span>            temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        ListNode<span style=color:#f92672>*</span> newhead <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ListNode(temp<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>val);
-</span></span><span style=display:flex><span>        newhead<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>        head <span style=color:#f92672>=</span> newhead; <span style=color:#75715e>//Updated the head
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> head;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>};
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(){
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> t;
-</span></span><span style=display:flex><span>    cin<span style=color:#f92672>&gt;&gt;</span>t;
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(t<span style=color:#f92672>--</span>){
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> n;
-</span></span><span style=display:flex><span>        cin<span style=color:#f92672>&gt;&gt;</span>n;
-</span></span><span style=display:flex><span>        vector<span style=color:#f92672>&lt;</span>ListNode<span style=color:#f92672>*&gt;</span> a(n);
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;i<span style=color:#f92672>&lt;</span>n;i<span style=color:#f92672>++</span>){
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>int</span> x;
-</span></span><span style=display:flex><span>            cin<span style=color:#f92672>&gt;&gt;</span>x;
-</span></span><span style=display:flex><span>            a[i]<span style=color:#f92672>=</span><span style=color:#66d9ef>new</span> ListNode(x);
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span>(i<span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span>){
-</span></span><span style=display:flex><span>                a[i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>=</span>a[i];
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        ListNode <span style=color:#f92672>*</span>head<span style=color:#f92672>=</span>a[<span style=color:#ae81ff>0</span>];
-</span></span><span style=display:flex><span>        Solution ob;
-</span></span><span style=display:flex><span>        head<span style=color:#f92672>=</span>ob.moveToFront(head);
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(head<span style=color:#f92672>!=</span>NULL){
-</span></span><span style=display:flex><span>            cout<span style=color:#f92672>&lt;&lt;</span>head<span style=color:#f92672>-&gt;</span>val;
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span>(head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>!=</span>NULL){
-</span></span><span style=display:flex><span>                cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34; &#34;</span>;
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>            head<span style=color:#f92672>=</span>head<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        cout<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h1 id=output-1>Output</h1><hr><pre tabindex=0><code>For Input:
+</code></pre><h5 id="output">Output:</h5>
+<pre tabindex="0"><code>{1,2,5,6,2}
+</code></pre><h5 id="explanation">Explanation:</h5>
+<p>In the given linked list, the last element is <code>1</code>, after <code>moving the last element to the front</code> the linked list will be <code>{1,2,5,6,2}</code>.</p>
+<blockquote>
+<p>Expected Time Complexity: O(N)</p>
+</blockquote>
+<blockquote>
+<p>Expected Auxiliary Space: O(1)</p>
+</blockquote>
+<h1 id="algorithm">Algorithm</h1>
+<hr>
+<p>We just create a newhead and copy the data of the last node into it. Then we need to point it&rsquo;s next to the main head. We should update the head also to the newhead. Most importantly we should convert the last node to NULL &amp; for the corner case we also create a check for a single node.</p>
+<h1 id="code">Code</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListNode</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> val;
+</span></span><span style="display:flex;"><span>    ListNode <span style="color:#f92672">*</span>next;
+</span></span><span style="display:flex;"><span>    ListNode(<span style="color:#66d9ef">int</span> x){
+</span></span><span style="display:flex;"><span>        val<span style="color:#f92672">=</span>x;
+</span></span><span style="display:flex;"><span>        next<span style="color:#f92672">=</span>NULL;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    ListNode <span style="color:#f92672">*</span>moveToFront(ListNode <span style="color:#f92672">*</span>head){
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//For single node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> head;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(temp<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">!=</span>NULL){
+</span></span><span style="display:flex;"><span>            temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> newhead <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(temp<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>val);
+</span></span><span style="display:flex;"><span>        newhead<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        head <span style="color:#f92672">=</span> newhead; <span style="color:#75715e">//Updated the head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> head;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> t;
+</span></span><span style="display:flex;"><span>    cin<span style="color:#f92672">&gt;&gt;</span>t;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(t<span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>        cin<span style="color:#f92672">&gt;&gt;</span>n;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span>ListNode<span style="color:#f92672">*&gt;</span> a(n);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>            cin<span style="color:#f92672">&gt;&gt;</span>x;
+</span></span><span style="display:flex;"><span>            a[i]<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> ListNode(x);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>                a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>a[i];
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>head<span style="color:#f92672">=</span>a[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>        Solution ob;
+</span></span><span style="display:flex;"><span>        head<span style="color:#f92672">=</span>ob.moveToFront(head);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(head<span style="color:#f92672">!=</span>NULL){
+</span></span><span style="display:flex;"><span>            cout<span style="color:#f92672">&lt;&lt;</span>head<span style="color:#f92672">-&gt;</span>val;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">!=</span>NULL){
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            head<span style="color:#f92672">=</span>head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="output-1">Output</h1>
+<hr>
+<pre tabindex="0"><code>For Input:
 5
 2 5 6 2 1
 For Output:
 1 2 5 6 2
 Expected Output:
 1 2 5 6 2
-</code></pre><div id=social-media-share><p><i>Sharing is caring!</i></p><div class=share-buttons><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Facebook. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/facebook.png></a>
-<a href="https://twitter.com/intent/tweet?text=Move%20to%20Front&url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Twitter. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/twitter.png></a>
-<a href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Reddit. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/reddit.png></a>
-<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Pinterest. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/pinterest.png></a>
-<a href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Tumblr. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/tumblr.png></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f
-			&title=Move%20to%20Front&summary=Question%20You%20are%20given%20the%20head%20of%20a%20Linked%20List.%20You%20have%20to%20move%20the%20last%20element%20to%20the%20front%20of%20the%20Linked%20List%20and%20return%20the%20list.&source=https://arnab7070.github.io/" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on LinkedIn. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/linkedin.png></a>
-<a href="mailto:?subject=Move%20to%20Front&body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f" title="Share via Email. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/mail.png></a></div></div><br><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div><div class="col-lg-2 d-none d-xl-block"><div class=ad-right-offset></div></div></div></div></main><footer class="text-center py-5"><p>© Copyright 2022 CodeWorld</p></footer></body></html>
+</code></pre>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Move%20to%20Front&url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f
+			&title=Move%20to%20Front&summary=Question%20You%20are%20given%20the%20head%20of%20a%20Linked%20List.%20You%20have%20to%20move%20the%20last%20element%20to%20the%20front%20of%20the%20Linked%20List%20and%20return%20the%20list.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=Move%20to%20Front&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fmove-to-front%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>

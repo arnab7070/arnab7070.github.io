@@ -1,3 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linked List on Code World</title><link>https://arnab7070.github.io/tags/linked-list/</link><description>Recent content in Linked List on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 03 Oct 2022 20:51:21 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/linked-list/index.xml" rel="self" type="application/rss+xml"/><item><title>Stack Using Linked List</title><link>https://arnab7070.github.io/posts/stack-using-linked-list/</link><pubDate>Mon, 03 Oct 2022 20:51:21 +0530</pubDate><guid>https://arnab7070.github.io/posts/stack-using-linked-list/</guid><description>Question Write a code to implement Stack using Linked List
-Algorithm It&amp;rsquo;s so simple to implement because stack uses LIFO and thats why we use insertAtBegin function only for inserting elements.</description></item><item><title>Polynomial Addition Using Linked List</title><link>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</link><pubDate>Mon, 03 Oct 2022 00:24:43 +0530</pubDate><guid>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</guid><description>Add two polynomials using Linked List Algorithm Recursive Approach (Easy) If both the numbers are null then return. else if compare the power, if same then add the coefficients and recursively call</description></item><item><title>Menu Driven Program For Doubly Linked List</title><link>https://arnab7070.github.io/posts/doubly-linked-list/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/posts/doubly-linked-list/</guid><description>Question Write a menu driven program in C++ to perform the following operations on double linked list.
-insert a node at the beginning of the list.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linked List on Code World</title>
+    <link>https://arnab7070.github.io/tags/linked-list/</link>
+    <description>Recent content in Linked List on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Oct 2022 20:51:21 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stack Using Linked List</title>
+      <link>https://arnab7070.github.io/posts/stack-using-linked-list/</link>
+      <pubDate>Mon, 03 Oct 2022 20:51:21 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/stack-using-linked-list/</guid>
+      <description>Question Write a code to implement Stack using Linked List
+Algorithm It&amp;rsquo;s so simple to implement because stack uses LIFO and thats why we use insertAtBegin function only for inserting elements.</description>
+    </item>
+    
+    <item>
+      <title>Polynomial Addition Using Linked List</title>
+      <link>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</link>
+      <pubDate>Mon, 03 Oct 2022 00:24:43 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</guid>
+      <description>Add two polynomials using Linked List Algorithm Recursive Approach (Easy) If both the numbers are null then return. else if compare the power, if same then add the coefficients and recursively call</description>
+    </item>
+    
+    <item>
+      <title>Menu Driven Program For Doubly Linked List</title>
+      <link>https://arnab7070.github.io/posts/doubly-linked-list/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/doubly-linked-list/</guid>
+      <description>Question Write a menu driven program in C++ to perform the following operations on double linked list.
+insert a node at the beginning of the list.</description>
+    </item>
+    
+  </channel>
+</rss>

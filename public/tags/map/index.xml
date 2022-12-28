@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>map on Code World</title><link>https://arnab7070.github.io/tags/map/</link><description>Recent content in map on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/map/index.xml" rel="self" type="application/rss+xml"/><item><title>Frequency Of Elements</title><link>https://arnab7070.github.io/posts/frequency-of-elements/</link><pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/posts/frequency-of-elements/</guid><description>Question Q. Program to find the frequency of each element of an array.
-Algorithm Step 1: Create a map of integer to store key-value pairs. map&amp;lt;int,int&amp;gt;.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>map on Code World</title>
+    <link>https://arnab7070.github.io/tags/map/</link>
+    <description>Recent content in map on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frequency Of Elements</title>
+      <link>https://arnab7070.github.io/posts/frequency-of-elements/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/frequency-of-elements/</guid>
+      <description>Question Q. Program to find the frequency of each element of an array.
+Algorithm Step 1: Create a map of integer to store key-value pairs. map&amp;lt;int,int&amp;gt;.</description>
+    </item>
+    
+  </channel>
+</rss>
