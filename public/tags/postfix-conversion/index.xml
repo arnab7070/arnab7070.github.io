@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Postfix Conversion on Code World</title>
-    <link>https://arnab7070.github.io/tags/postfix-conversion/</link>
-    <description>Recent content in Postfix Conversion on Code World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/postfix-conversion/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Infix to Postfix</title>
-      <link>https://arnab7070.github.io/posts/infix-to-postfix/</link>
-      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arnab7070.github.io/posts/infix-to-postfix/</guid>
-      <description>Question Convert infix expression to postfix expression using C++
-Some Important Concepts Infix notation is the notation in which operators come between the required operands. Postfix notation is the type of notation in which operator comes after the operand.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Postfix Conversion on Code World</title><link>https://arnab7070.github.io/tags/postfix-conversion/</link><description>Recent content in Postfix Conversion on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/postfix-conversion/index.xml" rel="self" type="application/rss+xml"/><item><title>Infix to Postfix</title><link>https://arnab7070.github.io/posts/infix-to-postfix/</link><pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/posts/infix-to-postfix/</guid><description>Question Convert infix expression to postfix expression using C++
+Some Important Concepts Infix notation is the notation in which operators come between the required operands. Postfix notation is the type of notation in which operator comes after the operand.</description></item></channel></rss>

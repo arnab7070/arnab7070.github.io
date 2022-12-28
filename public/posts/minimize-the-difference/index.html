@@ -1,520 +1,86 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head><title>
-    
-    Minimize the Difference | 
-    
-    Code World
-</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://arnab7070.github.io/posts/minimize-the-difference/" />
-<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
-
-
-<meta name="description" content="
+<!doctype html><html lang=en-us><head><title>Minimize the Difference |
+Code World</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel=canonical href=https://arnab7070.github.io/posts/minimize-the-difference/><link rel=icon type=image/png href=https://arnab7070.github.io/image/favicon.ico><meta name=description content="
     Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array.
-    "
-/>
-<meta property="og:description" content="
+    "><meta property="og:description" content="
     Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array.
-    " 
-/>
-
-
-<meta property="og:image" content="https://arnab7070.github.io/posts/minimize-the-difference/DSA%20CRACKER.png" />
-
-
-
-
-
-
-<meta property="og:title" content="Minimize the Difference" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arnab7070.github.io/posts/minimize-the-difference/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-10-12T08:37:21+05:30" />
-<meta property="article:modified_time" content="2022-10-12T08:37:21+05:30" />
-
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Minimize the Difference"/>
-<meta name="twitter:description" content="Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array."/>
-
-<meta itemprop="name" content="Minimize the Difference">
-<meta itemprop="description" content="Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array."><meta itemprop="datePublished" content="2022-10-12T08:37:21+05:30" />
-<meta itemprop="dateModified" content="2022-10-12T08:37:21+05:30" />
-<meta itemprop="wordCount" content="548">
-<meta itemprop="keywords" content="Practice Question,Code Studio,Love Babbar DSA Sheet," />
-
-
-
-
-<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
-
-
-
-
-
-<script src="https://arnab7070.github.io/bundle.js"></script>
-
-
-
-
-
-
-
-<script data-ad-client="adsense-key" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
-    crossorigin="anonymous"></script>
-
-
+    "><meta property="og:image" content="https://arnab7070.github.io/posts/minimize-the-difference/DSA%20CRACKER.png"><meta property="og:title" content="Minimize the Difference"><meta property="og:type" content="article"><meta property="og:url" content="https://arnab7070.github.io/posts/minimize-the-difference/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-12T08:37:21+05:30"><meta property="article:modified_time" content="2022-10-12T08:37:21+05:30"><meta name=twitter:card content="summary"><meta name=twitter:title content="Minimize the Difference"><meta name=twitter:description content="Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array."><meta itemprop=name content="Minimize the Difference"><meta itemprop=description content="Minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array."><meta itemprop=datePublished content="2022-10-12T08:37:21+05:30"><meta itemprop=dateModified content="2022-10-12T08:37:21+05:30"><meta itemprop=wordCount content="548"><meta itemprop=keywords content="Practice Question,Code Studio,Love Babbar DSA Sheet,"><link rel=stylesheet href=https://arnab7070.github.io/main.min.css><script src=https://arnab7070.github.io/bundle.js></script>
+<script data-ad-client=adsense-key async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
-
-
-
-
-</head>
-
-<body><header id="header">
-  <div class="top-bar">
-    <div class="container-md">
-
-      <div class="row align-items-center">
-        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
-          <ul>
-    
-    <li>
-        <a href="https://www.facebook.com/arnab7070" target="_blank">
-            <i class="fab fa-facebook"></i></a>
-    </li>
-    
-
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.instagram.com/arnab7070" target="_blank">
-            <i class="fab fa-instagram"></i></a>
-    </li>
-    
-
-    
-    <li>
-        <a href="https://github.com/arnab7070" target="_blank">
-            <i class="fab fa-github"></i></a>
-    </li>
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
-            <i class="fab fa-linkedin"></i></a>
-    </li>
-    
-
-</ul>
-        </div>
-
-        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
-          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
-        </div>
-
-        
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container-md">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-
-          <li class="nav-item d-block d-sm-none">
-            <ul class="social-buttons">
-              <ul>
-    
-    <li>
-        <a href="https://www.facebook.com/arnab7070" target="_blank">
-            <i class="fab fa-facebook"></i></a>
-    </li>
-    
-
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.instagram.com/arnab7070" target="_blank">
-            <i class="fab fa-instagram"></i></a>
-    </li>
-    
-
-    
-    <li>
-        <a href="https://github.com/arnab7070" target="_blank">
-            <i class="fab fa-github"></i></a>
-    </li>
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
-            <i class="fab fa-linkedin"></i></a>
-    </li>
-    
-
-</ul>
-            </ul>
-          </li>
-
-          
-          
-          <li class="nav-item">
-            <a class="nav-link 
-              
-              " 
-              href="https://arnab7070.github.io/">
-              Home
-            </a>
-          </li>
-          
-          
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-              Blog
-            </a>
-            <div class="dropdown-menu">
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
-              
-              
-              
-                <div class="dropdown-divider"></div>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
-              
-              
-            </div>
-          </li>
-          
-          
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-              About Us
-            </a>
-            <div class="dropdown-menu">
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
-              
-              
-            </div>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link 
-              
-              " 
-              href="https://arnab7070.github.io/contact/">
-              Contact
-            </a>
-          </li>
-          
-          
-        </ul>
-
-        
-
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main class="blog-content">
-    <div class="container-md">
-        <div class="row">
-            
-            <div class="col-lg-2 d-none d-xl-block">
-                <div class="ad-left-offset"></div>
-                
-            </div>
-
-            <div class="col-md-12 col-lg-8 px-lg-4">
-                
-
-                <h1 class="title">Minimize the Difference</h1>
-
-                <div class="container-fluid px-0 mb-4">
-                    <div class="row align-items-end">
-                        <div class="col-md-4 date-time">
-                            <span class="date">
-    Oct 12, 2022
-</span>
-                            &centerdot;
-                            <span class="time-to-read">
-    3 mins read</span>
-                        </div>
-
-                        <div class="col-md-8 tags ">
-                            
-                            <a href="https://arnab7070.github.io/tags/practice-question"><span
-                                    class="tag bg-dark">Practice Question</span></a>
-                            
-                            <a href="https://arnab7070.github.io/tags/code-studio"><span
-                                    class="tag bg-dark">Code Studio</span></a>
-                            
-                            <a href="https://arnab7070.github.io/tags/love-babbar-dsa-sheet"><span
-                                    class="tag bg-dark">Love Babbar DSA Sheet</span></a>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                
-                <figure>
-                    
-                    <img id="cover-image" src=https://arnab7070.github.io/posts/minimize-the-difference/DSA%20CRACKER.png alt="Minimize the Difference">
-                </figure>
-                
-
-                <h1 id="problem-statement">Problem Statement</h1>
-<p>You are given an array ‘A’ of length ‘N’ consisting only of positive integers and an integer ‘K’. You have to update every element of the array by increasing or decreasing its value by ‘K’ only once. Your task is to minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array.</p>
-<blockquote>
-<p>Note: After the operation, every value of the array should remain non-negative.</p>
-</blockquote>
-<hr>
-<p>Let’s say the array ‘A’ = [1, 2, 3, 4, 5] and ‘K’ = 2, then after increasing each element by ‘K’. The array ‘A’ will become [3, 4, 5, 6, 7]. So the maximum - minimum will be 7 - 3 = 4.</p>
-<h3 id="sample-input">Sample Input</h3>
-<pre tabindex="0"><code>2
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","")</script></head><body><header id=header><div class=top-bar><div class=container-md><div class="row align-items-center"><div class="col-3 col-sm-4 social-buttons d-none d-sm-block"><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></div><div class="ra-toggler col-3 col-sm-4 d-block d-sm-none"><button class=bg-dark type=button data-bs-toggle=collapse data-bs-target=#navbarNav>
+<i class="fas fa-bars"></i></button></div><div class="col-6 col-sm-4"><h2 class=title><a href=https://arnab7070.github.io/>Code World</a></h2></div></div></div></div><div class=container-md><nav class="navbar navbar-expand-sm navbar-dark bg-dark"><div class="collapse navbar-collapse" id=navbarNav><ul class="navbar-nav mx-auto"><li class="nav-item d-block d-sm-none"><ul class=social-buttons><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></ul></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/>Home</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>Blog</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/posts/>Posts</a>
+<a class=dropdown-item href=https://arnab7070.github.io/sections/>Sections</a><div class=dropdown-divider></div><a class=dropdown-item href=https://arnab7070.github.io/tags/>Tags</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>About Us</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/about/>About</a>
+<a class=dropdown-item href=https://arnab7070.github.io/privacy/>Privacy Policy</a>
+<a class=dropdown-item href=https://arnab7070.github.io/dmca/>DMCA</a>
+<a class=dropdown-item href=https://arnab7070.github.io/terms/>Terms & Conditions</a></div></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/contact/>Contact</a></li></ul></div></nav></div></header><main class=blog-content><div class=container-md><div class=row><div class="col-lg-2 d-none d-xl-block"><div class=ad-left-offset></div></div><div class="col-md-12 col-lg-8 px-lg-4"><h1 class=title>Minimize the Difference</h1><div class="container-fluid px-0 mb-4"><div class="row align-items-end"><div class="col-md-4 date-time"><span class=date>Oct 12, 2022</span>
+&#183;
+<span class=time-to-read>3 mins read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/practice-question><span class="tag bg-dark">Practice Question</span></a>
+<a href=https://arnab7070.github.io/tags/code-studio><span class="tag bg-dark">Code Studio</span></a>
+<a href=https://arnab7070.github.io/tags/love-babbar-dsa-sheet><span class="tag bg-dark">Love Babbar DSA Sheet</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/posts/minimize-the-difference/DSA%20CRACKER.png alt="Minimize the Difference"></figure><h1 id=problem-statement>Problem Statement</h1><p>You are given an array ‘A’ of length ‘N’ consisting only of positive integers and an integer ‘K’. You have to update every element of the array by increasing or decreasing its value by ‘K’ only once. Your task is to minimize the difference between maximum and minimum elements of the array after performing the increment or decrement on every element of the array.</p><blockquote><p>Note: After the operation, every value of the array should remain non-negative.</p></blockquote><hr><p>Let’s say the array ‘A’ = [1, 2, 3, 4, 5] and ‘K’ = 2, then after increasing each element by ‘K’. The array ‘A’ will become [3, 4, 5, 6, 7]. So the maximum - minimum will be 7 - 3 = 4.</p><h3 id=sample-input>Sample Input</h3><pre tabindex=0><code>2
 4 2
 1 5 8 10
 5 2
 1 2 3 4 5
-</code></pre><h3 id="sample-output">Sample Output</h3>
-<pre tabindex="0"><code>5
+</code></pre><h3 id=sample-output>Sample Output</h3><pre tabindex=0><code>5
 3
-</code></pre><h3 id="explanation-for-this-example">Explanation for this example</h3>
-<ul>
-<li>For test case 1:
-The final array will look like [3, 3, 6, 8]. So the difference between maximum and minimum is 8 - 3 = 5.</li>
-<li>For test case 2:
-The final array will look like [3, 4, 1, 2, 3]. So the difference between maximum and minimum is 4 - 1 = 3.</li>
-</ul>
-<hr>
-<h1 id="solution">Solution</h1>
-<hr>
-<h3 id="greedy-approach">Greedy Approach</h3>
-<p>Approach: We sort the given array, and then for each index, we perform the decrement operation on all the indexes greater than index ‘i’ and increment operation until the index ‘i’. Find the difference between maximum and minimum and update the answer. This works because we decrease all the greater values and increase the smaller ones, ultimately leading to a smaller difference.</p>
-<h3 id="algorithm">Algorithm:</h3>
-<ul>
-<li>Sort ‘A’.</li>
-<li>Create a variable, ‘ans’, and initialize it to the difference between the last and first terms of ‘A’.</li>
-<li>Create two variables, ‘minimum’ and ‘maximum’ and initialize them to ‘A[0] + K’ and ‘A[N - 1] - K’, respectively.</li>
-<li>Create two variables, ‘current_minimum’ and ‘current_maximum’.</li>
-<li>Iterate using a for loop from i = ‘0’ to ‘N - 1’.
-<ul>
-<li>Update ‘current_minimum’ to min(minimum, A[i + 1] - K).</li>
-<li>Update ‘current_maximum’ to max(maximum, A[i] + K).</li>
-<li>If ‘current_minimum’ is non-negative. Update ‘ans’ to min(ans, current_maximum - current_minimum).</li>
-</ul>
-</li>
-<li>Print ‘ans’.</li>
-</ul>
-<h1 id="code">Code</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Time Complexity: O(N).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Space Complexity: O(1).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Where &#39;N&#39; is the length of the array.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// This is the main minimizeIt function to this solution.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minimizeIt</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> A, <span style="color:#66d9ef">int</span> K)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> A.size();
-</span></span><span style="display:flex;"><span>    sort(A.begin(), A.end());
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> A[n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> A[<span style="color:#ae81ff">0</span>];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> minimum <span style="color:#f92672">=</span> A[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> K;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> maximum <span style="color:#f92672">=</span> A[n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> K;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> current_minimum, current_maximum;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Finding the minimum and the maximum value if we perform the decrement operation on all the
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// indexes greater than index ‘i’ and increment operation until the index ‘i’.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        current_minimum <span style="color:#f92672">=</span> min(A[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> K, minimum);
-</span></span><span style="display:flex;"><span>        current_maximum <span style="color:#f92672">=</span> max(A[i] <span style="color:#f92672">+</span> K, maximum);
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Checking if minimum value is non-negative or not.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (current_minimum <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>)
-</span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            ans <span style="color:#f92672">=</span> min(ans, current_maximum <span style="color:#f92672">-</span> current_minimum);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ans;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Driver Code
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> testcase;
-</span></span><span style="display:flex;"><span>    cin<span style="color:#f92672">&gt;&gt;</span>testcase;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(testcase<span style="color:#f92672">--</span>){
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> size,k;
-</span></span><span style="display:flex;"><span>        cin<span style="color:#f92672">&gt;&gt;</span>size<span style="color:#f92672">&gt;&gt;</span>k;
-</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> arr(size);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>){
-</span></span><span style="display:flex;"><span>            cin<span style="color:#f92672">&gt;&gt;</span>arr[i];
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span>minimizeIt(arr,k)<span style="color:#f92672">&lt;&lt;</span>endl;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><blockquote>
-<p>Code is provided by Code Studio. This is the <em><a href="https://www.codingninjas.com/codestudio/problems/minimize-the-difference_3208652?topList=love-babbar-dsa-sheet-problems&amp;leftPanelTab=0">Link</a></em>.</p>
-</blockquote>
-
-
-                <div id="social-media-share">
-	<p><i>Sharing is caring!</i></p>
-	
-	<div class="share-buttons">
-	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
-	        title="Share on Facebook. Opens in a new window.">
-	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
-	    </a>
-
-	    <a  href="https://twitter.com/intent/tweet?text=Minimize%20the%20Difference&url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
-	        title="Share on Twitter. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
-	    </a>
-
-		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Reddit. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
-	    </a>
-
-	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Pinterest. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
-	    </a>
-
-	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Tumblr. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
-	    </a>
-
-		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f
-			&title=Minimize%20the%20Difference&summary=Problem%20Statement%20You%20are%20given%20an%20array%20%e2%80%98A%e2%80%99%20of%20length%20%e2%80%98N%e2%80%99%20consisting%20only%20of%20positive%20integers%20and%20an%20integer%20%e2%80%98K%e2%80%99.%20You%20have%20to%20update%20every%20element%20of%20the%20array%20by%20increasing%20or%20decreasing%20its%20value%20by%20%e2%80%98K%e2%80%99%20only%20once.&source=https://arnab7070.github.io/"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on LinkedIn. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
-	    </a>
-
-	    <a  href="mailto:?subject=Minimize%20the%20Difference&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f"
-	        title="Share via Email. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
-	    </a>
-	</div>
-</div>
-
-
-
-
-                
-                <br>
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-    (function () {
-        
-        
-        if (window.location.hostname == "localhost")
-            return;
-
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = '';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
-
-            <div class="col-lg-2 d-none d-xl-block">
-                <div class="ad-right-offset"></div>
-                
-            </div>
-        </div>
-    </div>
-</main>
-
-<footer class="text-center py-5">
-    <p>
-        
-            © Copyright 2022 CodeWorld
-        
-    </p>
-</footer>
-
-</body>
-
-</html>
+</code></pre><h3 id=explanation-for-this-example>Explanation for this example</h3><ul><li>For test case 1:
+The final array will look like [3, 3, 6, 8]. So the difference between maximum and minimum is 8 - 3 = 5.</li><li>For test case 2:
+The final array will look like [3, 4, 1, 2, 3]. So the difference between maximum and minimum is 4 - 1 = 3.</li></ul><hr><h1 id=solution>Solution</h1><hr><h3 id=greedy-approach>Greedy Approach</h3><p>Approach: We sort the given array, and then for each index, we perform the decrement operation on all the indexes greater than index ‘i’ and increment operation until the index ‘i’. Find the difference between maximum and minimum and update the answer. This works because we decrease all the greater values and increase the smaller ones, ultimately leading to a smaller difference.</p><h3 id=algorithm>Algorithm:</h3><ul><li>Sort ‘A’.</li><li>Create a variable, ‘ans’, and initialize it to the difference between the last and first terms of ‘A’.</li><li>Create two variables, ‘minimum’ and ‘maximum’ and initialize them to ‘A[0] + K’ and ‘A[N - 1] - K’, respectively.</li><li>Create two variables, ‘current_minimum’ and ‘current_maximum’.</li><li>Iterate using a for loop from i = ‘0’ to ‘N - 1’.<ul><li>Update ‘current_minimum’ to min(minimum, A[i + 1] - K).</li><li>Update ‘current_maximum’ to max(maximum, A[i] + K).</li><li>If ‘current_minimum’ is non-negative. Update ‘ans’ to min(ans, current_maximum - current_minimum).</li></ul></li><li>Print ‘ans’.</li></ul><h1 id=code>Code</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>/*
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    Time Complexity: O(N).
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    Space Complexity: O(1).
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    Where &#39;N&#39; is the length of the array.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// This is the main minimizeIt function to this solution.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;iostream&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;algorithm&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;vector&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>minimizeIt</span>(vector<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>int</span><span style=color:#f92672>&gt;</span> A, <span style=color:#66d9ef>int</span> K)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> n <span style=color:#f92672>=</span> A.size();
+</span></span><span style=display:flex><span>    sort(A.begin(), A.end());
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> ans <span style=color:#f92672>=</span> A[n <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> A[<span style=color:#ae81ff>0</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> minimum <span style=color:#f92672>=</span> A[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>+</span> K;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> maximum <span style=color:#f92672>=</span> A[n <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> K;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> current_minimum, current_maximum;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> n <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Finding the minimum and the maximum value if we perform the decrement operation on all the
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// indexes greater than index ‘i’ and increment operation until the index ‘i’.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        current_minimum <span style=color:#f92672>=</span> min(A[i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> K, minimum);
+</span></span><span style=display:flex><span>        current_maximum <span style=color:#f92672>=</span> max(A[i] <span style=color:#f92672>+</span> K, maximum);
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Checking if minimum value is non-negative or not.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> (current_minimum <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            ans <span style=color:#f92672>=</span> min(ans, current_maximum <span style=color:#f92672>-</span> current_minimum);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> ans;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>// Driver Code
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> testcase;
+</span></span><span style=display:flex><span>    cin<span style=color:#f92672>&gt;&gt;</span>testcase;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(testcase<span style=color:#f92672>--</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> size,k;
+</span></span><span style=display:flex><span>        cin<span style=color:#f92672>&gt;&gt;</span>size<span style=color:#f92672>&gt;&gt;</span>k;
+</span></span><span style=display:flex><span>        vector<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>int</span><span style=color:#f92672>&gt;</span> arr(size);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> size; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>            cin<span style=color:#f92672>&gt;&gt;</span>arr[i];
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        cout<span style=color:#f92672>&lt;&lt;</span>minimizeIt(arr,k)<span style=color:#f92672>&lt;&lt;</span>endl;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><blockquote><p>Code is provided by Code Studio. This is the <em><a href="https://www.codingninjas.com/codestudio/problems/minimize-the-difference_3208652?topList=love-babbar-dsa-sheet-problems&leftPanelTab=0">Link</a></em>.</p></blockquote><div id=social-media-share><p><i>Sharing is caring!</i></p><div class=share-buttons><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Facebook. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/facebook.png></a>
+<a href="https://twitter.com/intent/tweet?text=Minimize%20the%20Difference&url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Twitter. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/twitter.png></a>
+<a href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Reddit. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/reddit.png></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Pinterest. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/pinterest.png></a>
+<a href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Tumblr. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/tumblr.png></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f
+			&title=Minimize%20the%20Difference&summary=Problem%20Statement%20You%20are%20given%20an%20array%20%e2%80%98A%e2%80%99%20of%20length%20%e2%80%98N%e2%80%99%20consisting%20only%20of%20positive%20integers%20and%20an%20integer%20%e2%80%98K%e2%80%99.%20You%20have%20to%20update%20every%20element%20of%20the%20array%20by%20increasing%20or%20decreasing%20its%20value%20by%20%e2%80%98K%e2%80%99%20only%20once.&source=https://arnab7070.github.io/" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on LinkedIn. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/linkedin.png></a>
+<a href="mailto:?subject=Minimize%20the%20Difference&body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fminimize-the-difference%2f" title="Share via Email. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/mail.png></a></div></div><br><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div><div class="col-lg-2 d-none d-xl-block"><div class=ad-right-offset></div></div></div></div></main><footer class="text-center py-5"><p>© Copyright 2022 CodeWorld</p></footer></body></html>

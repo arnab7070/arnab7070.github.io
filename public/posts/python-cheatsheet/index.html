@@ -1,838 +1,418 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head><title>
-    
-    Python CheatSheet | 
-    
-    Code World
-</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://arnab7070.github.io/posts/python-cheatsheet/" />
-<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
-
-
-<meta name="description" content="
+<!doctype html><html lang=en-us><head><title>Python CheatSheet |
+Code World</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel=canonical href=https://arnab7070.github.io/posts/python-cheatsheet/><link rel=icon type=image/png href=https://arnab7070.github.io/image/favicon.ico><meta name=description content="
     Python cheatsheet for revision python concepts quickly
-    "
-/>
-<meta property="og:description" content="
+    "><meta property="og:description" content="
     Python cheatsheet for revision python concepts quickly
-    " 
-/>
-
-
-<meta property="og:image" content="https://arnab7070.github.io/posts/python-cheatsheet/python.jpg" />
-
-
-
-
-
-
-<meta property="og:title" content="Python CheatSheet" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://arnab7070.github.io/posts/python-cheatsheet/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-12-10T15:24:06+05:30" />
-<meta property="article:modified_time" content="2022-12-10T15:24:06+05:30" />
-
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python CheatSheet"/>
-<meta name="twitter:description" content="Python cheatsheet for revision python concepts quickly"/>
-
-<meta itemprop="name" content="Python CheatSheet">
-<meta itemprop="description" content="Python cheatsheet for revision python concepts quickly"><meta itemprop="datePublished" content="2022-12-10T15:24:06+05:30" />
-<meta itemprop="dateModified" content="2022-12-10T15:24:06+05:30" />
-<meta itemprop="wordCount" content="1960">
-<meta itemprop="keywords" content="Python,CheatSheet," />
-
-
-
-
-<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
-
-
-
-
-
-<script src="https://arnab7070.github.io/bundle.js"></script>
-
-
-
-
-
-
-
-<script data-ad-client="adsense-key" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
-    crossorigin="anonymous"></script>
-
-
+    "><meta property="og:image" content="https://arnab7070.github.io/posts/python-cheatsheet/python.jpg"><meta property="og:title" content="Python CheatSheet"><meta property="og:type" content="article"><meta property="og:url" content="https://arnab7070.github.io/posts/python-cheatsheet/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-12-10T15:24:06+05:30"><meta property="article:modified_time" content="2022-12-10T15:24:06+05:30"><meta name=twitter:card content="summary"><meta name=twitter:title content="Python CheatSheet"><meta name=twitter:description content="Python cheatsheet for revision python concepts quickly"><meta itemprop=name content="Python CheatSheet"><meta itemprop=description content="Python cheatsheet for revision python concepts quickly"><meta itemprop=datePublished content="2022-12-10T15:24:06+05:30"><meta itemprop=dateModified content="2022-12-10T15:24:06+05:30"><meta itemprop=wordCount content="1960"><meta itemprop=keywords content="Python,CheatSheet,"><link rel=stylesheet href=https://arnab7070.github.io/main.min.css><script src=https://arnab7070.github.io/bundle.js></script>
+<script data-ad-client=adsense-key async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
-
-
-
-
-</head>
-
-<body><header id="header">
-  <div class="top-bar">
-    <div class="container-md">
-
-      <div class="row align-items-center">
-        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
-          <ul>
-    
-    <li>
-        <a href="https://www.facebook.com/arnab7070" target="_blank">
-            <i class="fab fa-facebook"></i></a>
-    </li>
-    
-
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.instagram.com/arnab7070" target="_blank">
-            <i class="fab fa-instagram"></i></a>
-    </li>
-    
-
-    
-    <li>
-        <a href="https://github.com/arnab7070" target="_blank">
-            <i class="fab fa-github"></i></a>
-    </li>
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
-            <i class="fab fa-linkedin"></i></a>
-    </li>
-    
-
-</ul>
-        </div>
-
-        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
-          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
-        </div>
-
-        
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container-md">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-
-          <li class="nav-item d-block d-sm-none">
-            <ul class="social-buttons">
-              <ul>
-    
-    <li>
-        <a href="https://www.facebook.com/arnab7070" target="_blank">
-            <i class="fab fa-facebook"></i></a>
-    </li>
-    
-
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.instagram.com/arnab7070" target="_blank">
-            <i class="fab fa-instagram"></i></a>
-    </li>
-    
-
-    
-    <li>
-        <a href="https://github.com/arnab7070" target="_blank">
-            <i class="fab fa-github"></i></a>
-    </li>
-    
-
-    
-
-    
-    <li>
-        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
-            <i class="fab fa-linkedin"></i></a>
-    </li>
-    
-
-</ul>
-            </ul>
-          </li>
-
-          
-          
-          <li class="nav-item">
-            <a class="nav-link 
-              
-              " 
-              href="https://arnab7070.github.io/">
-              Home
-            </a>
-          </li>
-          
-          
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-              Blog
-            </a>
-            <div class="dropdown-menu">
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
-              
-              
-              
-                <div class="dropdown-divider"></div>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
-              
-              
-            </div>
-          </li>
-          
-          
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-              About Us
-            </a>
-            <div class="dropdown-menu">
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
-              
-              
-              
-                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
-              
-              
-            </div>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link 
-              
-              " 
-              href="https://arnab7070.github.io/contact/">
-              Contact
-            </a>
-          </li>
-          
-          
-        </ul>
-
-        
-
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main class="blog-content">
-    <div class="container-md">
-        <div class="row">
-            
-            <div class="col-lg-2 d-none d-xl-block">
-                <div class="ad-left-offset"></div>
-                
-            </div>
-
-            <div class="col-md-12 col-lg-8 px-lg-4">
-                
-
-                <h1 class="title">Python CheatSheet</h1>
-
-                <div class="container-fluid px-0 mb-4">
-                    <div class="row align-items-end">
-                        <div class="col-md-4 date-time">
-                            <span class="date">
-    Dec 10, 2022
-</span>
-                            &centerdot;
-                            <span class="time-to-read">
-    11 mins read</span>
-                        </div>
-
-                        <div class="col-md-8 tags ">
-                            
-                            <a href="https://arnab7070.github.io/tags/python"><span
-                                    class="tag bg-dark">Python</span></a>
-                            
-                            <a href="https://arnab7070.github.io/tags/cheatsheet"><span
-                                    class="tag bg-dark">CheatSheet</span></a>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                
-                <figure>
-                    
-                    <img id="cover-image" src=https://arnab7070.github.io/posts/python-cheatsheet/python.jpg alt="Python CheatSheet">
-                </figure>
-                
-
-                <h1 id="overview">Overview</h1>
-<p>A Python cheat sheet is a quick reference guide for Python, a popular and versatile programming language. It provides a compact summary of the most frequently used features of the language, along with their syntax and examples. This can be particularly helpful for new or inexperienced Python programmers who want to quickly learn the basics of the language and get started with coding.</p>
-<h1 id="benifits-of-this-cheat-sheet">Benifits of this cheat-sheet</h1>
-<p>There are several benefits to using a Python cheat sheet, including:</p>
-<ul>
-<li>It provides a quick reference for the most commonly used features of the language, making it easier for you to look up and use these features as you write your code.</li>
-<li>It can help you save time by allowing you to quickly look up the syntax and usage of various Python features, rather than having to search through documentation or online tutorials to find the information you need.</li>
-<li>It can help you improve your coding skills by providing a convenient way to review and practice the most important aspects of the language.</li>
-<li>It can serve as a handy resource for experienced Python programmers who want to refresh their knowledge of the language or learn new features.</li>
-<li>It can be a valuable learning tool for new or inexperienced programmers who want to quickly familiarize themselves with the basics of Python.</li>
-</ul>
-<h1 id="topics-covered">Topics Covered:</h1>
-<p>A Python cheat sheet typically covers the most frequently used features of the language, including:</p>
-<ul>
-<li>Basic syntax and data types: This includes the syntax for common statements and operations in Python, such as variables, control structures, loops, and functions. It may also include information on the various data types supported by Python, such as numbers, strings, lists, and dictionaries.</li>
-<li>Built-in functions and modules: This includes a summary of the most commonly used built-in functions in Python, such as those for working with strings, lists, and dictionaries. It may also include a list of the most commonly used modules and their functions, such as the math and random modules.</li>
-<li>Object-oriented programming: This includes a summary of the key concepts and features of object-oriented programming in Python, such as classes, objects, inheritance, and polymorphism.</li>
-<li>Advanced features: Depending on the level of detail provided, a Python cheat sheet may also include information on more advanced features of the language, such as decorators, generators, and asynchronous programming.</li>
-</ul>
-<h1 id="cheat-sheet">Cheat Sheet</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Author: Arnab Nandi</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Date: 10.12.2022</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Topic: Pyhton Concept Revision</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To print something in the screen</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello World&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now come to the point how we can easily use comments in our code</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To use comment we need to add &#39;#&#39; before the line</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Comment line simply means that the code execution process</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># will just ignore the line</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Developers normally use the comment line to help other developer</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># to understand his/her code or codeblocks in simple words.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Multiline comments</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">It 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">is a
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">multiline comment
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">It
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">is also
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">a multiline comment
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Variables:-</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Variables are just like containers which can hold the value of</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># some datatypes like integer, float, string, boolean etc.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Examples:</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Note: &#39;=&#39; is an assignment operator used to store some value
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">in a variable. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span>
-</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>  <span style="color:#75715e"># Remember in python true is capital &#39;T&#39;</span>
-</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab&#34;</span>
-</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Arnab&#34;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">True</span>, [<span style="color:#e6db74">&#34;CSE&#34;</span>, <span style="color:#e6db74">&#34;AOT&#34;</span>]]
-</span></span><span style="display:flex;"><span>f <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Arnab&#34;</span>: <span style="color:#ae81ff">81</span>, <span style="color:#e6db74">&#34;Rohan&#34;</span>: <span style="color:#ae81ff">82</span>}
-</span></span><span style="display:flex;"><span>g <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;Arnab&#34;</span>, <span style="color:#e6db74">&#34;CSE&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verification of datatypes of the variables</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># We use type function to check the type of the variable</span>
-</span></span><span style="display:flex;"><span>print(type(a))  <span style="color:#75715e"># &lt;class &#39;int&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(b))  <span style="color:#75715e"># &lt;class &#39;float&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(c))  <span style="color:#75715e"># &lt;class &#39;bool&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(d))  <span style="color:#75715e"># &lt;class &#39;str&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(e))  <span style="color:#75715e"># &lt;class &#39;list&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(f))  <span style="color:#75715e"># &lt;class &#39;dict&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>print(type(g))  <span style="color:#75715e"># &lt;class &#39;tuple&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now come to the point how we can take input from user</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># to take input from the user we just need to use input() method</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># input()  # It will wait for some input</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now what if we want to prompt something during an input and store</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># that value into a variable.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter your name: &#34;</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;You entered&#34;</span>, name)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Common Mistakes:</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># -------------------</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Case 1: (mis-understanding)</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">+</span>b)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expected: 3</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Reality: 12</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Question: Now come to the point why?
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Ans: Python just concatenate the two numbers as a string. It will
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">not recognize them as integer values.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Solution No. 1</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">+</span>b)  <span style="color:#75715e"># It will perfectly work but not an efficient way</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Solution No. 2</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">For this solution we need to understand what is type-casting?
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Ans: Type-Casting is simply a process by which we can change the
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">datatype of the variable. 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">It can be of 2 types
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">1. Implicit Type-Casting (Done by interpreter itself)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2. Explicit Type-Casting (Done by programmer forcibly)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Implicit typecasting</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.2</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">+</span>b)  <span style="color:#75715e"># Here a will autometically typecasted into float</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># It is done by the interpreter from it&#39;s own</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Explicit typecasting (Main answer of Solution 2)</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># We entered this as string and we want this act as an integer. How?</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># We explicitly typecast the value of a &amp; b into integer</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Type-Casted answer: &#34;</span>, int(a)<span style="color:#f92672">+</span>int(b))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Case 2:</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># We generally thought that during input if we input numeric values</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># then it will be as integer type but this concept is wrong</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python by default take user input as a string</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Proof</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter a number: &#34;</span>)
-</span></span><span style="display:flex;"><span>print(type(a))  <span style="color:#75715e"># Output &lt;class &#39;str&#39;&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># so if we want to do some mathematical operation directly then it</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># will not work. So for that we have to typecast what we are entering</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter a number: &#34;</span>))
-</span></span><span style="display:flex;"><span>print(type(a))  <span style="color:#75715e"># Output &lt;class &#39;int&#39;&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now come to the point String</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab&#34;</span>  <span style="color:#75715e"># Single line string</span>
-</span></span><span style="display:flex;"><span>print(a)
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">s&#34;</span>  <span style="color:#75715e"># Use of escape sequence</span>
-</span></span><span style="display:flex;"><span>print(b)
-</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;In Python, a string is a sequence of characters enclosed 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">in quotes (either single or double quotes). Strings are used to 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">represent text-based data in a program, and they are one of the 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">most commonly used data types in Python.&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>print(c)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Basic methods of string in python</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># String is like array of characters. Indexing starts from 0</span>
-</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">0</span>])  <span style="color:#75715e"># A</span>
-</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">2</span>])  <span style="color:#75715e"># n</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To find out the length of a string</span>
-</span></span><span style="display:flex;"><span>print(len(a))  <span style="color:#75715e"># 5</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># check presence of word/character in a string</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;r&#39;</span> <span style="color:#f92672">in</span> a)  <span style="color:#75715e"># True</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I am a cool boy&#34;</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;cool&#34;</span> <span style="color:#f92672">in</span> a)  <span style="color:#75715e"># True</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;awesome&#34;</span> <span style="color:#f92672">in</span> a)  <span style="color:#75715e"># False</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Same is for not in statement</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;awesome&#34;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> a)  <span style="color:#75715e"># True</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># String slicing</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab&#34;</span>
-</span></span><span style="display:flex;"><span>print(a[:<span style="color:#ae81ff">4</span>])  <span style="color:#75715e"># By default start is from 0 and end is len(string)</span>
-</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">4</span>])  <span style="color:#75715e"># First index is inclusive &amp; second one is exclusive</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Negative slicing</span>
-</span></span><span style="display:flex;"><span>print(a[<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Interpreter reads this statement like this</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(a[len(a)-4:len(a)-1])</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>upper())
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Same concept goes for a.lower()</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;           Arnab&#34;</span>  <span style="color:#75715e"># Having lots of white space begining</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To remove this we use strip()</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(a) # Having whitespace in output</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>strip())  <span style="color:#75715e"># Well-Formatted output</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Replace method</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Arnab&#34;</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>))  <span style="color:#75715e"># Replaced r with k</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Split</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello,How,Are,You,Arnab?&#34;</span>
-</span></span><span style="display:flex;"><span>print(a<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;,&#34;</span>))  <span style="color:#75715e"># Returns the splitted list</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Operators</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4.4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">4.4</span><span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span><span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">True</span> <span style="color:#f92672">and</span> <span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">False</span> <span style="color:#f92672">and</span> <span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">False</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">False</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">False</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">5</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">5</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Details on list</span>
-</span></span><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Guava&#34;</span>, <span style="color:#e6db74">&#34;Watermelon&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>]
-</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#ae81ff">1</span>])  <span style="color:#75715e"># Guava</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To add something to list</span>
-</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;Grapes&#34;</span>)
-</span></span><span style="display:flex;"><span>print(fruits)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To insert something at specific position</span>
-</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;Inserted&#34;</span>)
-</span></span><span style="display:flex;"><span>print(fruits)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># remove list item</span>
-</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#34;Guava&#34;</span>)
-</span></span><span style="display:flex;"><span>print(fruits)
-</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>clear()  <span style="color:#75715e"># Return a shallow copy of the list.</span>
-</span></span><span style="display:flex;"><span>print(fruits)
-</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>numbers<span style="color:#f92672">.</span>sort()  <span style="color:#75715e"># To sort the whole list</span>
-</span></span><span style="display:flex;"><span>print(numbers)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Loops in python</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># List iteration example with the help of for loop</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Case 1:</span>
-</span></span><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Guava&#34;</span>, <span style="color:#e6db74">&#34;Watermelon&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fruits)):
-</span></span><span style="display:flex;"><span>    print(fruits[i])
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Another approach</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Case 2:</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> fruits:
-</span></span><span style="display:flex;"><span>    print(i)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now come to the point -&gt; while loop</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>):
-</span></span><span style="display:flex;"><span>    print(a)
-</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Tuples</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">In Python, a tuple is a sequence of comma-separated values enclosed 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">in parentheses. Tuples are similar to lists, but they are immutable, 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">which means that the values in a tuple cannot be changed once they 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">are created.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tuple with three elements</span>
-</span></span><span style="display:flex;"><span>t <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tuple with a string, an integer, and a float</span>
-</span></span><span style="display:flex;"><span>t <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">3.14</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># An empty tuple t = ()</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Access the first element in the tuple</span>
-</span></span><span style="display:flex;"><span>first_elem <span style="color:#f92672">=</span> t[<span style="color:#ae81ff">0</span>]
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Access the last element in the tuple</span>
-</span></span><span style="display:flex;"><span>last_elem <span style="color:#f92672">=</span> t[len(t) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>t1 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
-</span></span><span style="display:flex;"><span>t2 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Concatenate two tuples to create a new tuple</span>
-</span></span><span style="display:flex;"><span>t3 <span style="color:#f92672">=</span> t1 <span style="color:#f92672">+</span> t2
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Combine multiple tuples into a single tuple</span>
-</span></span><span style="display:flex;"><span>t4 <span style="color:#f92672">=</span> t1, t2, t3
-</span></span><span style="display:flex;"><span>print(t4)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a tuple from a list</span>
-</span></span><span style="display:flex;"><span>example <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
-</span></span><span style="display:flex;"><span>print(type(example))
-</span></span><span style="display:flex;"><span>tuple_example <span style="color:#f92672">=</span> tuple(example)
-</span></span><span style="display:flex;"><span>print(type(tuple_example))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Do the opposite process for converting into list from tuple</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Important Note:</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># To update a tuple we need to convert it into list then update</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># the list then again make it tuple</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set in python</span>
-</span></span><span style="display:flex;"><span>set_example <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>}  <span style="color:#75715e"># Duplicates are not allowed</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Set: &#34;</span>, set_example)
-</span></span><span style="display:flex;"><span>set_example<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">6</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;After addition: &#34;</span>, set_example)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10.15</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">51</span>}
-</span></span><span style="display:flex;"><span>list1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Arnab&#34;</span>, <span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">103.2</span>, <span style="color:#66d9ef">True</span>]
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># We can combine sets or lists by this</span>
-</span></span><span style="display:flex;"><span>set_example<span style="color:#f92672">.</span>update(set1)
-</span></span><span style="display:flex;"><span>print(set_example)
-</span></span><span style="display:flex;"><span>set_example<span style="color:#f92672">.</span>update(list1)
-</span></span><span style="display:flex;"><span>print(set_example)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Dictionaries in Python</span>
-</span></span><span style="display:flex;"><span>thisdict <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;Ford&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;Mustang&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;year&#34;</span>: <span style="color:#ae81ff">1964</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Access specific value for the key</span>
-</span></span><span style="display:flex;"><span>print(thisdict[<span style="color:#e6db74">&#34;brand&#34;</span>])
-</span></span><span style="display:flex;"><span>print(thisdict<span style="color:#f92672">.</span>keys())
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update the dictionary</span>
-</span></span><span style="display:flex;"><span>thisdict<span style="color:#f92672">.</span>update({<span style="color:#e6db74">&#34;year&#34;</span>: <span style="color:#ae81ff">2022</span>})
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add key-value pair in the dictionary</span>
-</span></span><span style="display:flex;"><span>thisdict[<span style="color:#e6db74">&#34;color&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;White&#34;</span>
-</span></span><span style="display:flex;"><span>print(thisdict)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove something from dictionary</span>
-</span></span><span style="display:flex;"><span>thisdict<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;color&#34;</span>)
-</span></span><span style="display:flex;"><span>print(thisdict)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># If-Else Statement</span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>):
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;True&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> (a <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>):
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Exactly 4&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;False&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function calling in python</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_function</span>(choice):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (choice <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Yes&#39;</span>):
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;I am in the function&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Plese call me&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function calling  demo</span>
-</span></span><span style="display:flex;"><span>choice <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Call that function? &#39;Yes&#39; or &#39;No&#39;: &#34;</span>)
-</span></span><span style="display:flex;"><span>my_function(choice)
-</span></span></code></pre></div><h1 id="output">Output</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">Hello</span> <span style="color:#66d9ef">World</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;int&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;float&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;bool&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;str&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;list&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;dict&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;tuple&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Enter</span> your name: <span style="color:#66d9ef">Arnab</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">You</span> entered <span style="color:#66d9ef">Arnab</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Type</span><span style="color:#f92672">-</span><span style="color:#66d9ef">Casted</span> <span style="color:#e6db74">answer</span>:  <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Enter</span> a <span style="color:#e6db74">number</span>: <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;str&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Enter</span> a <span style="color:#e6db74">number</span>: <span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#e6db74">&#39;int&#39;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Arnab</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Arnab</span><span style="color:#e6db74">&#34;s
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">In Python, a string is a sequence of characters enclosed 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">in quotes (either single or double quotes). Strings are used to 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">represent text-based data in a program, and they are one of the 
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">most commonly used data types in Python.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">A
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">n
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">5
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">False
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Arna
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">rna
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">rna
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ARNAB
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Arnab
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Aknab
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[&#39;Hello&#39;, &#39;How&#39;, &#39;Are&#39;, &#39;You&#39;, &#39;Arnab?&#39;]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">6
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">8
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2.0
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2.2
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2.0
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">1
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">25
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">False
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">False
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">False
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">True
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">False
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Guava
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[&#39;Apple&#39;, &#39;Guava&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[&#39;Apple&#39;, &#39;Inserted&#39;, &#39;Guava&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[&#39;Apple&#39;, &#39;Inserted&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[1, 8, 10, 15, 16, 100]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Apple
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Guava
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Watermelon
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Orange
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Another approach
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Apple
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Guava
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Watermelon
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Orange
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">5
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">4
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">3
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">1
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">((1, 2, 3), (4, 5, 6), (1, 2, 3, 4, 5, 6))
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;class &#39;list&#39;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;class &#39;tuple&#39;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Set:  {1, 2, 3}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">After addition:  {1, 2, 3, 6}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{1, 2, 3, 51, 6, 41, 10.15}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{1, 2, 3, 6, 10.15, 103.2, &#39;Arnab&#39;, 41, 51}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Ford
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">dict_keys([&#39;brand&#39;, &#39;model&#39;, &#39;year&#39;])
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 2022, &#39;color&#39;: &#39;White&#39;}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 2022}
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Exactly 4
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Call that function? &#39;Yes&#39; or &#39;No&#39;: Yes
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">I am in the function
-</span></span></span></code></pre></div><hr>
-<blockquote>
-<p>Just open up your code editor and copy the code to have a better understanding.</p>
-</blockquote>
-<p>📕📥<a href="./CheatSheet.pdf">Download Cheatsheet Now</a>📁🆓</p>
-
-
-                <div id="social-media-share">
-	<p><i>Sharing is caring!</i></p>
-	
-	<div class="share-buttons">
-	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
-	        title="Share on Facebook. Opens in a new window.">
-	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
-	    </a>
-
-	    <a  href="https://twitter.com/intent/tweet?text=Python%20CheatSheet&url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
-	        title="Share on Twitter. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
-	    </a>
-
-		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Reddit. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
-	    </a>
-
-	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Pinterest. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
-	    </a>
-
-	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on Tumblr. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
-	    </a>
-
-		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f
-			&title=Python%20CheatSheet&summary=Overview%20A%20Python%20cheat%20sheet%20is%20a%20quick%20reference%20guide%20for%20Python%2c%20a%20popular%20and%20versatile%20programming%20language.%20It%20provides%20a%20compact%20summary%20of%20the%20most%20frequently%20used%20features%20of%20the%20language%2c%20along%20with%20their%20syntax%20and%20examples.&source=https://arnab7070.github.io/"
-	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
-	        title="Share on LinkedIn. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
-	    </a>
-
-	    <a  href="mailto:?subject=Python%20CheatSheet&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f"
-	        title="Share via Email. Opens in a new window." >
-	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
-	    </a>
-	</div>
-</div>
-
-
-
-
-                
-                <br>
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-    (function () {
-        
-        
-        if (window.location.hostname == "localhost")
-            return;
-
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = '';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
-
-            <div class="col-lg-2 d-none d-xl-block">
-                <div class="ad-right-offset"></div>
-                
-            </div>
-        </div>
-    </div>
-</main>
-
-<footer class="text-center py-5">
-    <p>
-        
-            © Copyright 2022 CodeWorld
-        
-    </p>
-</footer>
-
-</body>
-
-</html>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","")</script></head><body><header id=header><div class=top-bar><div class=container-md><div class="row align-items-center"><div class="col-3 col-sm-4 social-buttons d-none d-sm-block"><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></div><div class="ra-toggler col-3 col-sm-4 d-block d-sm-none"><button class=bg-dark type=button data-bs-toggle=collapse data-bs-target=#navbarNav>
+<i class="fas fa-bars"></i></button></div><div class="col-6 col-sm-4"><h2 class=title><a href=https://arnab7070.github.io/>Code World</a></h2></div></div></div></div><div class=container-md><nav class="navbar navbar-expand-sm navbar-dark bg-dark"><div class="collapse navbar-collapse" id=navbarNav><ul class="navbar-nav mx-auto"><li class="nav-item d-block d-sm-none"><ul class=social-buttons><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></ul></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/>Home</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>Blog</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/posts/>Posts</a>
+<a class=dropdown-item href=https://arnab7070.github.io/sections/>Sections</a><div class=dropdown-divider></div><a class=dropdown-item href=https://arnab7070.github.io/tags/>Tags</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>About Us</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/about/>About</a>
+<a class=dropdown-item href=https://arnab7070.github.io/privacy/>Privacy Policy</a>
+<a class=dropdown-item href=https://arnab7070.github.io/dmca/>DMCA</a>
+<a class=dropdown-item href=https://arnab7070.github.io/terms/>Terms & Conditions</a></div></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/contact/>Contact</a></li></ul></div></nav></div></header><main class=blog-content><div class=container-md><div class=row><div class="col-lg-2 d-none d-xl-block"><div class=ad-left-offset></div></div><div class="col-md-12 col-lg-8 px-lg-4"><h1 class=title>Python CheatSheet</h1><div class="container-fluid px-0 mb-4"><div class="row align-items-end"><div class="col-md-4 date-time"><span class=date>Dec 10, 2022</span>
+&#183;
+<span class=time-to-read>11 mins read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/python><span class="tag bg-dark">Python</span></a>
+<a href=https://arnab7070.github.io/tags/cheatsheet><span class="tag bg-dark">CheatSheet</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/posts/python-cheatsheet/python.jpg alt="Python CheatSheet"></figure><h1 id=overview>Overview</h1><p>A Python cheat sheet is a quick reference guide for Python, a popular and versatile programming language. It provides a compact summary of the most frequently used features of the language, along with their syntax and examples. This can be particularly helpful for new or inexperienced Python programmers who want to quickly learn the basics of the language and get started with coding.</p><h1 id=benifits-of-this-cheat-sheet>Benifits of this cheat-sheet</h1><p>There are several benefits to using a Python cheat sheet, including:</p><ul><li>It provides a quick reference for the most commonly used features of the language, making it easier for you to look up and use these features as you write your code.</li><li>It can help you save time by allowing you to quickly look up the syntax and usage of various Python features, rather than having to search through documentation or online tutorials to find the information you need.</li><li>It can help you improve your coding skills by providing a convenient way to review and practice the most important aspects of the language.</li><li>It can serve as a handy resource for experienced Python programmers who want to refresh their knowledge of the language or learn new features.</li><li>It can be a valuable learning tool for new or inexperienced programmers who want to quickly familiarize themselves with the basics of Python.</li></ul><h1 id=topics-covered>Topics Covered:</h1><p>A Python cheat sheet typically covers the most frequently used features of the language, including:</p><ul><li>Basic syntax and data types: This includes the syntax for common statements and operations in Python, such as variables, control structures, loops, and functions. It may also include information on the various data types supported by Python, such as numbers, strings, lists, and dictionaries.</li><li>Built-in functions and modules: This includes a summary of the most commonly used built-in functions in Python, such as those for working with strings, lists, and dictionaries. It may also include a list of the most commonly used modules and their functions, such as the math and random modules.</li><li>Object-oriented programming: This includes a summary of the key concepts and features of object-oriented programming in Python, such as classes, objects, inheritance, and polymorphism.</li><li>Advanced features: Depending on the level of detail provided, a Python cheat sheet may also include information on more advanced features of the language, such as decorators, generators, and asynchronous programming.</li></ul><h1 id=cheat-sheet>Cheat Sheet</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=display:flex><span><span style=color:#75715e># Author: Arnab Nandi</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Date: 10.12.2022</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Topic: Pyhton Concept Revision</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To print something in the screen</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;Hello World&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># Now come to the point how we can easily use comments in our code</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To use comment we need to add &#39;#&#39; before the line</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Comment line simply means that the code execution process</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># will just ignore the line</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Developers normally use the comment line to help other developer</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># to understand his/her code or codeblocks in simple words.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Multiline comments</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>It 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>is a
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>multiline comment
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>It
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>is also
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>a multiline comment
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Variables:-</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Variables are just like containers which can hold the value of</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># some datatypes like integer, float, string, boolean etc.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Examples:</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Note: &#39;=&#39; is an assignment operator used to store some value
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>in a variable. 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#ae81ff>2.0</span>
+</span></span><span style=display:flex><span>c <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>  <span style=color:#75715e># Remember in python true is capital &#39;T&#39;</span>
+</span></span><span style=display:flex><span>d <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab&#34;</span>
+</span></span><span style=display:flex><span>e <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Arnab&#34;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>True</span>, [<span style=color:#e6db74>&#34;CSE&#34;</span>, <span style=color:#e6db74>&#34;AOT&#34;</span>]]
+</span></span><span style=display:flex><span>f <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;Arnab&#34;</span>: <span style=color:#ae81ff>81</span>, <span style=color:#e6db74>&#34;Rohan&#34;</span>: <span style=color:#ae81ff>82</span>}
+</span></span><span style=display:flex><span>g <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#34;Arnab&#34;</span>, <span style=color:#e6db74>&#34;CSE&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># Verification of datatypes of the variables</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># We use type function to check the type of the variable</span>
+</span></span><span style=display:flex><span>print(type(a))  <span style=color:#75715e># &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(b))  <span style=color:#75715e># &lt;class &#39;float&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(c))  <span style=color:#75715e># &lt;class &#39;bool&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(d))  <span style=color:#75715e># &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(e))  <span style=color:#75715e># &lt;class &#39;list&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(f))  <span style=color:#75715e># &lt;class &#39;dict&#39;&gt;</span>
+</span></span><span style=display:flex><span>print(type(g))  <span style=color:#75715e># &lt;class &#39;tuple&#39;&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Now come to the point how we can take input from user</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># to take input from the user we just need to use input() method</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># input()  # It will wait for some input</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Now what if we want to prompt something during an input and store</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># that value into a variable.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>name <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Enter your name: &#34;</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;You entered&#34;</span>, name)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Common Mistakes:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># -------------------</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Case 1: (mis-understanding)</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span>
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;2&#34;</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>+</span>b)
+</span></span><span style=display:flex><span><span style=color:#75715e># Expected: 3</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Reality: 12</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Question: Now come to the point why?
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Ans: Python just concatenate the two numbers as a string. It will
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>not recognize them as integer values.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Solution No. 1</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>+</span>b)  <span style=color:#75715e># It will perfectly work but not an efficient way</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Solution No. 2</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>For this solution we need to understand what is type-casting?
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Ans: Type-Casting is simply a process by which we can change the
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>datatype of the variable. 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>It can be of 2 types
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>1. Implicit Type-Casting (Done by interpreter itself)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2. Explicit Type-Casting (Done by programmer forcibly)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Implicit typecasting</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#ae81ff>2.2</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>+</span>b)  <span style=color:#75715e># Here a will autometically typecasted into float</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># It is done by the interpreter from it&#39;s own</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Explicit typecasting (Main answer of Solution 2)</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span>
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;2&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># We entered this as string and we want this act as an integer. How?</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># We explicitly typecast the value of a &amp; b into integer</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;Type-Casted answer: &#34;</span>, int(a)<span style=color:#f92672>+</span>int(b))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Case 2:</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># We generally thought that during input if we input numeric values</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># then it will be as integer type but this concept is wrong</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Python by default take user input as a string</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Proof</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Enter a number: &#34;</span>)
+</span></span><span style=display:flex><span>print(type(a))  <span style=color:#75715e># Output &lt;class &#39;str&#39;&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># so if we want to do some mathematical operation directly then it</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># will not work. So for that we have to typecast what we are entering</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> int(input(<span style=color:#e6db74>&#34;Enter a number: &#34;</span>))
+</span></span><span style=display:flex><span>print(type(a))  <span style=color:#75715e># Output &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Now come to the point String</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab&#34;</span>  <span style=color:#75715e># Single line string</span>
+</span></span><span style=display:flex><span>print(a)
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab</span><span style=color:#ae81ff>\&#34;</span><span style=color:#e6db74>s&#34;</span>  <span style=color:#75715e># Use of escape sequence</span>
+</span></span><span style=display:flex><span>print(b)
+</span></span><span style=display:flex><span>c <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;&#34;In Python, a string is a sequence of characters enclosed 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>in quotes (either single or double quotes). Strings are used to 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>represent text-based data in a program, and they are one of the 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>most commonly used data types in Python.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>print(c)
+</span></span><span style=display:flex><span><span style=color:#75715e># Basic methods of string in python</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># String is like array of characters. Indexing starts from 0</span>
+</span></span><span style=display:flex><span>print(a[<span style=color:#ae81ff>0</span>])  <span style=color:#75715e># A</span>
+</span></span><span style=display:flex><span>print(a[<span style=color:#ae81ff>2</span>])  <span style=color:#75715e># n</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To find out the length of a string</span>
+</span></span><span style=display:flex><span>print(len(a))  <span style=color:#75715e># 5</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># check presence of word/character in a string</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#39;r&#39;</span> <span style=color:#f92672>in</span> a)  <span style=color:#75715e># True</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;I am a cool boy&#34;</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;cool&#34;</span> <span style=color:#f92672>in</span> a)  <span style=color:#75715e># True</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;awesome&#34;</span> <span style=color:#f92672>in</span> a)  <span style=color:#75715e># False</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Same is for not in statement</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;awesome&#34;</span> <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> a)  <span style=color:#75715e># True</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># String slicing</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab&#34;</span>
+</span></span><span style=display:flex><span>print(a[:<span style=color:#ae81ff>4</span>])  <span style=color:#75715e># By default start is from 0 and end is len(string)</span>
+</span></span><span style=display:flex><span>print(a[<span style=color:#ae81ff>1</span>:<span style=color:#ae81ff>4</span>])  <span style=color:#75715e># First index is inclusive &amp; second one is exclusive</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Negative slicing</span>
+</span></span><span style=display:flex><span>print(a[<span style=color:#f92672>-</span><span style=color:#ae81ff>4</span>:<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span><span style=color:#75715e># Interpreter reads this statement like this</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># print(a[len(a)-4:len(a)-1])</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>.</span>upper())
+</span></span><span style=display:flex><span><span style=color:#75715e># Same concept goes for a.lower()</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;           Arnab&#34;</span>  <span style=color:#75715e># Having lots of white space begining</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To remove this we use strip()</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># print(a) # Having whitespace in output</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>.</span>strip())  <span style=color:#75715e># Well-Formatted output</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Replace method</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Arnab&#34;</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>&#39;r&#39;</span>, <span style=color:#e6db74>&#39;k&#39;</span>))  <span style=color:#75715e># Replaced r with k</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Split</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Hello,How,Are,You,Arnab?&#34;</span>
+</span></span><span style=display:flex><span>print(a<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#34;,&#34;</span>))  <span style=color:#75715e># Returns the splitted list</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Operators</span>
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4</span><span style=color:#f92672>+</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4</span><span style=color:#f92672>-</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4.4</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>4.4</span><span style=color:#f92672>//</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span><span style=color:#f92672>**</span><span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#66d9ef>True</span> <span style=color:#f92672>and</span> <span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#66d9ef>False</span> <span style=color:#f92672>and</span> <span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#66d9ef>False</span> <span style=color:#f92672>or</span> <span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#66d9ef>False</span> <span style=color:#f92672>or</span> <span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span> <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#ae81ff>5</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>5</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Details on list</span>
+</span></span><span style=display:flex><span>fruits <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Apple&#34;</span>, <span style=color:#e6db74>&#34;Guava&#34;</span>, <span style=color:#e6db74>&#34;Watermelon&#34;</span>, <span style=color:#e6db74>&#34;Orange&#34;</span>]
+</span></span><span style=display:flex><span>print(fruits[<span style=color:#ae81ff>1</span>])  <span style=color:#75715e># Guava</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To add something to list</span>
+</span></span><span style=display:flex><span>fruits<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;Grapes&#34;</span>)
+</span></span><span style=display:flex><span>print(fruits)
+</span></span><span style=display:flex><span><span style=color:#75715e># To insert something at specific position</span>
+</span></span><span style=display:flex><span>fruits<span style=color:#f92672>.</span>insert(<span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#34;Inserted&#34;</span>)
+</span></span><span style=display:flex><span>print(fruits)
+</span></span><span style=display:flex><span><span style=color:#75715e># remove list item</span>
+</span></span><span style=display:flex><span>fruits<span style=color:#f92672>.</span>remove(<span style=color:#e6db74>&#34;Guava&#34;</span>)
+</span></span><span style=display:flex><span>print(fruits)
+</span></span><span style=display:flex><span>fruits<span style=color:#f92672>.</span>clear()  <span style=color:#75715e># Return a shallow copy of the list.</span>
+</span></span><span style=display:flex><span>print(fruits)
+</span></span><span style=display:flex><span>numbers <span style=color:#f92672>=</span> [<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>8</span>, <span style=color:#ae81ff>15</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>numbers<span style=color:#f92672>.</span>sort()  <span style=color:#75715e># To sort the whole list</span>
+</span></span><span style=display:flex><span>print(numbers)
+</span></span><span style=display:flex><span><span style=color:#75715e># Loops in python</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># List iteration example with the help of for loop</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Case 1:</span>
+</span></span><span style=display:flex><span>fruits <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Apple&#34;</span>, <span style=color:#e6db74>&#34;Guava&#34;</span>, <span style=color:#e6db74>&#34;Watermelon&#34;</span>, <span style=color:#e6db74>&#34;Orange&#34;</span>]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(fruits)):
+</span></span><span style=display:flex><span>    print(fruits[i])
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Another approach</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># Case 2:</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> fruits:
+</span></span><span style=display:flex><span>    print(i)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Now come to the point -&gt; while loop</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> (a <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>):
+</span></span><span style=display:flex><span>    print(a)
+</span></span><span style=display:flex><span>    a <span style=color:#f92672>-=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Tuples</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>In Python, a tuple is a sequence of comma-separated values enclosed 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>in parentheses. Tuples are similar to lists, but they are immutable, 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>which means that the values in a tuple cannot be changed once they 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>are created.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># A tuple with three elements</span>
+</span></span><span style=display:flex><span>t <span style=color:#f92672>=</span> (<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># A tuple with a string, an integer, and a float</span>
+</span></span><span style=display:flex><span>t <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#34;hello&#34;</span>, <span style=color:#ae81ff>42</span>, <span style=color:#ae81ff>3.14</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># An empty tuple t = ()</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Access the first element in the tuple</span>
+</span></span><span style=display:flex><span>first_elem <span style=color:#f92672>=</span> t[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span><span style=color:#75715e># Access the last element in the tuple</span>
+</span></span><span style=display:flex><span>last_elem <span style=color:#f92672>=</span> t[len(t) <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>t1 <span style=color:#f92672>=</span> (<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>t2 <span style=color:#f92672>=</span> (<span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># Concatenate two tuples to create a new tuple</span>
+</span></span><span style=display:flex><span>t3 <span style=color:#f92672>=</span> t1 <span style=color:#f92672>+</span> t2
+</span></span><span style=display:flex><span><span style=color:#75715e># Combine multiple tuples into a single tuple</span>
+</span></span><span style=display:flex><span>t4 <span style=color:#f92672>=</span> t1, t2, t3
+</span></span><span style=display:flex><span>print(t4)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create a tuple from a list</span>
+</span></span><span style=display:flex><span>example <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>]
+</span></span><span style=display:flex><span>print(type(example))
+</span></span><span style=display:flex><span>tuple_example <span style=color:#f92672>=</span> tuple(example)
+</span></span><span style=display:flex><span>print(type(tuple_example))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Do the opposite process for converting into list from tuple</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Important Note:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To update a tuple we need to convert it into list then update</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># the list then again make it tuple</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Set in python</span>
+</span></span><span style=display:flex><span>set_example <span style=color:#f92672>=</span> {<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>}  <span style=color:#75715e># Duplicates are not allowed</span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;Set: &#34;</span>, set_example)
+</span></span><span style=display:flex><span>set_example<span style=color:#f92672>.</span>add(<span style=color:#ae81ff>6</span>)
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;After addition: &#34;</span>, set_example)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set1 <span style=color:#f92672>=</span> {<span style=color:#ae81ff>10.15</span>, <span style=color:#ae81ff>41</span>, <span style=color:#ae81ff>51</span>}
+</span></span><span style=display:flex><span>list1 <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Arnab&#34;</span>, <span style=color:#ae81ff>51</span>, <span style=color:#ae81ff>103.2</span>, <span style=color:#66d9ef>True</span>]
+</span></span><span style=display:flex><span><span style=color:#75715e># We can combine sets or lists by this</span>
+</span></span><span style=display:flex><span>set_example<span style=color:#f92672>.</span>update(set1)
+</span></span><span style=display:flex><span>print(set_example)
+</span></span><span style=display:flex><span>set_example<span style=color:#f92672>.</span>update(list1)
+</span></span><span style=display:flex><span>print(set_example)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Dictionaries in Python</span>
+</span></span><span style=display:flex><span>thisdict <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;brand&#34;</span>: <span style=color:#e6db74>&#34;Ford&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;model&#34;</span>: <span style=color:#e6db74>&#34;Mustang&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;year&#34;</span>: <span style=color:#ae81ff>1964</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e># Access specific value for the key</span>
+</span></span><span style=display:flex><span>print(thisdict[<span style=color:#e6db74>&#34;brand&#34;</span>])
+</span></span><span style=display:flex><span>print(thisdict<span style=color:#f92672>.</span>keys())
+</span></span><span style=display:flex><span><span style=color:#75715e># Update the dictionary</span>
+</span></span><span style=display:flex><span>thisdict<span style=color:#f92672>.</span>update({<span style=color:#e6db74>&#34;year&#34;</span>: <span style=color:#ae81ff>2022</span>})
+</span></span><span style=display:flex><span><span style=color:#75715e># Add key-value pair in the dictionary</span>
+</span></span><span style=display:flex><span>thisdict[<span style=color:#e6db74>&#34;color&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;White&#34;</span>
+</span></span><span style=display:flex><span>print(thisdict)
+</span></span><span style=display:flex><span><span style=color:#75715e># Remove something from dictionary</span>
+</span></span><span style=display:flex><span>thisdict<span style=color:#f92672>.</span>pop(<span style=color:#e6db74>&#34;color&#34;</span>)
+</span></span><span style=display:flex><span>print(thisdict)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If-Else Statement</span>
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> (a <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>):
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;True&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elif</span> (a <span style=color:#f92672>==</span> <span style=color:#ae81ff>4</span>):
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;Exactly 4&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;False&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Function calling in python</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>my_function</span>(choice):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (choice <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;Yes&#39;</span>):
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;I am in the function&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Plese call me&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Function calling  demo</span>
+</span></span><span style=display:flex><span>choice <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Call that function? &#39;Yes&#39; or &#39;No&#39;: &#34;</span>)
+</span></span><span style=display:flex><span>my_function(choice)
+</span></span></code></pre></div><h1 id=output>Output</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>Hello</span> <span style=color:#66d9ef>World</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;int&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;float&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;bool&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;str&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;list&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;dict&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;tuple&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Enter</span> your name: <span style=color:#66d9ef>Arnab</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>You</span> entered <span style=color:#66d9ef>Arnab</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>12</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>3</span><span style=color:#f92672>.</span><span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Type</span><span style=color:#f92672>-</span><span style=color:#66d9ef>Casted</span> <span style=color:#e6db74>answer</span>:  <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Enter</span> a <span style=color:#e6db74>number</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;str&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Enter</span> a <span style=color:#e6db74>number</span>: <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>class</span> <span style=color:#e6db74>&#39;int&#39;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Arnab</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>Arnab</span><span style=color:#e6db74>&#34;s
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>In Python, a string is a sequence of characters enclosed 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>in quotes (either single or double quotes). Strings are used to 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>represent text-based data in a program, and they are one of the 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>most commonly used data types in Python.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>A
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>n
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>False
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Arna
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>rna
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>rna
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ARNAB
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Arnab
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Aknab
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[&#39;Hello&#39;, &#39;How&#39;, &#39;Are&#39;, &#39;You&#39;, &#39;Arnab?&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>6
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>8
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2.0
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2.2
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2.0
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>25
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>False
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>False
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>False
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>True
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>False
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Guava
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[&#39;Apple&#39;, &#39;Guava&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[&#39;Apple&#39;, &#39;Inserted&#39;, &#39;Guava&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[&#39;Apple&#39;, &#39;Inserted&#39;, &#39;Watermelon&#39;, &#39;Orange&#39;, &#39;Grapes&#39;]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[1, 8, 10, 15, 16, 100]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Apple
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Guava
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Watermelon
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Orange
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Another approach
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Apple
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Guava
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Watermelon
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Orange
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>5
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>4
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>2
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>((1, 2, 3), (4, 5, 6), (1, 2, 3, 4, 5, 6))
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&lt;class &#39;list&#39;&gt;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&lt;class &#39;tuple&#39;&gt;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Set:  {1, 2, 3}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>After addition:  {1, 2, 3, 6}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{1, 2, 3, 51, 6, 41, 10.15}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{1, 2, 3, 6, 10.15, 103.2, &#39;Arnab&#39;, 41, 51}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Ford
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>dict_keys([&#39;brand&#39;, &#39;model&#39;, &#39;year&#39;])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 2022, &#39;color&#39;: &#39;White&#39;}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{&#39;brand&#39;: &#39;Ford&#39;, &#39;model&#39;: &#39;Mustang&#39;, &#39;year&#39;: 2022}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Exactly 4
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Call that function? &#39;Yes&#39; or &#39;No&#39;: Yes
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>I am in the function
+</span></span></span></code></pre></div><hr><blockquote><p>Just open up your code editor and copy the code to have a better understanding.</p></blockquote><p>📕📥<a href=./CheatSheet.pdf>Download Cheatsheet Now</a>📁🆓</p><div id=social-media-share><p><i>Sharing is caring!</i></p><div class=share-buttons><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Facebook. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/facebook.png></a>
+<a href="https://twitter.com/intent/tweet?text=Python%20CheatSheet&url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Twitter. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/twitter.png></a>
+<a href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Reddit. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/reddit.png></a>
+<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Pinterest. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/pinterest.png></a>
+<a href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Tumblr. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/tumblr.png></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f
+			&title=Python%20CheatSheet&summary=Overview%20A%20Python%20cheat%20sheet%20is%20a%20quick%20reference%20guide%20for%20Python%2c%20a%20popular%20and%20versatile%20programming%20language.%20It%20provides%20a%20compact%20summary%20of%20the%20most%20frequently%20used%20features%20of%20the%20language%2c%20along%20with%20their%20syntax%20and%20examples.&source=https://arnab7070.github.io/" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on LinkedIn. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/linkedin.png></a>
+<a href="mailto:?subject=Python%20CheatSheet&body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fpython-cheatsheet%2f" title="Share via Email. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/mail.png></a></div></div><br><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div><div class="col-lg-2 d-none d-xl-block"><div class=ad-right-offset></div></div></div></div></main><footer class="text-center py-5"><p>© Copyright 2022 CodeWorld</p></footer></body></html>
