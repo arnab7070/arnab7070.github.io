@@ -18,6 +18,7 @@ disqusShortname = ""
     adsense         = "adsense-key"
     math            = false   # best to enable this in the front matter of a page
     mermaid         = false   # best to enable this in the front matter of a page
+    ignoreTaxonomies = ["*"]
 
     # Social Media Params
     facebook   = "https://www.facebook.com/arnab7070"
