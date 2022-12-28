@@ -18,11 +18,10 @@ draft: false
 > 5. search an given key.
 > 6. Find the smallest element.
 > 7. Find the largest element.
-> 8. Delete an element.
-> 9. Count the total number of nodes.
-> 10. Count the total number of external nodes.
-> 11.  Count the total number of internal nodes.
-> 12. Determine the height of the tree.
+> 8. Count the total number of nodes.
+> 9. Count the total number of external nodes.
+> 10.  Count the total number of internal nodes.
+> 11. Determine the height of the tree.
 ---
 # Code
 ---
