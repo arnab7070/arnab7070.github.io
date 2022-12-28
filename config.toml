@@ -104,8 +104,4 @@ disqusShortname = ""
     min = "0.102.3"
 
 [sitemap]
-  changefreq = "monthly"
-  filename = "sitemap.xml"
-  priority = 0.5
-  # enable sitemap generation
   enable = false
