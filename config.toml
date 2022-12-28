@@ -102,6 +102,3 @@ disqusShortname = ""
   [module.hugoVersion]
     extended = true
     min = "0.102.3"
-
-[sitemap]
-  enable = false

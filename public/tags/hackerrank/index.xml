@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hackerrank on Code World</title>
-    <link>https://arnab7070.github.io/tags/hackerrank/</link>
-    <description>Recent content in Hackerrank on Code World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 07 Nov 2022 19:19:17 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/hackerrank/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mark &amp; Toys</title>
-      <link>https://arnab7070.github.io/posts/mark-toys/</link>
-      <pubDate>Mon, 07 Nov 2022 19:19:17 +0530</pubDate>
-      
-      <guid>https://arnab7070.github.io/posts/mark-toys/</guid>
-      <description>This question is taken from HackerRank Website. Here is the link
-Problem Statement Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hackerrank on Code World</title><link>https://arnab7070.github.io/tags/hackerrank/</link><description>Recent content in Hackerrank on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Nov 2022 19:19:17 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/hackerrank/index.xml" rel="self" type="application/rss+xml"/><item><title>Mark &amp; Toys</title><link>https://arnab7070.github.io/posts/mark-toys/</link><pubDate>Mon, 07 Nov 2022 19:19:17 +0530</pubDate><guid>https://arnab7070.github.io/posts/mark-toys/</guid><description>This question is taken from HackerRank Website. Here is the link
+Problem Statement Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some.</description></item></channel></rss>
