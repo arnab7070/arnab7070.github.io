@@ -8,7 +8,7 @@ layout: single2
 
 <p>Welcome to Code World!</p>
 
-<p>These terms and conditions outline the rules and regulations for the use of Code World's Website, located at https://arnab7070.github.io/blog.</p>
+<p>These terms and conditions outline the rules and regulations for the use of Code World's Website, located at https://arnab7070.github.io/.</p>
 
 <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Code World if you do not agree to take all of the terms and conditions stated on this page.</p>
 
