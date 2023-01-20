@@ -1,113 +1,537 @@
-<!doctype html><html lang=en-us><head><title>8. Infix to Postfix |
-Code World</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel=canonical href=https://arnab7070.github.io/sections/c++-tutorial/infix-to-postfix/><link rel=icon type=image/png href=https://arnab7070.github.io/image/favicon.ico><meta name=description content="
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    8. Infix to Postfix | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/infix-to-postfix/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
     Here we will see how we can easily code our Infix to Postfix conversion.
-    "><meta property="og:description" content="
+    "
+/>
+<meta property="og:description" content="
     Here we will see how we can easily code our Infix to Postfix conversion.
-    "><meta property="og:image" content="https://arnab7070.github.io/sections/c++-tutorial/infix-to-postfix/ITP.gif"><meta property="og:title" content="8. Infix To Postfix"><meta property="og:type" content="article"><meta property="og:url" content="https://arnab7070.github.io/sections/c++-tutorial/infix-to-postfix/"><meta property="article:section" content="sections"><meta property="article:published_time" content="2022-12-27T00:00:00+00:00"><meta property="article:modified_time" content="2022-12-27T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="8. Infix To Postfix"><meta name=twitter:description content="Here we will see how we can easily code our Infix to Postfix conversion."><meta itemprop=name content="8. Infix To Postfix"><meta itemprop=description content="Here we will see how we can easily code our Infix to Postfix conversion."><meta itemprop=datePublished content="2022-12-27T00:00:00+00:00"><meta itemprop=dateModified content="2022-12-27T00:00:00+00:00"><meta itemprop=wordCount content="685"><meta itemprop=keywords content="C++,LAB EXAM,ONESHOT,"><link rel=stylesheet href=https://arnab7070.github.io/main.min.css><script src=https://arnab7070.github.io/bundle.js></script>
-<script data-ad-client=adsense-key async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467" crossorigin=anonymous></script>
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/infix-to-postfix/ITP.gif" />
+
+
+
+
+
+
+<meta property="og:title" content="8. Infix To Postfix" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/infix-to-postfix/" /><meta property="article:section" content="sections" />
+<meta property="article:published_time" content="2022-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-27T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="8. Infix To Postfix"/>
+<meta name="twitter:description" content="Here we will see how we can easily code our Infix to Postfix conversion."/>
+
+<meta itemprop="name" content="8. Infix To Postfix">
+<meta itemprop="description" content="Here we will see how we can easily code our Infix to Postfix conversion."><meta itemprop="datePublished" content="2022-12-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="685">
+<meta itemprop="keywords" content="C&#43;&#43;,LAB EXAM,ONESHOT," />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="pub-5270518167259467" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","")</script></head><body><header id=header><div class=top-bar><div class=container-md><div class="row align-items-center"><div class="col-3 col-sm-4 social-buttons d-none d-sm-block"><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></div><div class="ra-toggler col-3 col-sm-4 d-block d-sm-none"><button class=bg-dark type=button data-bs-toggle=collapse data-bs-target=#navbarNav>
-<i class="fas fa-bars"></i></button></div><div class="col-6 col-sm-4"><h2 class=title><a href=https://arnab7070.github.io/>Code World</a></h2></div></div></div></div><div class=container-md><nav class="navbar navbar-expand-sm navbar-dark bg-dark"><div class="collapse navbar-collapse" id=navbarNav><ul class="navbar-nav mx-auto"><li class="nav-item d-block d-sm-none"><ul class=social-buttons><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></ul></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/>Home</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>Blog</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/posts/>Posts</a>
-<a class=dropdown-item href=https://arnab7070.github.io/sections/>Sections</a><div class=dropdown-divider></div><a class=dropdown-item href=https://arnab7070.github.io/tags/>Tags</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>About Us</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/about/>About</a>
-<a class=dropdown-item href=https://arnab7070.github.io/privacy/>Privacy Policy</a>
-<a class=dropdown-item href=https://arnab7070.github.io/dmca/>DMCA</a>
-<a class=dropdown-item href=https://arnab7070.github.io/terms/>Terms & Conditions</a></div></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/contact/>Contact</a></li></ul></div></nav></div></header><main class=blog-content><div class=container-md><div class=row><div class="col-lg-2 d-none d-xl-block"><div class=ad-left-offset></div></div><div class="col-md-12 col-lg-8 px-lg-4"><h1 class=title>8. Infix To Postfix</h1><div class="container-fluid px-0 mb-4"><div class="row align-items-end"><div class="col-md-4 date-time"><span class=date>Dec 27, 2022</span>
-&#183;
-<span class=time-to-read>4 mins read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/c++><span class="tag bg-dark">C++</span></a>
-<a href=https://arnab7070.github.io/tags/lab-exam><span class="tag bg-dark">LAB EXAM</span></a>
-<a href=https://arnab7070.github.io/tags/oneshot><span class="tag bg-dark">ONESHOT</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/sections/c++-tutorial/infix-to-postfix/ITP.gif alt="8. Infix To Postfix"></figure><h2 id=some-basic-concepts>Some Basic Concepts</h2><p>Infix notation is a common way of writing arithmetic expressions in which the operators are written between the operands, such as &ldquo;3 + 4&rdquo;. On the other hand, postfix notation (also known as reverse Polish notation) is a notation in which the operators are written after the operands, such as &ldquo;3 4 +&rdquo;.</p><p>Converting an infix expression to a postfix expression can be done using a stack. The basic idea is to scan the infix expression from left to right, and use a stack to keep track of the operators. The algorithm works as follows:</p><ol><li>Initialize an empty stack.</li><li>Scan the infix expression from left to right.</li><li>If the current character is an operand, add it to the output string (which will eventually contain the postfix expression).</li><li>If the current character is an operator, follow these steps:<ol><li>While the stack is not empty and the top element of the stack has equal or higher precedence than the current operator, pop the top element from the stack and add it to the output string.</li><li>Push the current operator onto the stack.</li></ol></li><li>If the current character is a left parenthesis, push it onto the stack.</li><li>If the current character is a right parenthesis, follow these steps:<ol><li>While the top element of the stack is not a left parenthesis, pop the top element from the stack and add it to the output string.</li><li>Pop the left parenthesis from the stack (but do not add it to the output string).</li></ol></li><li>Repeat steps 2-7 until the end of the infix expression is reached.</li><li>While the stack is not empty, pop the top element from the stack and add it to the output string.</li></ol><blockquote><p>We are now going to see the code of Infix to Postfix conversion. So let&rsquo;s get straight into the code. I am using C++ for these operations.</p></blockquote><h3 id=code>Code</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;bits/stdc++.h&gt;</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>precedence</span>(<span style=color:#66d9ef>char</span> ch){
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span>(ch){
-</span></span><span style=display:flex><span>		<span style=color:#75715e>//If the operator is Plus or Minus
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;-&#39;</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;+&#39;</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>;
-</span></span><span style=display:flex><span>		<span style=color:#75715e>//If the operator is Multiplier or Divider
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;*&#39;</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;/&#39;</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>2</span>;
-</span></span><span style=display:flex><span>		<span style=color:#75715e>//If the operator is a Power
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;^&#39;</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>3</span>;
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>bool</span> <span style=color:#a6e22e>isOperand</span>(<span style=color:#66d9ef>char</span> ch){
-</span></span><span style=display:flex><span>	<span style=color:#75715e>// If the character is an operand return true otherwise return false
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> (ch<span style=color:#f92672>&gt;=</span><span style=color:#e6db74>&#39;a&#39;</span> <span style=color:#f92672>&amp;&amp;</span> ch<span style=color:#f92672>&lt;=</span><span style=color:#e6db74>&#39;z&#39;</span>) <span style=color:#f92672>||</span> (ch<span style=color:#f92672>&gt;=</span><span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&amp;&amp;</span> ch <span style=color:#f92672>&lt;=</span><span style=color:#e6db74>&#39;Z&#39;</span> <span style=color:#f92672>||</span> (ch<span style=color:#f92672>&gt;=</span><span style=color:#e6db74>&#39;0&#39;</span> <span style=color:#f92672>&amp;&amp;</span> ch<span style=color:#f92672>&lt;=</span><span style=color:#e6db74>&#39;9&#39;</span>));
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#75715e>// Function to convert infix to postfix expression
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>string <span style=color:#a6e22e>infixToPostfix</span>(string infix){
-</span></span><span style=display:flex><span>	<span style=color:#75715e>// n = length of the infix expression
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>int</span> n<span style=color:#f92672>=</span>infix.length();
-</span></span><span style=display:flex><span>	<span style=color:#75715e>//we are using inbuilt stack library of char datatype
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    stack<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>char</span><span style=color:#f92672>&gt;</span> st;
-</span></span><span style=display:flex><span>	<span style=color:#75715e>//this is the main string where we store our answer
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    string postfix;
-</span></span><span style=display:flex><span>	<span style=color:#75715e>//now iterate all over the infix expression 
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;i<span style=color:#f92672>&lt;</span>n;i<span style=color:#f92672>++</span>){
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(isOperand(infix[i])){
-</span></span><span style=display:flex><span>            <span style=color:#75715e>//step 2 -&gt; if it is an operand directly push it to the postfix string
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            postfix.push_back(infix[i]);
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(infix[i] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;(&#39;</span>){
-</span></span><span style=display:flex><span>            <span style=color:#75715e>//step 3 -&gt; if it is opening bracket just push it to the postfix string
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            st.push(<span style=color:#e6db74>&#39;(&#39;</span>);
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(infix[i] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;)&#39;</span>){
-</span></span><span style=display:flex><span>            <span style=color:#75715e>//step 4 -&gt; if we encounter an closing bracket then just pop all the elements
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#75715e>// &amp; push it to the main answer string until we reach to the opening bracket
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>while</span>( st.top() <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;(&#39;</span> ){
-</span></span><span style=display:flex><span>                postfix.push_back(st.top());
-</span></span><span style=display:flex><span>                st.pop();
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>			<span style=color:#75715e>// Now throw &#39;(&#39; out of the stack
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            st.pop();
-</span></span><span style=display:flex><span>            
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>{
-</span></span><span style=display:flex><span>            <span style=color:#75715e>// step 5 -&gt; if the precedence of the incoming character is lesser than the stack
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#75715e>// top character then first pop the stack top character and add it to the postfix
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#75715e>// string. Do this until incoming operator precedence is greater than the stack top
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#75715e>// operator. (Fun remembrance 😉: Toppers always take the top position in the class)
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span>st.empty() <span style=color:#f92672>&amp;&amp;</span> st.top() <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#39;(&#39;</span> <span style=color:#f92672>&amp;&amp;</span> precedence(st.top()) <span style=color:#f92672>&gt;=</span> precedence(infix[i])){
-</span></span><span style=display:flex><span>                postfix.push_back(st.top());
-</span></span><span style=display:flex><span>                st.pop();
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>			<span style=color:#75715e>// pushing the incoming operator finally to the stack
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            st.push(infix[i]);
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// Now finally add all rest elements into the postfix string until stack gets empty
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span>st.empty()){
-</span></span><span style=display:flex><span>        postfix.push_back(st.top());
-</span></span><span style=display:flex><span>        st.pop();
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> postfix;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>() {
-</span></span><span style=display:flex><span>	<span style=color:#75715e>// main driver code for this operation
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    string infix;
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Enter the infix expression: &#34;</span>;
-</span></span><span style=display:flex><span>	cin<span style=color:#f92672>&gt;&gt;</span>infix;
-</span></span><span style=display:flex><span>    string postfix<span style=color:#f92672>=</span>infixToPostfix(infix);
-</span></span><span style=display:flex><span>    cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Infix expression : &#34;</span><span style=color:#f92672>&lt;&lt;</span>infix<span style=color:#f92672>&lt;&lt;</span>endl; 
-</span></span><span style=display:flex><span>    cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Postfix expression : &#34;</span><span style=color:#f92672>&lt;&lt;</span>postfix<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h3 id=output>Output</h3><pre tabindex=0><code>Enter the infix expression: 2+3*(4/5)-6
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">8. Infix To Postfix</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Dec 27, 2022
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://arnab7070.github.io/tags/c&#43;&#43;"><span
+                                    class="tag bg-dark">C&#43;&#43;</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/lab-exam"><span
+                                    class="tag bg-dark">LAB EXAM</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/oneshot"><span
+                                    class="tag bg-dark">ONESHOT</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/sections/c&#43;&#43;-tutorial/infix-to-postfix/ITP.gif alt="8. Infix To Postfix">
+                </figure>
+                
+
+                <h2 id="some-basic-concepts">Some Basic Concepts</h2>
+<p>Infix notation is a common way of writing arithmetic expressions in which the operators are written between the operands, such as &ldquo;3 + 4&rdquo;. On the other hand, postfix notation (also known as reverse Polish notation) is a notation in which the operators are written after the operands, such as &ldquo;3 4 +&rdquo;.</p>
+<p>Converting an infix expression to a postfix expression can be done using a stack. The basic idea is to scan the infix expression from left to right, and use a stack to keep track of the operators. The algorithm works as follows:</p>
+<ol>
+<li>Initialize an empty stack.</li>
+<li>Scan the infix expression from left to right.</li>
+<li>If the current character is an operand, add it to the output string (which will eventually contain the postfix expression).</li>
+<li>If the current character is an operator, follow these steps:
+<ol>
+<li>While the stack is not empty and the top element of the stack has equal or higher precedence than the current operator, pop the top element from the stack and add it to the output string.</li>
+<li>Push the current operator onto the stack.</li>
+</ol>
+</li>
+<li>If the current character is a left parenthesis, push it onto the stack.</li>
+<li>If the current character is a right parenthesis, follow these steps:
+<ol>
+<li>While the top element of the stack is not a left parenthesis, pop the top element from the stack and add it to the output string.</li>
+<li>Pop the left parenthesis from the stack (but do not add it to the output string).</li>
+</ol>
+</li>
+<li>Repeat steps 2-7 until the end of the infix expression is reached.</li>
+<li>While the stack is not empty, pop the top element from the stack and add it to the output string.</li>
+</ol>
+<blockquote>
+<p>We are now going to see the code of Infix to Postfix conversion. So let&rsquo;s get straight into the code. I am using C++ for these operations.</p>
+</blockquote>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">precedence</span>(<span style="color:#66d9ef">char</span> ch){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span>(ch){
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//If the operator is Plus or Minus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;-&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;+&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//If the operator is Multiplier or Divider
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;/&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//If the operator is a Power
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;^&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isOperand</span>(<span style="color:#66d9ef">char</span> ch){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// If the character is an operand return true otherwise return false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> (ch<span style="color:#f92672">&gt;=</span><span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;&amp;</span> ch<span style="color:#f92672">&lt;=</span><span style="color:#e6db74">&#39;z&#39;</span>) <span style="color:#f92672">||</span> (ch<span style="color:#f92672">&gt;=</span><span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&amp;&amp;</span> ch <span style="color:#f92672">&lt;=</span><span style="color:#e6db74">&#39;Z&#39;</span> <span style="color:#f92672">||</span> (ch<span style="color:#f92672">&gt;=</span><span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> ch<span style="color:#f92672">&lt;=</span><span style="color:#e6db74">&#39;9&#39;</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to convert infix to postfix expression
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>string <span style="color:#a6e22e">infixToPostfix</span>(string infix){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// n = length of the infix expression
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span>infix.length();
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//we are using inbuilt stack library of char datatype
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    stack<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;</span> st;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//this is the main string where we store our answer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    string postfix;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//now iterate all over the infix expression 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(isOperand(infix[i])){
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//step 2 -&gt; if it is an operand directly push it to the postfix string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            postfix.push_back(infix[i]);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(infix[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//step 3 -&gt; if it is opening bracket just push it to the postfix string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            st.push(<span style="color:#e6db74">&#39;(&#39;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(infix[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//step 4 -&gt; if we encounter an closing bracket then just pop all the elements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// &amp; push it to the main answer string until we reach to the opening bracket
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">while</span>( st.top() <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;(&#39;</span> ){
+</span></span><span style="display:flex;"><span>                postfix.push_back(st.top());
+</span></span><span style="display:flex;"><span>                st.pop();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// Now throw &#39;(&#39; out of the stack
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            st.pop();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// step 5 -&gt; if the precedence of the incoming character is lesser than the stack
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// top character then first pop the stack top character and add it to the postfix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// string. Do this until incoming operator precedence is greater than the stack top
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// operator. (Fun remembrance 😉: Toppers always take the top position in the class)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>st.empty() <span style="color:#f92672">&amp;&amp;</span> st.top() <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;(&#39;</span> <span style="color:#f92672">&amp;&amp;</span> precedence(st.top()) <span style="color:#f92672">&gt;=</span> precedence(infix[i])){
+</span></span><span style="display:flex;"><span>                postfix.push_back(st.top());
+</span></span><span style="display:flex;"><span>                st.pop();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// pushing the incoming operator finally to the stack
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            st.push(infix[i]);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Now finally add all rest elements into the postfix string until stack gets empty
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>st.empty()){
+</span></span><span style="display:flex;"><span>        postfix.push_back(st.top());
+</span></span><span style="display:flex;"><span>        st.pop();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> postfix;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// main driver code for this operation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    string infix;
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter the infix expression: &#34;</span>;
+</span></span><span style="display:flex;"><span>	cin<span style="color:#f92672">&gt;&gt;</span>infix;
+</span></span><span style="display:flex;"><span>    string postfix<span style="color:#f92672">=</span>infixToPostfix(infix);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Infix expression : &#34;</span><span style="color:#f92672">&lt;&lt;</span>infix<span style="color:#f92672">&lt;&lt;</span>endl; 
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Postfix expression : &#34;</span><span style="color:#f92672">&lt;&lt;</span>postfix<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="output">Output</h3>
+<pre tabindex="0"><code>Enter the infix expression: 2+3*(4/5)-6
 Infix expression : 2+3*(4/5)-6
 Postfix expression : 2345/*+6-
-</code></pre><div id=social-media-share><p><i>Sharing is caring!</i></p><div class=share-buttons><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Facebook. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/facebook.png></a>
-<a href="https://twitter.com/intent/tweet?text=8.%20Infix%20To%20Postfix&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Twitter. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/twitter.png></a>
-<a href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Reddit. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/reddit.png></a>
-<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Pinterest. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/pinterest.png></a>
-<a href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Tumblr. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/tumblr.png></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f
-			&title=8.%20Infix%20To%20Postfix&summary=Some%20Basic%20Concepts%20Infix%20notation%20is%20a%20common%20way%20of%20writing%20arithmetic%20expressions%20in%20which%20the%20operators%20are%20written%20between%20the%20operands%2c%20such%20as%20%26ldquo%3b3%20%2b%204%26rdquo%3b.&source=https://arnab7070.github.io/" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on LinkedIn. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/linkedin.png></a>
-<a href="mailto:?subject=8.%20Infix%20To%20Postfix&body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f" title="Share via Email. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/mail.png></a></div></div><br><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div><div class="col-lg-2 d-none d-xl-block"><div class=ad-right-offset></div></div></div></div></main><footer class="text-center py-5"><p>© Copyright 2022 CodeWorld</p></footer></body></html>
+</code></pre>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=8.%20Infix%20To%20Postfix&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f
+			&title=8.%20Infix%20To%20Postfix&summary=Some%20Basic%20Concepts%20Infix%20notation%20is%20a%20common%20way%20of%20writing%20arithmetic%20expressions%20in%20which%20the%20operators%20are%20written%20between%20the%20operands%2c%20such%20as%20%26ldquo%3b3%20%2b%204%26rdquo%3b.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=8.%20Infix%20To%20Postfix&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2fc%2b%2b-tutorial%2finfix-to-postfix%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>
