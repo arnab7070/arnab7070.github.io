@@ -1,5 +1,5 @@
 ---
-title: Queue Operations 
+title: Priority Queue Operations 
 image: PQueue.gif
 date: 2023-01-22
 tags: ["C++","LAB EXAM","ONESHOT"]
