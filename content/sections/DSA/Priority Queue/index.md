@@ -23,110 +23,82 @@ These are just a few examples of the operations that can be performed on priorit
 > We are now going to see different kind of operations in Priority Queue. So let's get straight into the code. I am using C++ for these operations.
 ### Code
 ```cpp
-// Priority Queue Implementation Using Linked List
 #include <iostream>
 using namespace std;
-class Node
-{
-public:
-    int data;
-    Node *next;
-
-    // Constructor
-    Node(int data)
-    {
-        this->data = data;
-        this->next = NULL;
-    }
+class Node{
+	public:
+	int data;
+	int priority;
+	Node* next;
+	Node(int data, int priority){
+		this->data = data;
+		this->priority = priority;
+		this->next = NULL;
+	}
 };
 
-void enque(Node *&head, int item)
-{
-    // if node == NULL
-    if (head == NULL)
-    {
-        Node *new_node = new Node(item);
-        head = new_node;
-        return;
-    }
-    // if single node was there
-    else if (head->next == NULL)
-    {
-        Node *new_node = new Node(item);
-        if (item < head->data)
-        {
-            new_node->next = head;
-            head = new_node;
-            return;
-        }
-        head->next = new_node;
-        return;
-    }
-    // Else check the priority for other condition
-    Node *temp = head;
-
-    while (temp->next != NULL && item > temp->data && item > temp->next->data)
-    {
-        // temp->next != NULL it should check first to avoid segmentation fault
-        /* item > temp->next->data is for Handling the mid insertion */
-        /* temp->next != NULL is for Important for handling tail case */
-        temp = temp->next;
-    }
-
-    Node *new_node = new Node(item);
-    // Handling the tail insert case
-    if (temp->next == NULL)
-    {
-        temp->next = new_node;
-        return;
-    }
-    // Handling the mid insertion case
-    new_node->next = temp->next;
-    temp->next = new_node;
+void insert(Node* &head, int data, int priority){
+	Node* newNode = new Node(data, priority);
+	if(head == NULL || priority < head->priority){
+		newNode->next = head;
+		head = newNode;
+		return;
+	}
+	Node *temp = head;
+	while(temp->next != NULL && temp->next->priority <= priority){
+		temp = temp->next;
+	}
+	newNode->next = temp->next;
+	temp->next = newNode;
+	
 }
-// Plain delete from begin operation in Linked List
-void deque(Node *&head)
-{
-    if (head == NULL)
-    {
-        cout << "Error: No element present in the priority queue." << endl;
-        return;
-    }
-    Node *temp = head;
-    head = head->next;
-    delete temp;
+void deleteNode(Node* &head){
+	if(head == NULL){
+		cout<<"No data present"<<endl;
+		return;
+	}
+	cout<<"Deleted: "<<head->data<<endl;
+	Node* temp = head;
+	head = head->next;
+	delete temp;
+	
 }
-void display(Node *head)
-{
-    while (head != NULL)
-    {
-        cout << head->data << "->";
-        head = head->next;
-    }
-    cout << "NULL" << endl;
+void isEmpty(Node* &head){
+	if(head == NULL){
+		cout<<"List is empty"<<endl;
+		return;
+	}
+	cout<<"List has some data"<<endl;
+}
+void display(Node* head){
+	while(head!=NULL){
+		cout<<head->data<<"@"<<head->priority<<"->";
+		head = head->next;
+	}
+	cout<<"NULL"<<endl;
 }
 
-int main()
-{
-    Node *head = NULL;
-    enque(head, 7);
-    enque(head, 1);
-    enque(head, 3);
-    enque(head, 2);
-    enque(head, 10);
-    enque(head, 4);
-    enque(head, 5);
-    enque(head, 4);
-    display(head);
-    deque(head);
-    // deque(head);
-    display(head);
-    return 0;
+int main(){
+	Node* head = NULL;
+	isEmpty(head);
+	insert(head, 1, 4);
+	insert(head, 2, 1);
+	insert(head, 5, 3);
+	insert(head, 7, 2);
+	insert(head, 8, 5);
+	display(head);
+	deleteNode(head);
+	isEmpty(head);
+	display(head);
+	return 0;
 }
-
 ```
+
 ### Output
 ```
-1->2->3->4->4->5->7->10->NULL
-2->3->4->4->5->7->10->NULL
+List is empty
+2@1->7@2->5@3->1@4->8@5->NULL
+Deleted: 2
+List has some data
+7@2->5@3->1@4->8@5->NULL
 ```
