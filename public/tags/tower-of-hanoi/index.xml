@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tower Of Hanoi on Code World</title><link>https://arnab7070.github.io/tags/tower-of-hanoi/</link><description>Recent content in Tower Of Hanoi on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 25 Jan 2023 00:24:43 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/tower-of-hanoi/index.xml" rel="self" type="application/rss+xml"/><item><title>Tower Of Hanoi</title><link>https://arnab7070.github.io/posts/tower-of-hanoi/</link><pubDate>Wed, 25 Jan 2023 00:24:43 +0530</pubDate><guid>https://arnab7070.github.io/posts/tower-of-hanoi/</guid><description>Tower Of Hanoi Algorithm /*
+START
+Procedure Hanoi(disk, source, dest, aux)
+IF disk == 1, THEN
+move disk from source to dest
+ELSE
+Hanoi(disk - 1, source, aux, dest) // Step 1
+move disk from source to dest // Step 2
+Hanoi(disk - 1, aux, dest, source) // Step 3
+END IF
+END Procedure
+STOP
+*/ Code #include &amp;lt;iostream&amp;gt; using namespace std; void TowerOfHanoi(int n, char src, char aux, char dest) { if (n == 1) { cout &amp;lt;&amp;lt; &amp;#34;Move Disk No.</description></item></channel></rss>
