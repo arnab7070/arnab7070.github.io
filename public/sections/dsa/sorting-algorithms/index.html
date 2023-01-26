@@ -16,7 +16,10 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 &#183;
 <span class=time-to-read>8 mins read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/c++><span class="tag bg-dark">C++</span></a>
 <a href=https://arnab7070.github.io/tags/lab-exam><span class="tag bg-dark">LAB EXAM</span></a>
-<a href=https://arnab7070.github.io/tags/oneshot><span class="tag bg-dark">ONESHOT</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/sections/dsa/sorting-algorithms/Sorting.gif alt="Sorting Algorithms One Shot"></figure><h2 id=bubble-sort>Bubble Sort</h2><hr><h4 id=small-concept>Small Concept</h4><pre tabindex=0><code>Bubble Sort is a simple and basic sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. This process is repeated until no swaps are needed, which indicates that the list is sorted.
+<a href=https://arnab7070.github.io/tags/oneshot><span class="tag bg-dark">ONESHOT</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/sections/dsa/sorting-algorithms/Sorting.gif alt="Sorting Algorithms One Shot"></figure><h2 id=bubble-sort>Bubble Sort</h2><hr><h4 id=small-concept>Small Concept</h4><pre tabindex=0><code>Bubble Sort is a simple and basic sorting algorithm that repeatedly steps 
+through the list to be sorted, compares each pair of adjacent items and swaps 
+them if they are in the wrong order. This process is repeated until no swaps are needed, 
+which indicates that the list is sorted.
 </code></pre><h4 id=code>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bubbleSort</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> n){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> totalComparision <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>; i<span style=color:#f92672>++</span>){
@@ -31,7 +34,10 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	print(arr,n);
 </span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Total number of comparisions required: &#34;</span><span style=color:#f92672>&lt;&lt;</span>totalComparision<span style=color:#f92672>&lt;&lt;</span>endl;
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=insertion-sort>Insertion Sort</h2><hr><h4 id=small-concept-1>Small Concept</h4><pre tabindex=0><code>Insertion Sort is a simple sorting algorithm that builds the final sorted list one item at a time. It takes each element from the list and compares it to the elements already in the sorted portion of the list, and then places it in the correct position.
+</span></span></code></pre></div><h2 id=insertion-sort>Insertion Sort</h2><hr><h4 id=small-concept-1>Small Concept</h4><pre tabindex=0><code>Insertion Sort is a simple sorting algorithm that builds the final 
+sorted list one item at a time. It takes each element from the list and compares 
+it to the elements already in the sorted portion of the list, and then places it in 
+the correct position.
 </code></pre><h4 id=code-1>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>insertionSort</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> n){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> totalComparision <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>; i <span style=color:#f92672>&lt;</span> n; i<span style=color:#f92672>++</span>){
@@ -49,7 +55,9 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Total number of comparisions required: &#34;</span><span style=color:#f92672>&lt;&lt;</span>totalComparision<span style=color:#f92672>&lt;&lt;</span>endl;
 </span></span><span style=display:flex><span>	
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=selection-sort>Selection Sort</h2><hr><h4 id=small-concept-2>Small Concept</h4><pre tabindex=0><code>Selection Sort is another simple sorting algorithm that selects the smallest element from the unsorted portion of the list and places it at the beginning of the sorted portion of the list. This process is repeated until the entire list is sorted.
+</span></span></code></pre></div><h2 id=selection-sort>Selection Sort</h2><hr><h4 id=small-concept-2>Small Concept</h4><pre tabindex=0><code>Selection Sort is another simple sorting algorithm that selects the smallest 
+element from the unsorted portion of the list and places it at the beginning of 
+the sorted portion of the list. This process is repeated until the entire list is sorted.
 </code></pre><h4 id=code-2>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>selectionSort</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> n){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> totalComparision <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>; i<span style=color:#f92672>++</span>){
@@ -66,7 +74,8 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	print(arr, n);
 </span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Total number of comparisions required: &#34;</span><span style=color:#f92672>&lt;&lt;</span>totalComparision<span style=color:#f92672>&lt;&lt;</span>endl;
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=merge-sort>Merge Sort</h2><hr><h4 id=small-concept-3>Small Concept</h4><pre tabindex=0><code>Merge Sort is a divide-and-conquer algorithm that divides the input list into two sublists, recursively sorts the sublists and then merges the sorted sublists to produce the final sorted list.
+</span></span></code></pre></div><h2 id=merge-sort>Merge Sort</h2><hr><h4 id=small-concept-3>Small Concept</h4><pre tabindex=0><code>Merge Sort is a divide-and-conquer algorithm that divides the input list into two sublists, 
+recursively sorts the sublists and then merges the sorted sublists to produce the final sorted list.
 </code></pre><h4 id=code-3>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>merge</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> start, <span style=color:#66d9ef>int</span> end){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> mid <span style=color:#f92672>=</span> (start<span style=color:#f92672>+</span>end)<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> len1 <span style=color:#f92672>=</span> mid<span style=color:#f92672>-</span>start<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>;
@@ -112,7 +121,9 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	mergeSort(arr, mid<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>, end);
 </span></span><span style=display:flex><span>	merge(arr, start, end);
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=heap-sort>Heap Sort</h2><hr><h4 id=small-concept-4>Small Concept</h4><pre tabindex=0><code>Heap Sort is a comparison-based sorting algorithm that builds a binary heap from the input list and then repeatedly extracts the maximum element from the heap and places it at the end of the sorted list.
+</span></span></code></pre></div><h2 id=heap-sort>Heap Sort</h2><hr><h4 id=small-concept-4>Small Concept</h4><pre tabindex=0><code>Heap Sort is a comparison-based sorting algorithm that builds a binary heap 
+from the input list and then repeatedly extracts the maximum element from the 
+heap and places it at the end of the sorted list.
 </code></pre><h4 id=code-4>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>heapify</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> n, <span style=color:#66d9ef>int</span> i){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> largest <span style=color:#f92672>=</span> i;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> left <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>;
@@ -141,7 +152,9 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;The sorted array will look like: &#34;</span>;
 </span></span><span style=display:flex><span>	print(arr, n);
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=count-sort>Count Sort</h2><hr><h4 id=small-concept-5>Small Concept</h4><pre tabindex=0><code>Count Sort is a sorting algorithm that uses the counts of each element to place them in their correct position in the sorted list. It is efficient for small integers and positive integers.
+</span></span></code></pre></div><h2 id=count-sort>Count Sort</h2><hr><h4 id=small-concept-5>Small Concept</h4><pre tabindex=0><code>Count Sort is a sorting algorithm that uses the counts of each element to place 
+them in their correct position in the sorted list. It is efficient for small integers 
+and positive integers.
 </code></pre><h4 id=code-5>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>countSort</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> n){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> max_element <span style=color:#f92672>=</span> INT_MIN;
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> n; i<span style=color:#f92672>++</span>){
@@ -166,7 +179,10 @@ Code World</title><meta charset=utf-8><meta name=viewport content="width=device-
 </span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;The sorted array will look like: &#34;</span>;
 </span></span><span style=display:flex><span>	print(arr, n);
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=quick-sort>Quick Sort</h2><hr><h4 id=small-concept-6>Small Concept</h4><pre tabindex=0><code>Quick Sort is a divide-and-conquer algorithm that selects a &#34;pivot&#34; element from the list and partition the other elements into two sublists, according to whether they are less than or greater than the pivot. The sublists are then recursively sorted.
+</span></span></code></pre></div><h2 id=quick-sort>Quick Sort</h2><hr><h4 id=small-concept-6>Small Concept</h4><pre tabindex=0><code>Quick Sort is a divide-and-conquer algorithm that selects a &#34;pivot&#34; element 
+from the list and partition the other elements into two sublists, according 
+to whether they are less than or greater than the pivot. The sublists are then 
+recursively sorted.
 </code></pre><h4 id=code-6>Code</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>partition</span>(<span style=color:#66d9ef>int</span> arr[], <span style=color:#66d9ef>int</span> low, <span style=color:#66d9ef>int</span> high){
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> pivot <span style=color:#f92672>=</span> arr[high];
 </span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> low<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
