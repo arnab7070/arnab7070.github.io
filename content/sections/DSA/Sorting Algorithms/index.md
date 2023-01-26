@@ -8,6 +8,10 @@ description: We can now understand all of the sorting algorithms in one shot.
 ---
 ## Bubble Sort
 ---------------
+#### Small Concept
+```
+Bubble Sort is a simple and basic sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. This process is repeated until no swaps are needed, which indicates that the list is sorted.
+```
 #### Code
 ```cpp
 void bubbleSort(int arr[], int n){
@@ -27,6 +31,10 @@ void bubbleSort(int arr[], int n){
 ```
 ## Insertion Sort
 ---------------
+#### Small Concept
+```
+Insertion Sort is a simple sorting algorithm that builds the final sorted list one item at a time. It takes each element from the list and compares it to the elements already in the sorted portion of the list, and then places it in the correct position.
+```
 #### Code
 ```cpp
 void insertionSort(int arr[], int n){
@@ -49,6 +57,10 @@ void insertionSort(int arr[], int n){
 ```
 ## Selection Sort
 ---------------
+#### Small Concept
+```
+Selection Sort is another simple sorting algorithm that selects the smallest element from the unsorted portion of the list and places it at the beginning of the sorted portion of the list. This process is repeated until the entire list is sorted.
+```
 #### Code
 ```cpp
 void selectionSort(int arr[], int n){
@@ -70,6 +82,10 @@ void selectionSort(int arr[], int n){
 ```
 ## Merge Sort
 ---------------
+#### Small Concept
+```
+Merge Sort is a divide-and-conquer algorithm that divides the input list into two sublists, recursively sorts the sublists and then merges the sorted sublists to produce the final sorted list.
+```
 #### Code
 ```cpp
 void merge(int arr[], int start, int end){
@@ -120,6 +136,10 @@ void mergeSort(int arr[], int start, int end){
 ```
 ## Heap Sort
 ---------------
+#### Small Concept
+```
+Heap Sort is a comparison-based sorting algorithm that builds a binary heap from the input list and then repeatedly extracts the maximum element from the heap and places it at the end of the sorted list.
+```
 #### Code
 ```cpp
 void heapify(int arr[], int n, int i){
@@ -153,6 +173,10 @@ void heapSort(int arr[], int n){
 ```
 ## Count Sort
 ---------------
+#### Small Concept
+```
+Count Sort is a sorting algorithm that uses the counts of each element to place them in their correct position in the sorted list. It is efficient for small integers and positive integers.
+```
 #### Code
 ```cpp
 void countSort(int arr[], int n){
@@ -182,6 +206,10 @@ void countSort(int arr[], int n){
 ```
 ## Quick Sort 
 ---------------
+#### Small Concept
+```
+Quick Sort is a divide-and-conquer algorithm that selects a "pivot" element from the list and partition the other elements into two sublists, according to whether they are less than or greater than the pivot. The sublists are then recursively sorted.
+```
 #### Code
 ```cpp
 int partition(int arr[], int low, int high){
@@ -206,6 +234,8 @@ void quickSort(int arr[], int low, int high){
 	}
 }
 ```
+All of these sorting algorithms have their own advantages and disadvantages, and the choice of algorithm depends on the specific use case and the characteristics of the input data.
+
 ## Full Code Implementation
 ```cpp
 #include <iostream>
