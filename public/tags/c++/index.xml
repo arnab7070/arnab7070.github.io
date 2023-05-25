@@ -1,19 +1,223 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ on Code World</title><link>https://arnab7070.github.io/tags/c++/</link><description>Recent content in C++ on Code World</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>Sorting Algorithms One Shot</title><link>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</link><pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</guid><description>Bubble Sort Small Concept Bubble Sort is a simple and basic sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.</description></item><item><title>Tail Recursion</title><link>https://arnab7070.github.io/sections/dsa/tail-recursion/</link><pubDate>Wed, 25 Jan 2023 00:24:43 +0530</pubDate><guid>https://arnab7070.github.io/sections/dsa/tail-recursion/</guid><description>Code #include &amp;lt;iostream&amp;gt; using namespace std; int factorial(int n, int a){ if(n==0 || n==1){ return a; } return factorial(n-1,n*a); } int fibonacci(int n, int a, int b){ if(n == 0){ return a; } if(n == 1){ return b; } return fibonacci(n-1,b,a+b); } int main(){ cout&amp;lt;&amp;lt;factorial(5,1)&amp;lt;&amp;lt;endl; // cout&amp;lt;&amp;lt;fibonacci(5,0,1)&amp;lt;&amp;lt;endl; for(int i = 0; i &amp;lt;= 5; i++){ cout&amp;lt;&amp;lt;fibonacci(i,0,1)&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; return 0; } Output 120
-0 1 1 2 3 5</description></item><item><title>Tower Of Hanoi</title><link>https://arnab7070.github.io/sections/dsa/tower-of-hanoi/</link><pubDate>Wed, 25 Jan 2023 00:24:43 +0530</pubDate><guid>https://arnab7070.github.io/sections/dsa/tower-of-hanoi/</guid><description>Tower Of Hanoi Algorithm /*
-START
-Procedure Hanoi(disk, source, dest, aux)
-IF disk == 1, THEN
-move disk from source to dest
-ELSE
-Hanoi(disk - 1, source, aux, dest) // Step 1
-move disk from source to dest // Step 2
-Hanoi(disk - 1, aux, dest, source) // Step 3
-END IF
-END Procedure
-STOP
-*/ Code #include &amp;lt;iostream&amp;gt; using namespace std; void TowerOfHanoi(int n, char src, char aux, char dest) { if (n == 1) { cout &amp;lt;&amp;lt; &amp;#34;Move Disk No.</description></item><item><title>Priority Queue Operations</title><link>https://arnab7070.github.io/sections/dsa/priority-queue/</link><pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/priority-queue/</guid><description>Some Basic Concepts A priority queue is a data structure that stores elements in a specific order based on their priority. Elements with higher priority are served before elements with lower priority.</description></item><item><title>1. Array Operations</title><link>https://arnab7070.github.io/sections/dsa/array-operations/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/array-operations/</guid><description>Some Basic Concepts In C++, an array is a collection of items that are stored in a contiguous block of memory. The items can be of the same type or of different types, and the type of the items is specified when the array is declared.</description></item><item><title>2. Stack Operations</title><link>https://arnab7070.github.io/sections/dsa/stack-operations/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/stack-operations/</guid><description>Some Basic Concepts A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) manner. In other words, the last item added to the stack will be the first one to be removed.</description></item><item><title>3. Queue Operations</title><link>https://arnab7070.github.io/sections/dsa/queue-operations/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/queue-operations/</guid><description>Some Basic Concepts A queue is a linear data structure that follows the First In, First Out (FIFO) principle. In other words, the first element added to the queue will be the first one to be removed.</description></item><item><title>4. Circular Queue Operations</title><link>https://arnab7070.github.io/sections/dsa/circular-queue/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/circular-queue/</guid><description>Benifits of Circular Queue A circular queue is a type of queue in which the last position is connected to the first position, so that the queue can be treated as a circular list.</description></item><item><title>5. Linked List Operations</title><link>https://arnab7070.github.io/sections/dsa/linked-list-operations/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/linked-list-operations/</guid><description>Some Basic Concepts A singly linked list is a linear data structure that consists of a sequence of nodes, where each node contains a value and a pointer to the next node in the list.</description></item><item><title>6. Doubly Linked List</title><link>https://arnab7070.github.io/sections/dsa/doubly-linked-list/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/doubly-linked-list/</guid><description>Some Basic Concepts A doubly linked list is a linear data structure that consists of a sequence of nodes, where each node contains a value and pointers to the previous and next nodes in the list.</description></item><item><title>7. Circular Linked List</title><link>https://arnab7070.github.io/sections/dsa/circular-linked-list/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/circular-linked-list/</guid><description>Some Basic Concepts A circular linked list is a variation of a linked list in which the last node is connected to the first node, forming a circular list.</description></item><item><title>8. Infix To Postfix</title><link>https://arnab7070.github.io/sections/dsa/infix-to-postfix/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/infix-to-postfix/</guid><description>Some Basic Concepts Infix notation is a common way of writing arithmetic expressions in which the operators are written between the operands, such as &amp;ldquo;3 + 4&amp;rdquo;.</description></item><item><title>9. Postfix Evaluation</title><link>https://arnab7070.github.io/sections/dsa/postfix-evaluation/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/postfix-evaluation/</guid><description>Some Basic Concepts Postfix notation (also known as reverse Polish notation) is a way of writing arithmetic expressions in which the operands are written before the operators.</description></item><item><title>Binary Search Tree</title><link>https://arnab7070.github.io/sections/dsa/binary-search-tree/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/binary-search-tree/</guid><description>Some Basic Concepts A binary search tree (BST) is a data structure that is used to store data in a sorted and searchable manner. It consists of nodes organized in a tree-like structure, where each node has at most two children.</description></item><item><title>Polynomial Addition</title><link>https://arnab7070.github.io/sections/dsa/polynomial-addition/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/polynomial-addition/</guid><description>Now we will do an important question for interview preparation. We need to add two polynomials using Linked List. So let&amp;rsquo;s see how we can do it?</description></item><item><title>Queue Using Linked List</title><link>https://arnab7070.github.io/sections/dsa/queue-using-linked-list/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/queue-using-linked-list/</guid><description>Some Basic Concepts A queue is a linear data structure that stores items in a First-In/First-Out (FIFO) manner. In other words, the first item added to the queue will be the first one to be removed.</description></item><item><title>Stack Using Linked List</title><link>https://arnab7070.github.io/sections/dsa/stack-using-linked-list/</link><pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/sections/dsa/stack-using-linked-list/</guid><description>Some Basic Concepts To implement a stack using a linked list, you will need to follow these steps:
-Define a node data structure that has two fields: data: Stores the data for the current node.</description></item><item><title>Mark &amp; Toys</title><link>https://arnab7070.github.io/posts/mark-toys/</link><pubDate>Mon, 07 Nov 2022 19:19:17 +0530</pubDate><guid>https://arnab7070.github.io/posts/mark-toys/</guid><description>This question is taken from HackerRank Website. Here is the link
-Problem Statement Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some.</description></item><item><title>Stack Using Linked List</title><link>https://arnab7070.github.io/posts/stack-using-linked-list/</link><pubDate>Mon, 03 Oct 2022 20:51:21 +0530</pubDate><guid>https://arnab7070.github.io/posts/stack-using-linked-list/</guid><description>Question Write a code to implement Stack using Linked List
-Algorithm It&amp;rsquo;s so simple to implement because stack uses LIFO and thats why we use insertAtBegin function only for inserting elements.</description></item><item><title>Polynomial Addition Using Linked List</title><link>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</link><pubDate>Mon, 03 Oct 2022 00:24:43 +0530</pubDate><guid>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</guid><description>Add two polynomials using Linked List Algorithm Recursive Approach (Easy) If both the numbers are null then return. else if compare the power, if same then add the coefficients and recursively call</description></item><item><title>Binary Search Tree</title><link>https://arnab7070.github.io/posts/binary-search-tree/</link><pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/posts/binary-search-tree/</guid><description>Implementation of Binary Search Tree Question Write a menu driven program in C or C++ to perform the following operations on Binary Search Tree.
-insert a node.</description></item><item><title>BFS Traversal</title><link>https://arnab7070.github.io/posts/bfs-traversal/</link><pubDate>Fri, 23 Sep 2022 20:44:48 +0530</pubDate><guid>https://arnab7070.github.io/posts/bfs-traversal/</guid><description>Code in C++ to perform BFS Code #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt; #include&amp;lt;algorithm&amp;gt; using namespace std; int main(){ queue&amp;lt;int&amp;gt; q; int u; int i = 0; //here we are starting exploration from 0.</description></item><item><title>Menu Driven Program For Doubly Linked List</title><link>https://arnab7070.github.io/posts/doubly-linked-list/</link><pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate><guid>https://arnab7070.github.io/posts/doubly-linked-list/</guid><description>Question Write a menu driven program in C++ to perform the following operations on double linked list.
-insert a node at the beginning of the list.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Code World</title>
+    <link>https://arnab7070.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Code World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sorting Algorithms One Shot</title>
+      <link>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</guid>
+      <description>Bubble Sort Small Concept Bubble Sort is a simple and basic sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.</description>
+    </item>
+    
+    <item>
+      <title>Tail Recursion</title>
+      <link>https://arnab7070.github.io/sections/dsa/tail-recursion/</link>
+      <pubDate>Wed, 25 Jan 2023 00:24:43 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/tail-recursion/</guid>
+      <description>Code #include &amp;lt;iostream&amp;gt; using namespace std; int factorial(int n, int a){ if(n==0 || n==1){ return a; } return factorial(n-1,n*a); } int fibonacci(int n, int a, int b){ if(n == 0){ return a; } if(n == 1){ return b; } return fibonacci(n-1,b,a+b); } int main(){ cout&amp;lt;&amp;lt;factorial(5,1)&amp;lt;&amp;lt;endl; // cout&amp;lt;&amp;lt;fibonacci(5,0,1)&amp;lt;&amp;lt;endl; for(int i = 0; i &amp;lt;= 5; i++){ cout&amp;lt;&amp;lt;fibonacci(i,0,1)&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; return 0; } Output 1200 1 1 2 3 5 </description>
+    </item>
+    
+    <item>
+      <title>Tower Of Hanoi</title>
+      <link>https://arnab7070.github.io/sections/dsa/tower-of-hanoi/</link>
+      <pubDate>Wed, 25 Jan 2023 00:24:43 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/tower-of-hanoi/</guid>
+      <description>Tower Of Hanoi Algorithm /*STARTProcedure Hanoi(disk, source, dest, aux)IF disk == 1, THENmove disk from source to destELSEHanoi(disk - 1, source, aux, dest) // Step 1move disk from source to dest // Step 2Hanoi(disk - 1, aux, dest, source) // Step 3END IFEND ProcedureSTOP*/ Code #include &amp;lt;iostream&amp;gt; using namespace std; void TowerOfHanoi(int n, char src, char aux, char dest) { if (n == 1) { cout &amp;lt;&amp;lt; &amp;#34;Move Disk No.</description>
+    </item>
+    
+    <item>
+      <title>Priority Queue Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/priority-queue/</link>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/priority-queue/</guid>
+      <description>Some Basic Concepts A priority queue is a data structure that stores elements in a specific order based on their priority. Elements with higher priority are served before elements with lower priority.</description>
+    </item>
+    
+    <item>
+      <title>1. Array Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/array-operations/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/array-operations/</guid>
+      <description>Some Basic Concepts In C++, an array is a collection of items that are stored in a contiguous block of memory. The items can be of the same type or of different types, and the type of the items is specified when the array is declared.</description>
+    </item>
+    
+    <item>
+      <title>2. Stack Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/stack-operations/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/stack-operations/</guid>
+      <description>Some Basic Concepts A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) manner. In other words, the last item added to the stack will be the first one to be removed.</description>
+    </item>
+    
+    <item>
+      <title>3. Queue Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/queue-operations/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/queue-operations/</guid>
+      <description>Some Basic Concepts A queue is a linear data structure that follows the First In, First Out (FIFO) principle. In other words, the first element added to the queue will be the first one to be removed.</description>
+    </item>
+    
+    <item>
+      <title>4. Circular Queue Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/circular-queue/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/circular-queue/</guid>
+      <description>Benifits of Circular Queue A circular queue is a type of queue in which the last position is connected to the first position, so that the queue can be treated as a circular list.</description>
+    </item>
+    
+    <item>
+      <title>5. Linked List Operations</title>
+      <link>https://arnab7070.github.io/sections/dsa/linked-list-operations/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/linked-list-operations/</guid>
+      <description>Some Basic Concepts A singly linked list is a linear data structure that consists of a sequence of nodes, where each node contains a value and a pointer to the next node in the list.</description>
+    </item>
+    
+    <item>
+      <title>6. Doubly Linked List</title>
+      <link>https://arnab7070.github.io/sections/dsa/doubly-linked-list/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/doubly-linked-list/</guid>
+      <description>Some Basic Concepts A doubly linked list is a linear data structure that consists of a sequence of nodes, where each node contains a value and pointers to the previous and next nodes in the list.</description>
+    </item>
+    
+    <item>
+      <title>7. Circular Linked List</title>
+      <link>https://arnab7070.github.io/sections/dsa/circular-linked-list/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/circular-linked-list/</guid>
+      <description>Some Basic Concepts A circular linked list is a variation of a linked list in which the last node is connected to the first node, forming a circular list.</description>
+    </item>
+    
+    <item>
+      <title>8. Infix To Postfix</title>
+      <link>https://arnab7070.github.io/sections/dsa/infix-to-postfix/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/infix-to-postfix/</guid>
+      <description>Some Basic Concepts Infix notation is a common way of writing arithmetic expressions in which the operators are written between the operands, such as &amp;ldquo;3 + 4&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>9. Postfix Evaluation</title>
+      <link>https://arnab7070.github.io/sections/dsa/postfix-evaluation/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/postfix-evaluation/</guid>
+      <description>Some Basic Concepts Postfix notation (also known as reverse Polish notation) is a way of writing arithmetic expressions in which the operands are written before the operators.</description>
+    </item>
+    
+    <item>
+      <title>Binary Search Tree</title>
+      <link>https://arnab7070.github.io/sections/dsa/binary-search-tree/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/binary-search-tree/</guid>
+      <description>Some Basic Concepts A binary search tree (BST) is a data structure that is used to store data in a sorted and searchable manner. It consists of nodes organized in a tree-like structure, where each node has at most two children.</description>
+    </item>
+    
+    <item>
+      <title>Polynomial Addition</title>
+      <link>https://arnab7070.github.io/sections/dsa/polynomial-addition/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/polynomial-addition/</guid>
+      <description>Now we will do an important question for interview preparation. We need to add two polynomials using Linked List. So let&amp;rsquo;s see how we can do it?</description>
+    </item>
+    
+    <item>
+      <title>Queue Using Linked List</title>
+      <link>https://arnab7070.github.io/sections/dsa/queue-using-linked-list/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/queue-using-linked-list/</guid>
+      <description>Some Basic Concepts A queue is a linear data structure that stores items in a First-In/First-Out (FIFO) manner. In other words, the first item added to the queue will be the first one to be removed.</description>
+    </item>
+    
+    <item>
+      <title>Stack Using Linked List</title>
+      <link>https://arnab7070.github.io/sections/dsa/stack-using-linked-list/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/dsa/stack-using-linked-list/</guid>
+      <description>Some Basic Concepts To implement a stack using a linked list, you will need to follow these steps:
+Define a node data structure that has two fields: data: Stores the data for the current node.</description>
+    </item>
+    
+    <item>
+      <title>Mark &amp; Toys</title>
+      <link>https://arnab7070.github.io/posts/mark-toys/</link>
+      <pubDate>Mon, 07 Nov 2022 19:19:17 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/mark-toys/</guid>
+      <description>This question is taken from HackerRank Website. Here is the link
+Problem Statement Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some.</description>
+    </item>
+    
+    <item>
+      <title>Stack Using Linked List</title>
+      <link>https://arnab7070.github.io/posts/stack-using-linked-list/</link>
+      <pubDate>Mon, 03 Oct 2022 20:51:21 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/stack-using-linked-list/</guid>
+      <description>Question Write a code to implement Stack using Linked List
+Algorithm It&amp;rsquo;s so simple to implement because stack uses LIFO and thats why we use insertAtBegin function only for inserting elements.</description>
+    </item>
+    
+    <item>
+      <title>Polynomial Addition Using Linked List</title>
+      <link>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</link>
+      <pubDate>Mon, 03 Oct 2022 00:24:43 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/polynomial-addition-by-linked-list/</guid>
+      <description>Add two polynomials using Linked List Algorithm Recursive Approach (Easy) If both the numbers are null then return. else if compare the power, if same then add the coefficients and recursively call</description>
+    </item>
+    
+    <item>
+      <title>Binary Search Tree</title>
+      <link>https://arnab7070.github.io/posts/binary-search-tree/</link>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/binary-search-tree/</guid>
+      <description>Implementation of Binary Search Tree Question Write a menu driven program in C or C++ to perform the following operations on Binary Search Tree.
+insert a node.</description>
+    </item>
+    
+    <item>
+      <title>BFS Traversal</title>
+      <link>https://arnab7070.github.io/posts/bfs-traversal/</link>
+      <pubDate>Fri, 23 Sep 2022 20:44:48 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/bfs-traversal/</guid>
+      <description>Code in C++ to perform BFS Code #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt; #include&amp;lt;algorithm&amp;gt; using namespace std; int main(){ queue&amp;lt;int&amp;gt; q; int u; int i = 0; //here we are starting exploration from 0.</description>
+    </item>
+    
+    <item>
+      <title>Menu Driven Program For Doubly Linked List</title>
+      <link>https://arnab7070.github.io/posts/doubly-linked-list/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/doubly-linked-list/</guid>
+      <description>Question Write a menu driven program in C++ to perform the following operations on double linked list.
+insert a node at the beginning of the list.</description>
+    </item>
+    
+  </channel>
+</rss>

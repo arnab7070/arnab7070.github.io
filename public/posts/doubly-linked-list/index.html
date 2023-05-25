@@ -1,195 +1,605 @@
-<!doctype html><html lang=en-us><head><title>Menu Driven Program for Doubly Linked List |
-Code World</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel=canonical href=https://arnab7070.github.io/posts/doubly-linked-list/><link rel=icon type=image/png href=https://arnab7070.github.io/image/favicon.ico><meta name=description content="
-    Write a menu driven program in C++ to perform the following operations on double linked list.
-    "><meta property="og:description" content="
-    Write a menu driven program in C++ to perform the following operations on double linked list.
-    "><meta property="og:image" content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg"><meta property="og:title" content="Menu Driven Program For Doubly Linked List"><meta property="og:type" content="article"><meta property="og:url" content="https://arnab7070.github.io/posts/doubly-linked-list/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-09-17T00:00:00+00:00"><meta property="article:modified_time" content="2022-09-17T00:00:00+00:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg"><meta name=twitter:title content="Menu Driven Program For Doubly Linked List"><meta name=twitter:description content="Write a menu driven program in C++ to perform the following operations on double linked list."><meta itemprop=name content="Menu Driven Program For Doubly Linked List"><meta itemprop=description content="Write a menu driven program in C++ to perform the following operations on double linked list."><meta itemprop=datePublished content="2022-09-17T00:00:00+00:00"><meta itemprop=dateModified content="2022-09-17T00:00:00+00:00"><meta itemprop=wordCount content="478"><meta itemprop=image content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg"><meta itemprop=keywords content="DSA,C++,Linked List,"><link rel=stylesheet href=https://arnab7070.github.io/main.min.css><script src=https://arnab7070.github.io/bundle.js></script>
-<script data-ad-client=pub-5270518167259467 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467" crossorigin=anonymous></script>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Menu Driven Program for Doubly Linked List | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/posts/doubly-linked-list/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    Write a menu driven program in C&#43;&#43; to perform the following operations on double linked list.
+    "
+/>
+<meta property="og:description" content="
+    Write a menu driven program in C&#43;&#43; to perform the following operations on double linked list.
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg" />
+
+
+
+
+
+
+<meta property="og:title" content="Menu Driven Program For Doubly Linked List" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/posts/doubly-linked-list/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-17T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg"/>
+<meta name="twitter:title" content="Menu Driven Program For Doubly Linked List"/>
+<meta name="twitter:description" content="Write a menu driven program in C&#43;&#43; to perform the following operations on double linked list."/>
+
+<meta itemprop="name" content="Menu Driven Program For Doubly Linked List">
+<meta itemprop="description" content="Write a menu driven program in C&#43;&#43; to perform the following operations on double linked list."><meta itemprop="datePublished" content="2022-09-17T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-17T00:00:00+00:00" />
+<meta itemprop="wordCount" content="478"><meta itemprop="image" content="https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg">
+<meta itemprop="keywords" content="DSA,C&#43;&#43;,Linked List," />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="pub-5270518167259467" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","")</script></head><body><header id=header><div class=top-bar><div class=container-md><div class="row align-items-center"><div class="col-3 col-sm-4 social-buttons d-none d-sm-block"><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></div><div class="ra-toggler col-3 col-sm-4 d-block d-sm-none"><button class=bg-dark type=button data-bs-toggle=collapse data-bs-target=#navbarNav>
-<i class="fas fa-bars"></i></button></div><div class="col-6 col-sm-4"><h2 class=title><a href=https://arnab7070.github.io/>Code World</a></h2></div></div></div></div><div class=container-md><nav class="navbar navbar-expand-sm navbar-dark bg-dark"><div class="collapse navbar-collapse" id=navbarNav><ul class="navbar-nav mx-auto"><li class="nav-item d-block d-sm-none"><ul class=social-buttons><ul><li><a href=https://www.facebook.com/arnab7070 target=_blank><i class="fab fa-facebook"></i></a></li><li><a href=https://www.instagram.com/arnab7070 target=_blank><i class="fab fa-instagram"></i></a></li><li><a href=https://github.com/arnab7070 target=_blank><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/arnab7070/ target=_blank><i class="fab fa-linkedin"></i></a></li></ul></ul></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/>Home</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>Blog</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/posts/>Posts</a>
-<a class=dropdown-item href=https://arnab7070.github.io/sections/>Sections</a><div class=dropdown-divider></div><a class=dropdown-item href=https://arnab7070.github.io/tags/>Tags</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown>About Us</a><div class=dropdown-menu><a class=dropdown-item href=https://arnab7070.github.io/about/>About</a>
-<a class=dropdown-item href=https://arnab7070.github.io/privacy/>Privacy Policy</a>
-<a class=dropdown-item href=https://arnab7070.github.io/dmca/>DMCA</a>
-<a class=dropdown-item href=https://arnab7070.github.io/terms/>Terms & Conditions</a></div></li><li class=nav-item><a class=nav-link href=https://arnab7070.github.io/contact/>Contact</a></li></ul></div></nav></div></header><main class=blog-content><div class=container-md><div class=row><div class="col-lg-2 d-none d-xl-block"><div class=ad-left-offset></div></div><div class="col-md-12 col-lg-8 px-lg-4"><h1 class=title>Menu Driven Program For Doubly Linked List</h1><div class="container-fluid px-0 mb-4"><div class="row align-items-end"><div class="col-md-4 date-time"><span class=date>Sep 17, 2022</span>
-&#183;
-<span class=time-to-read>3 mins read</span></div><div class="col-md-8 tags"><a href=https://arnab7070.github.io/tags/dsa><span class="tag bg-dark">DSA</span></a>
-<a href=https://arnab7070.github.io/tags/c++><span class="tag bg-dark">C++</span></a>
-<a href=https://arnab7070.github.io/tags/linked-list><span class="tag bg-dark">Linked List</span></a></div></div></div><figure><img id=cover-image src=https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg alt="Menu Driven Program For Doubly Linked List"></figure><h1 id=question>Question</h1><blockquote><p>Write a menu driven program in C++ to perform the following operations on double linked list.</p><ol><li>insert a node at the beginning of the list.</li><li>insert a node at the end of the list.</li><li>delete a node from the beginning of the list.</li><li>delete a node at the end of the list.</li><li>display the whole list.</li></ol></blockquote><hr><h1 id=code>Code</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#include</span><span style=color:#75715e>&lt;iostream&gt;</span><span style=color:#75715e>
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>node</span>{
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> data;
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> prev;
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> next;
-</span></span><span style=display:flex><span>	
-</span></span><span style=display:flex><span>	node(<span style=color:#66d9ef>int</span> data){
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>data <span style=color:#f92672>=</span> data;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>prev <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>};
-</span></span><span style=display:flex><span>node<span style=color:#f92672>*</span> head <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>node<span style=color:#f92672>*</span> tail <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>display</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>head){
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>while</span>(temp <span style=color:#f92672>!=</span> NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span>temp<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;-&gt;&#34;</span>;
-</span></span><span style=display:flex><span>		temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;NULL&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>displayReverse</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>tail){
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> tail;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>while</span>(temp <span style=color:#f92672>!=</span> NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span>temp<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;-&gt;&#34;</span>;
-</span></span><span style=display:flex><span>		temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>prev;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;NULL&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>insertAtBegin</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>head, <span style=color:#66d9ef>int</span> val){
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>		node <span style=color:#f92672>*</span>temp <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> node(val);
-</span></span><span style=display:flex><span>		head <span style=color:#f92672>=</span> temp;
-</span></span><span style=display:flex><span>		tail <span style=color:#f92672>=</span> temp;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> node(val);
-</span></span><span style=display:flex><span>	temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>	head<span style=color:#f92672>-&gt;</span>prev <span style=color:#f92672>=</span> temp;
-</span></span><span style=display:flex><span>	head <span style=color:#f92672>=</span> temp;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>insertAtEnd</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>head, <span style=color:#66d9ef>int</span> val){
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head <span style=color:#f92672>==</span> NULL){
-</span></span><span style=display:flex><span>		insertAtBegin(head,val);
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>!=</span> NULL){
-</span></span><span style=display:flex><span>		temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> node(val);
-</span></span><span style=display:flex><span>	temp<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>prev <span style=color:#f92672>=</span> temp;
-</span></span><span style=display:flex><span>	tail <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>deleteBegin</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>head){
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;No elements present in the linked list to delete&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Deleted: &#34;</span><span style=color:#f92672>&lt;&lt;</span>head<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>delete</span> head;
-</span></span><span style=display:flex><span>		tail <span style=color:#f92672>=</span> head <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Deleted: &#34;</span><span style=color:#f92672>&lt;&lt;</span>temp<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>	head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>prev <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>	head <span style=color:#f92672>=</span> head<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>delete</span> temp;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>deleteEnd</span>(node<span style=color:#f92672>*</span> <span style=color:#f92672>&amp;</span>head){
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;No elements present in the linked list to delete&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span>(head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>==</span>NULL){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Deleted: &#34;</span><span style=color:#f92672>&lt;&lt;</span>head<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>delete</span> head;
-</span></span><span style=display:flex><span>		tail <span style=color:#f92672>=</span> head <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span>;
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>!=</span>NULL){
-</span></span><span style=display:flex><span>        temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Deleted: &#34;</span><span style=color:#f92672>&lt;&lt;</span>temp<span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>    temp<span style=color:#f92672>-&gt;</span>prev<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>delete</span> temp;
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(){
-</span></span><span style=display:flex><span>	node<span style=color:#f92672>*</span> head <span style=color:#f92672>=</span> NULL;
-</span></span><span style=display:flex><span>	system(<span style=color:#e6db74>&#34;clear&#34;</span>);
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> x;
-</span></span><span style=display:flex><span>	cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;1 -&gt; Insert Begin</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>2 -&gt; Insert End</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>3 -&gt; Delete Begin</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>4 -&gt; Delete End</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>5 -&gt; Display</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>6 -&gt; Reverse Display</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>7 -&gt; For Quit&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>while</span>(x <span style=color:#f92672>!=</span> <span style=color:#ae81ff>7</span>){
-</span></span><span style=display:flex><span>		cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Enter any option: &#34;</span>;
-</span></span><span style=display:flex><span>		cin<span style=color:#f92672>&gt;&gt;</span>x;
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>switch</span>(x){
-</span></span><span style=display:flex><span>			<span style=color:#75715e>//Insert Begin
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>int</span> val;
-</span></span><span style=display:flex><span>				cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Enter an element: &#34;</span>;
-</span></span><span style=display:flex><span>				cin<span style=color:#f92672>&gt;&gt;</span>val;
-</span></span><span style=display:flex><span>				insertAtBegin(head,val);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>		   <span style=color:#75715e>//Insert End
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>int</span> item;
-</span></span><span style=display:flex><span>				cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Enter an element: &#34;</span>;
-</span></span><span style=display:flex><span>				cin<span style=color:#f92672>&gt;&gt;</span>item;
-</span></span><span style=display:flex><span>				insertAtEnd(head,item);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>			<span style=color:#75715e>//Delete Begin
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>			    deleteBegin(head);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>			<span style=color:#75715e>//Delete End
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>4</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>                deleteEnd(head);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>			<span style=color:#75715e>//Display
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>5</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>				display(head);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>6</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>				displayReverse(tail);
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;
-</span></span><span style=display:flex><span>			<span style=color:#75715e>//Reverse Display
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>7</span><span style=color:#f92672>:</span>
-</span></span><span style=display:flex><span>				cout<span style=color:#f92672>&lt;&lt;</span><span style=color:#e6db74>&#34;Thanks for using Doubly Linked List&#34;</span><span style=color:#f92672>&lt;&lt;</span>endl;
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>break</span>;	
-</span></span><span style=display:flex><span>		}
-</span></span><span style=display:flex><span>	}
-</span></span><span style=display:flex><span>	<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>Output
-</span></span><span style=display:flex><span><span style=color:#ae81ff>1</span> <span style=color:#f92672>-&gt;</span> Insert Begin
-</span></span><span style=display:flex><span><span style=color:#ae81ff>2</span> <span style=color:#f92672>-&gt;</span> Insert End
-</span></span><span style=display:flex><span><span style=color:#ae81ff>3</span> <span style=color:#f92672>-&gt;</span> Delete Begin
-</span></span><span style=display:flex><span><span style=color:#ae81ff>4</span> <span style=color:#f92672>-&gt;</span> Delete End
-</span></span><span style=display:flex><span><span style=color:#ae81ff>5</span> <span style=color:#f92672>-&gt;</span> Display
-</span></span><span style=display:flex><span><span style=color:#ae81ff>6</span> <span style=color:#f92672>-&gt;</span> Reverse Display
-</span></span><span style=display:flex><span><span style=color:#ae81ff>7</span> <span style=color:#f92672>-&gt;</span> For Quit
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>Enter an element: <span style=color:#ae81ff>10</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>Enter an element: <span style=color:#ae81ff>15</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>Enter an element: <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>Enter an element: <span style=color:#ae81ff>20</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span><span style=color:#ae81ff>5</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>10</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>15</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>20</span><span style=color:#f92672>-&gt;</span>NULL
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>6</span>
-</span></span><span style=display:flex><span><span style=color:#ae81ff>20</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>15</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>10</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>5</span><span style=color:#f92672>-&gt;</span>NULL
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>Deleted: <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span>Deleted: <span style=color:#ae81ff>20</span>
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span><span style=color:#ae81ff>10</span><span style=color:#f92672>-&gt;</span><span style=color:#ae81ff>15</span><span style=color:#f92672>-&gt;</span>NULL
-</span></span><span style=display:flex><span>Enter any option: <span style=color:#ae81ff>7</span>
-</span></span><span style=display:flex><span>Thanks <span style=color:#66d9ef>for</span> <span style=color:#66d9ef>using</span> Doubly Linked List
-</span></span></code></pre></div><div id=social-media-share><p><i>Sharing is caring!</i></p><div class=share-buttons><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Facebook. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/facebook.png></a>
-<a href="https://twitter.com/intent/tweet?text=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" onclick='return socialMediaPopUp(this.href,"",500,500),!1' title="Share on Twitter. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/twitter.png></a>
-<a href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Reddit. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/reddit.png></a>
-<a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Pinterest. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/pinterest.png></a>
-<a href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on Tumblr. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/tumblr.png></a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f
-			&title=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&summary=Question%20Write%20a%20menu%20driven%20program%20in%20C%2b%2b%20to%20perform%20the%20following%20operations%20on%20double%20linked%20list.%0ainsert%20a%20node%20at%20the%20beginning%20of%20the%20list.&source=https://arnab7070.github.io/" onclick='return socialMediaPopUp(this.href,"",900,500),!1' title="Share on LinkedIn. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/linkedin.png></a>
-<a href="mailto:?subject=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f" title="Share via Email. Opens in a new window."><img src=https://arnab7070.github.io/icons/45px/mail.png></a></div></div><br><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t,e=document.createElement("script");e.type="text/javascript",e.async=!0,t="",e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div><div class="col-lg-2 d-none d-xl-block"><div class=ad-right-offset></div></div></div></div></main><footer class="text-center py-5"><p>© Copyright 2022 CodeWorld</p></footer></body></html>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Menu Driven Program For Doubly Linked List</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Sep 17, 2022
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    3 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://arnab7070.github.io/tags/dsa"><span
+                                    class="tag bg-dark">DSA</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/c&#43;&#43;"><span
+                                    class="tag bg-dark">C&#43;&#43;</span></a>
+                            
+                            <a href="https://arnab7070.github.io/tags/linked-list"><span
+                                    class="tag bg-dark">Linked List</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/posts/doubly-linked-list/featured.jpg alt="Menu Driven Program For Doubly Linked List">
+                </figure>
+                
+
+                <h1 id="question">Question</h1>
+<blockquote>
+<p>Write a menu driven program in C++ to perform the following operations on double linked list.</p>
+<ol>
+<li>insert a node at the beginning of the list.</li>
+<li>insert a node at the end of the list.</li>
+<li>delete a node from the beginning of the list.</li>
+<li>delete a node at the end of the list.</li>
+<li>display the whole list.</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="code">Code</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">node</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> data;
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> prev;
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> next;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	node(<span style="color:#66d9ef">int</span> data){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> data;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>node<span style="color:#f92672">*</span> head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>node<span style="color:#f92672">*</span> tail <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>head){
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(temp <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span>temp<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;-&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>		temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;NULL&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayReverse</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>tail){
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> tail;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(temp <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span>temp<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;-&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>		temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>prev;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;NULL&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertAtBegin</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>head, <span style="color:#66d9ef">int</span> val){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>		node <span style="color:#f92672">*</span>temp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> node(val);
+</span></span><span style="display:flex;"><span>		head <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>		tail <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> node(val);
+</span></span><span style="display:flex;"><span>	temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>	head<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>	head <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertAtEnd</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>head, <span style="color:#66d9ef">int</span> val){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head <span style="color:#f92672">==</span> NULL){
+</span></span><span style="display:flex;"><span>		insertAtBegin(head,val);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>		temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	temp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> node(val);
+</span></span><span style="display:flex;"><span>	temp<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>	tail <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteBegin</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>head){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;No elements present in the linked list to delete&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Deleted: &#34;</span><span style="color:#f92672">&lt;&lt;</span>head<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">delete</span> head;
+</span></span><span style="display:flex;"><span>		tail <span style="color:#f92672">=</span> head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Deleted: &#34;</span><span style="color:#f92672">&lt;&lt;</span>temp<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	head<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>prev <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>	head <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteEnd</span>(node<span style="color:#f92672">*</span> <span style="color:#f92672">&amp;</span>head){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;No elements present in the linked list to delete&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">==</span>NULL){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Deleted: &#34;</span><span style="color:#f92672">&lt;&lt;</span>head<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">delete</span> head;
+</span></span><span style="display:flex;"><span>		tail <span style="color:#f92672">=</span> head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(temp<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">!=</span>NULL){
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Deleted: &#34;</span><span style="color:#f92672">&lt;&lt;</span>temp<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>    temp<span style="color:#f92672">-&gt;</span>prev<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	node<span style="color:#f92672">*</span> head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;clear&#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;1 -&gt; Insert Begin</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">2 -&gt; Insert End</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">3 -&gt; Delete Begin</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">4 -&gt; Delete End</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">5 -&gt; Display</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">6 -&gt; Reverse Display</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">7 -&gt; For Quit&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(x <span style="color:#f92672">!=</span> <span style="color:#ae81ff">7</span>){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter any option: &#34;</span>;
+</span></span><span style="display:flex;"><span>		cin<span style="color:#f92672">&gt;&gt;</span>x;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span>(x){
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//Insert Begin
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">int</span> val;
+</span></span><span style="display:flex;"><span>				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter an element: &#34;</span>;
+</span></span><span style="display:flex;"><span>				cin<span style="color:#f92672">&gt;&gt;</span>val;
+</span></span><span style="display:flex;"><span>				insertAtBegin(head,val);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		   <span style="color:#75715e">//Insert End
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">int</span> item;
+</span></span><span style="display:flex;"><span>				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Enter an element: &#34;</span>;
+</span></span><span style="display:flex;"><span>				cin<span style="color:#f92672">&gt;&gt;</span>item;
+</span></span><span style="display:flex;"><span>				insertAtEnd(head,item);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//Delete Begin
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			    deleteBegin(head);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//Delete End
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                deleteEnd(head);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//Display
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				display(head);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				displayReverse(tail);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//Reverse Display
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>				cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Thanks for using Doubly Linked List&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;	
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Output
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-&gt;</span> Insert Begin
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-&gt;</span> Insert End
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> <span style="color:#f92672">-&gt;</span> Delete Begin
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> <span style="color:#f92672">-&gt;</span> Delete End
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#f92672">-&gt;</span> Display
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> <span style="color:#f92672">-&gt;</span> Reverse Display
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> <span style="color:#f92672">-&gt;</span> For Quit
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter an element: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>Enter an element: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter an element: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>Enter an element: <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">15</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">20</span><span style="color:#f92672">-&gt;</span>NULL
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">20</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">15</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">5</span><span style="color:#f92672">-&gt;</span>NULL
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>Deleted: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>Deleted: <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">15</span><span style="color:#f92672">-&gt;</span>NULL
+</span></span><span style="display:flex;"><span>Enter any option: <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>Thanks <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">using</span> Doubly Linked List
+</span></span></code></pre></div>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f
+			&title=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&summary=Question%20Write%20a%20menu%20driven%20program%20in%20C%2b%2b%20to%20perform%20the%20following%20operations%20on%20double%20linked%20list.%0ainsert%20a%20node%20at%20the%20beginning%20of%20the%20list.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=Menu%20Driven%20Program%20For%20Doubly%20Linked%20List&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fposts%2fdoubly-linked-list%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>
