@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Sep 2022 20:44:48 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Abstract Data Types</title>
+      <link>https://arnab7070.github.io/sections/oops/module-1/</link>
+      <pubDate>Mon, 24 Jul 2023 18:27:22 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/oops/module-1/</guid>
+      <description>What is an abstract data type? An abstract data type (ADT) is a mathematical model for data types. It specifies the operations that can be performed on the data, but it does not specify how the data is stored or implemented.</description>
+    </item>
+    
+    <item>
       <title>Sorting Algorithms One Shot</title>
       <link>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</link>
       <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
