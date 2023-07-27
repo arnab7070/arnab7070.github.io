@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Module 3 | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/sections/oops/module-3/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    This tutorial covers Inheritance in Java, introduces classifications of Design Patterns (Creational, Structural, Behavioral), and explains the Iterator Pattern. It features code snippets illustrating inheritance and the use of the Iterator Pattern for sequential access in collections.
+    "
+/>
+<meta property="og:description" content="
+    This tutorial covers Inheritance in Java, introduces classifications of Design Patterns (Creational, Structural, Behavioral), and explains the Iterator Pattern. It features code snippets illustrating inheritance and the use of the Iterator Pattern for sequential access in collections.
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/sections/oops/module-3/module3.png" />
+
+
+
+
+
+
+<meta property="og:title" content="Module 3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/sections/oops/module-3/" /><meta property="article:section" content="sections" />
+<meta property="article:published_time" content="2023-07-27T07:15:40+05:30" />
+<meta property="article:modified_time" content="2023-07-27T07:15:40+05:30" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Module 3"/>
+<meta name="twitter:description" content="This tutorial covers Inheritance in Java, introduces classifications of Design Patterns (Creational, Structural, Behavioral), and explains the Iterator Pattern. It features code snippets illustrating inheritance and the use of the Iterator Pattern for sequential access in collections."/>
+
+<meta itemprop="name" content="Module 3">
+<meta itemprop="description" content="This tutorial covers Inheritance in Java, introduces classifications of Design Patterns (Creational, Structural, Behavioral), and explains the Iterator Pattern. It features code snippets illustrating inheritance and the use of the Iterator Pattern for sequential access in collections."><meta itemprop="datePublished" content="2023-07-27T07:15:40+05:30" />
+<meta itemprop="dateModified" content="2023-07-27T07:15:40+05:30" />
+<meta itemprop="wordCount" content="489">
+<meta itemprop="keywords" content="" />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="pub-5270518167259467" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Module 3</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jul 27, 2023
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    3 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/sections/oops/module-3/module3.png alt="Module 3">
+                </figure>
+                
+
+                <h1 id="inheritance">Inheritance</h1>
+<p>Inheritance is a fundamental concept in OO design where a class is based on another class, absorbing its attributes and behaviors and enhancing them. Inheritance allows programmers to create classes that are built upon existing classes, enabling code reusability and the addition of new features to existing code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// A base class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Animal is eating...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// A derived class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> Animal <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bark</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dog is barking...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Driver class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Dog dog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        dog<span style="color:#f92672">.</span><span style="color:#a6e22e">eat</span><span style="color:#f92672">();</span>  <span style="color:#75715e">// from Animal class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        dog<span style="color:#f92672">.</span><span style="color:#a6e22e">bark</span><span style="color:#f92672">();</span> <span style="color:#75715e">// from Dog class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>In the above example, <code>Dog</code> is a derived class that inherits from the <code>Animal</code> base class. A <code>Dog</code> object can access the <code>eat</code> method of <code>Animal</code> and its own <code>bark</code> method.</p>
+<h1 id="design-patterns">Design Patterns</h1>
+<p>Design patterns are typical solutions to commonly occurring problems in software design. They represent the best practices used by experienced software developers. Design patterns are categorized into three groups: Creational, Structural, and Behavioral.</p>
+<ol>
+<li>
+<p><strong>Creational Patterns</strong>: Provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using a constructor. This gives the program more flexibility in deciding which objects need to be created for a given use case. Examples: Factory Method, Abstract Factory, Builder, Prototype, Singleton.</p>
+</li>
+<li>
+<p><strong>Structural Patterns</strong>: Concerned with class and object composition. They provide a manner to define relationships between classes or objects so that if one part changes, the impact on the overall structure will be minimal. Examples: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy.</p>
+</li>
+<li>
+<p><strong>Behavioral Patterns</strong>: Concerned with the interaction and responsibility of objects. In other words, they focus on the communication between objects. Examples: Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor.</p>
+</li>
+</ol>
+<h1 id="iterator-pattern">Iterator Pattern</h1>
+<p>The Iterator Pattern is a behavioral design pattern that provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. It involves two key components:</p>
+<ol>
+<li><strong>Iterator</strong>: The &lsquo;Iterator&rsquo; defines an interface for accessing and traversing elements.</li>
+<li><strong>Concrete Iterator</strong>: The &lsquo;ConcreteIterator&rsquo; implements the &lsquo;Iterator&rsquo; interface and keeps track of the current position in the traversal of the aggregate.</li>
+</ol>
+<p>Here is an example of how to use the Iterator Pattern in Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Iterator<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> animals <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        animals<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dog&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        animals<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Cat&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        animals<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Horse&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Iterator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> animals<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>it<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>it<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>In this code, <code>ArrayList</code> is the aggregate object and the <code>Iterator</code> object <code>it</code> is used to traverse through the elements. The <code>hasNext</code> method of the iterator object is used to ensure there is a next element, and the <code>next</code> method is used to move to the next element in the list.</p>
+<p>In your examination, understanding these concepts and being able to provide code examples will demonstrate your grasp of OO design and the use of design patterns in Java.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Module%203&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f
+			&title=Module%203&summary=Inheritance%20Inheritance%20is%20a%20fundamental%20concept%20in%20OO%20design%20where%20a%20class%20is%20based%20on%20another%20class%2c%20absorbing%20its%20attributes%20and%20behaviors%20and%20enhancing%20them.%20Inheritance%20allows%20programmers%20to%20create%20classes%20that%20are%20built%20upon%20existing%20classes%2c%20enabling%20code%20reusability%20and%20the%20addition%20of%20new%20features%20to%20existing%20code.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=Module%203&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-3%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>

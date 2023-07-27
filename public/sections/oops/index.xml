@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jul 2023 18:16:46 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/sections/oops/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Module 3</title>
+      <link>https://arnab7070.github.io/sections/oops/module-3/</link>
+      <pubDate>Thu, 27 Jul 2023 07:15:40 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/oops/module-3/</guid>
+      <description>Inheritance Inheritance is a fundamental concept in OO design where a class is based on another class, absorbing its attributes and behaviors and enhancing them. Inheritance allows programmers to create classes that are built upon existing classes, enabling code reusability and the addition of new features to existing code.</description>
+    </item>
+    
+    <item>
       <title>Encapsulation, Polymorphism</title>
       <link>https://arnab7070.github.io/sections/oops/module-2/</link>
       <pubDate>Tue, 25 Jul 2023 20:37:06 +0530</pubDate>
