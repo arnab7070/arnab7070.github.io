@@ -196,11 +196,11 @@ In some cases, you might want to encapsulate commands as objects. This is often 
 Here's a simple example of a command as an object in Java:
 
 ```java
-public interface Command {
+interface Command {
     void execute();
 }
 
-public class HelloWorldCommand implements Command {
+class HelloWorldCommand implements Command {
     public void execute() {
         System.out.println("Hello, World!");
     }
@@ -208,12 +208,16 @@ public class HelloWorldCommand implements Command {
 
 public class Main {
     public static void main(String[] args) {
-        Command cmd = new HelloWorldCommand();
-
-        // execute command
+        Command cmd = new HelloWorldCommand(); // Object type is interface but constructor is of implemented class
+        // execute command by encapsulating the implementation of the function
         cmd.execute();
     }
 }
+```
+
+- **Output**
+```
+Hello, World!
 ```
 
 In this code, `HelloWorldCommand` is a class implementing the `Command` interface and defining the `execute` method, which prints "Hello, World!". In the `main` method, we create an instance of `HelloWorldCommand`, treat it as a `Command`, and call `execute`.
