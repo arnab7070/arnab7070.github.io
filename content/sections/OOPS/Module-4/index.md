@@ -1,5 +1,5 @@
 ---
-title: "Module 4"
+title: "MVC & Memory Management"
 date: 2023-07-28T06:38:06+05:30
 draft: false
 image: module4.png
@@ -7,6 +7,7 @@ description: This tutorial teaches you how to implement object-oriented programm
 ---
 
 # Model-view-controller pattern
+
 - The model-view-controller (MVC) pattern is a design pattern that separates an application into three components: the model, the view, and the controller.
 - The model represents the data and business logic of the application. It is responsible for managing the state and notifying the view of any changes.
 - The view represents the presentation layer of the application. It is responsible for displaying the data from the model and receiving user input.
@@ -14,24 +15,37 @@ description: This tutorial teaches you how to implement object-oriented programm
 - The MVC pattern allows for a clear separation of concerns, modularity, reusability, and testability of the application components.
 
 # Model
+
 ##### Role
+
 - Data and business logic
+
 ##### Example
+
 - Student class
 
 # View
+
 ##### Role
+
 - Presentation layer
+
 ##### Example
+
 - StudentView class
 
 # Controller
+
 ##### Role
+
 - Intermediary between model and view
+
 ##### Example
+
 - StudentController class
 
 ## Example of MVC pattern in Java
+
 - To illustrate how to implement the MVC pattern in Java, let's create a simple example of a student management system.
 - We will create a Student class that represents the model, a StudentView class that represents the view, and a StudentController class that represents the controller.
 - The Student class will have two instance variables: name and rollNo. It will also have getters and setters for these variables.
@@ -138,134 +152,125 @@ public class Main {
 - The output of running the Main class will be:
 
 ```
-Student: 
+Student:
 Name: Alice
 Roll No: 101
-Student: 
+Student:
 Name: Bob
 Roll No: 101
 ```
 
 # Commands as methods and as objects
+
 - A command is an action that can be performed by an object. In Java, a command can be represented as a method or as an object.
 - A command as a method is a simple way of defining and executing a command. A method is a block of code that performs a specific task and can be invoked by other objects. A method can have parameters and a return value.
 - A command as an object is a more advanced way of defining and executing a command. An object is an instance of a class that has fields and methods. A command object is an object that implements a specific interface or abstract class that defines the command's API. A command object can have fields to store the information required for executing the command, such as the receiver object, the method to call, and the method arguments. A command object can also have a method to execute the command, usually called execute or run.
 
-## Example of commands as methods and as objects in Java
-- To illustrate how to implement commands as methods and as objects in Java, let's create a simple example of a text file application that can perform operations such as opening, saving, and writing to a text file.
-- We will create a TextFile class that represents the receiver of the commands. It will have two fields: name and content. It will also have three methods: open, save, and write. These methods will print some messages to the console to simulate the file operations.
+## Example of commands as methods & as objects in Java
+
+**1. Commands as Methods**
+
+In Java, a method is a command that tells the computer to perform a certain action. It is a collection of statements that perform some specific task and return the result to the caller. A method can perform some specific task without returning anything. 
+
+Here is an example of a command as a method in Java:
 
 ```java
-// Receiver class
-public class TextFile {
-    private String name;
-    private String content;
-
-    // constructor
-    public TextFile(String name) {
-        this.name = name;
-        this.content = "";
+public class Main {
+    // Method named "printHelloWorld"
+    public static void printHelloWorld() {
+        System.out.println("Hello, World!");
     }
 
-    // methods to perform file operations
-    public void open() {
-        System.out.println("Opening file " + name);
-    }
-
-    public void save() {
-        System.out.println("Saving file " + name);
-    }
-
-    public void write(String text) {
-        content += text;
-        System.out.println("Writing " + text + " to file " + name);
+    public static void main(String[] args) {
+        // Call the method named "printHelloWorld"
+        printHelloWorld();
     }
 }
 ```
+In the above code, `printHelloWorld` is a method that commands Java to print "Hello, World!" to the console.
 
-- To implement commands as methods, we will create a TextFileOperation interface that defines the command's API. It will have one abstract method: execute. This method will take no parameters and return a String value.
+**2. Commands as Objects**
 
-```java
-// Command interface
-@FunctionalInterface
-public interface TextFileOperation {
-    String execute();
-}
-```
+In some cases, you might want to encapsulate commands as objects. This is often used in design patterns like the Command Pattern, where an object is used to encapsulate all information needed to perform an action or trigger an event at a later time. 
 
-- To implement commands as objects, we will create three classes that implement the TextFileOperation interface: OpenTextFileOperation, SaveTextFileOperation, and WriteTextFileOperation. These classes will have one field: textFile. They will also have constructors that take a TextFile object as a parameter and assign it to the field. They will also override the execute method to invoke the corresponding method on the textFile object and return a String value.
+Here's a simple example of a command as an object in Java:
 
 ```java
-// Command implementations
-public class OpenTextFileOperation implements TextFileOperation {
-    private TextFile textFile;
+public interface Command {
+    void execute();
+}
 
-    // constructor
-    public OpenTextFileOperation(TextFile textFile) {
-        this.textFile = textFile;
-    }
-
-    // override execute method
-    @Override
-    public String execute() {
-        textFile.open();
-        return "Opened file " + textFile.getName();
+public class HelloWorldCommand implements Command {
+    public void execute() {
+        System.out.println("Hello, World!");
     }
 }
 
-public class SaveTextFileOperation implements TextFileOperation {
-    private TextFile textFile;
-
-    // constructor
-    public SaveTextFileOperation(TextFile textFile) {
-        this.textFile = textFile;
-    }
-
-    // override execute method
-    @Override
-    public String execute() {
-        textFile.save();
-        return "Saved file " + textFile.getName();
-    }
-}
-
-public class WriteTextFileOperation implements TextFileOperation {
-    private TextFile textFile;
-    private String text;
-
-    // constructor
-    public WriteTextFileOperation(TextFile textFile, String text) {
-        this.textFile = textFile;
-        this.text = text;
-    }
-
-    // override execute method
-    @Override
-    public String execute() {
-        textFile.write(text);
-        return "Wrote " + text + " to file " + textFile.getName();
-    }
-}
-```
-
-- To test our commands as methods and as objects, we will create a Main class that creates a TextFile object and invokes its methods directly or through command objects.
-
-```java
-// Main class
 public class Main {
     public static void main(String[] args) {
-        // create a text file object
-        TextFile textFile = new TextFile("test.txt");
+        Command cmd = new HelloWorldCommand();
 
-        // invoke file operations directly using methods
-        System.out.println("Using methods:");
-        textFile.open();
-        textFile.write("Hello world");
-        textFile.save();
-
-        // invoke file operations indirectly using command objects
-        System.out.println("Using commands:");
-        TextFileOperation openCommand = new OpenText
+        // execute command
+        cmd.execute();
     }
 }
 ```
+
+In this code, `HelloWorldCommand` is a class implementing the `Command` interface and defining the `execute` method, which prints "Hello, World!". In the `main` method, we create an instance of `HelloWorldCommand`, treat it as a `Command`, and call `execute`.
+
+In this way, the command to print "Hello, World!" is encapsulated within the `HelloWorldCommand` object. This is an example of a command as an object in Java. It's a higher-level abstraction than a command as a method, and it's a way of using objects to represent real-world actions or events.
+
+## Memory management in JAVA
+Memory management in Java is primarily managed by the Java Virtual Machine (JVM) and one of its component called the Garbage Collector. It is part of the internal workings of the JVM and is abstracted away from the programmer for the most part, making memory management in Java a largely automatic process.
+
+In Java, the memory is divided into two parts:
+
+1. **Stack Memory**: Stack memory is used for the execution of a thread. It contains method-specific values that are short-lived. Stack memory is always referenced in LIFO (Last-In-First-Out) order.
+
+2. **Heap Memory**: This is the runtime data area from which the memory for all class instances and arrays is allocated. The heap is created on the JVM start-up and shared among all Java Virtual Machine threads.
+
+Here's an overview of how memory management works in Java.
+
+**1. Object creation**
+
+When you create an object in Java (using the `new` keyword), memory is allocated on the heap to hold the object's instance variables.
+
+```java
+Person person = new Person("John Doe", 30); // Allocates memory for a Person object on the heap
+```
+
+**2. Object use**
+
+As long as an object is being referenced, it remains in memory. The object can be used by accessing its methods and fields through the reference.
+
+```java
+System.out.println(person.getName()); // Uses the person object
+```
+
+**3. Garbage collection**
+
+When an object is no longer referenced anywhere, it becomes eligible for garbage collection. The Java Garbage Collector is a program running in the background that looks for unreferenced objects and frees the memory they are using.
+
+```java
+person = null; // Makes the person object eligible for garbage collection
+```
+
+In this case, the `person` object is no longer accessible because it's not referenced anywhere, so the garbage collector can free its memory.
+
+**4. Finalization**
+
+Just before an object's memory is reclaimed by the garbage collector, the garbage collector calls the object's `finalize()` method. This can be used to ensure an object finishes any important tasks before it is destroyed, such as closing open files.
+
+**5. Memory leaks**
+
+Even with automatic garbage collection, memory leaks can still occur in Java. A memory leak happens when an object that is no longer needed is still referenced somewhere, so the garbage collector can't reclaim its memory. Over time, this can lead to a significant amount of memory being used up, eventually causing the application to slow down or crash.
+
+**6. Manual Memory Management**
+
+Although Java handles most of the memory management internally, developers can still have some level of control and optimization over this process:
+
+- Developers can manually make an object eligible for garbage collection by setting all references to it to `null`.
+
+- Developers can also suggest to the JVM that it might be a good time to run the garbage collector by calling `System.gc()`. However, it's just a suggestion, and the JVM may choose to ignore it.
+
+In summary, while Java abstracts much of the memory management process, understanding how it works helps you write more efficient code and avoid potential issues like memory leaks.

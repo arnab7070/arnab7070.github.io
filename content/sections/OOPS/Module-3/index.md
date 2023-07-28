@@ -1,5 +1,5 @@
 ---
-title: "Module 3"
+title: "Inheritance in JAVA"
 date: 2023-07-27T07:15:40+05:30
 draft: false
 image: module3.png
