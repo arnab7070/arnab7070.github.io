@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Module 4 | 
+    
+    Code World
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://arnab7070.github.io/sections/oops/module-4/" />
+<link rel="icon" type="image/png" href="https://arnab7070.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts.
+    "
+/>
+<meta property="og:description" content="
+    This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts.
+    " 
+/>
+
+
+<meta property="og:image" content="https://arnab7070.github.io/sections/oops/module-4/module4.png" />
+
+
+
+
+
+
+<meta property="og:title" content="Module 4" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arnab7070.github.io/sections/oops/module-4/" /><meta property="article:section" content="sections" />
+<meta property="article:published_time" content="2023-07-28T06:38:06+05:30" />
+<meta property="article:modified_time" content="2023-07-28T06:38:06+05:30" />
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Module 4"/>
+<meta name="twitter:description" content="This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts."/>
+
+<meta itemprop="name" content="Module 4">
+<meta itemprop="description" content="This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts."><meta itemprop="datePublished" content="2023-07-28T06:38:06+05:30" />
+<meta itemprop="dateModified" content="2023-07-28T06:38:06+05:30" />
+<meta itemprop="wordCount" content="1250">
+<meta itemprop="keywords" content="" />
+
+
+
+
+<link rel="stylesheet" href="https://arnab7070.github.io/main.min.css">
+
+
+
+
+
+<script src="https://arnab7070.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="pub-5270518167259467" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5270518167259467"
+    crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://arnab7070.github.io/">Code World</a></h2>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    <li>
+        <a href="https://www.facebook.com/arnab7070" target="_blank">
+            <i class="fab fa-facebook"></i></a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/arnab7070" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/arnab7070" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/arnab7070/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/sections/">Sections</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              About Us
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/about/">About</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/privacy/">Privacy Policy</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/dmca/">DMCA</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://arnab7070.github.io/terms/">Terms &amp; Conditions</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://arnab7070.github.io/contact/">
+              Contact
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Module 4</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jul 28, 2023
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    7 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <figure>
+                    
+                    <img id="cover-image" src=https://arnab7070.github.io/sections/oops/module-4/module4.png alt="Module 4">
+                </figure>
+                
+
+                <h1 id="model-view-controller-pattern">Model-view-controller pattern</h1>
+<ul>
+<li>The model-view-controller (MVC) pattern is a design pattern that separates an application into three components: the model, the view, and the controller.</li>
+<li>The model represents the data and business logic of the application. It is responsible for managing the state and notifying the view of any changes.</li>
+<li>The view represents the presentation layer of the application. It is responsible for displaying the data from the model and receiving user input.</li>
+<li>The controller acts as an intermediary between the model and the view. It is responsible for handling user requests, updating the model, and selecting the appropriate view.</li>
+<li>The MVC pattern allows for a clear separation of concerns, modularity, reusability, and testability of the application components.</li>
+</ul>
+<h1 id="model">Model</h1>
+<h5 id="role">Role</h5>
+<ul>
+<li>Data and business logic</li>
+</ul>
+<h5 id="example">Example</h5>
+<ul>
+<li>Student class</li>
+</ul>
+<h1 id="view">View</h1>
+<h5 id="role-1">Role</h5>
+<ul>
+<li>Presentation layer</li>
+</ul>
+<h5 id="example-1">Example</h5>
+<ul>
+<li>StudentView class</li>
+</ul>
+<h1 id="controller">Controller</h1>
+<h5 id="role-2">Role</h5>
+<ul>
+<li>Intermediary between model and view</li>
+</ul>
+<h5 id="example-2">Example</h5>
+<ul>
+<li>StudentController class</li>
+</ul>
+<h2 id="example-of-mvc-pattern-in-java">Example of MVC pattern in Java</h2>
+<ul>
+<li>To illustrate how to implement the MVC pattern in Java, let&rsquo;s create a simple example of a student management system.</li>
+<li>We will create a Student class that represents the model, a StudentView class that represents the view, and a StudentController class that represents the controller.</li>
+<li>The Student class will have two instance variables: name and rollNo. It will also have getters and setters for these variables.</li>
+<li>The StudentView class will have one instance method: printStudentDetails. This method will take a student name and roll number as parameters and print them to the console.</li>
+<li>The StudentController class will have two instance variables: model and view. It will also have a constructor that takes a Student object and a StudentView object as parameters and assigns them to the instance variables. It will also have methods to set and get the student name and roll number, and to update the view.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Model class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String rollNo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// getters and setters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getRollNo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rollNo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setRollNo</span><span style="color:#f92672">(</span>String rollNo<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rollNo</span> <span style="color:#f92672">=</span> rollNo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// View class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StudentView</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printStudentDetails</span><span style="color:#f92672">(</span>String studentName<span style="color:#f92672">,</span> String studentRollNo<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Student: &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Name: &#34;</span> <span style="color:#f92672">+</span> studentName<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Roll No: &#34;</span> <span style="color:#f92672">+</span> studentRollNo<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Controller class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StudentController</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Student model<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> StudentView view<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">StudentController</span><span style="color:#f92672">(</span>Student model<span style="color:#f92672">,</span> StudentView view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> model<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view</span> <span style="color:#f92672">=</span> view<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// methods to set and get student name and roll number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setStudentName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getStudentName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> model<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setStudentRollNo</span><span style="color:#f92672">(</span>String rollNo<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">.</span><span style="color:#a6e22e">setRollNo</span><span style="color:#f92672">(</span>rollNo<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getStudentRollNo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> model<span style="color:#f92672">.</span><span style="color:#a6e22e">getRollNo</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// method to update the view
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateView</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        view<span style="color:#f92672">.</span><span style="color:#a6e22e">printStudentDetails</span><span style="color:#f92672">(</span>model<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span> model<span style="color:#f92672">.</span><span style="color:#a6e22e">getRollNo</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>To test our MVC implementation, we will create a Main class that creates a Student object, a StudentView object, and a StudentController object. We will then use the controller to set and get the student data and update the view.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Main class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// create a student object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Student student <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        student<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Alice&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        student<span style="color:#f92672">.</span><span style="color:#a6e22e">setRollNo</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;101&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// create a student view object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        StudentView studentView <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StudentView<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// create a student controller object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        StudentController studentController <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StudentController<span style="color:#f92672">(</span>student<span style="color:#f92672">,</span> studentView<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// use the controller to update the view
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        studentController<span style="color:#f92672">.</span><span style="color:#a6e22e">updateView</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// use the controller to modify the student data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        studentController<span style="color:#f92672">.</span><span style="color:#a6e22e">setStudentName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bob&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// use the controller to update the view again
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        studentController<span style="color:#f92672">.</span><span style="color:#a6e22e">updateView</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>The output of running the Main class will be:</li>
+</ul>
+<pre tabindex="0"><code>Student: 
+Name: Alice
+Roll No: 101
+Student: 
+Name: Bob
+Roll No: 101
+</code></pre><h1 id="commands-as-methods-and-as-objects">Commands as methods and as objects</h1>
+<ul>
+<li>A command is an action that can be performed by an object. In Java, a command can be represented as a method or as an object.</li>
+<li>A command as a method is a simple way of defining and executing a command. A method is a block of code that performs a specific task and can be invoked by other objects. A method can have parameters and a return value.</li>
+<li>A command as an object is a more advanced way of defining and executing a command. An object is an instance of a class that has fields and methods. A command object is an object that implements a specific interface or abstract class that defines the command&rsquo;s API. A command object can have fields to store the information required for executing the command, such as the receiver object, the method to call, and the method arguments. A command object can also have a method to execute the command, usually called execute or run.</li>
+</ul>
+<h2 id="example-of-commands-as-methods-and-as-objects-in-java">Example of commands as methods and as objects in Java</h2>
+<ul>
+<li>To illustrate how to implement commands as methods and as objects in Java, let&rsquo;s create a simple example of a text file application that can perform operations such as opening, saving, and writing to a text file.</li>
+<li>We will create a TextFile class that represents the receiver of the commands. It will have two fields: name and content. It will also have three methods: open, save, and write. These methods will print some messages to the console to simulate the file operations.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Receiver class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextFile</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String content<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TextFile</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// methods to perform file operations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">open</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Opening file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Saving file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        content <span style="color:#f92672">+=</span> text<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Writing &#34;</span> <span style="color:#f92672">+</span> text <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; to file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>To implement commands as methods, we will create a TextFileOperation interface that defines the command&rsquo;s API. It will have one abstract method: execute. This method will take no parameters and return a String value.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Command interface
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">@FunctionalInterface</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TextFileOperation</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    String <span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>To implement commands as objects, we will create three classes that implement the TextFileOperation interface: OpenTextFileOperation, SaveTextFileOperation, and WriteTextFileOperation. These classes will have one field: textFile. They will also have constructors that take a TextFile object as a parameter and assign it to the field. They will also override the execute method to invoke the corresponding method on the textFile object and return a String value.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Command implementations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OpenTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Opened file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SaveTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SaveTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Saved file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WriteTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String text<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">WriteTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">,</span> String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> text<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Wrote &#34;</span> <span style="color:#f92672">+</span> text <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; to file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>To test our commands as methods and as objects, we will create a Main class that creates a TextFile object and invokes its methods directly or through command objects.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Main class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// create a text file object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        TextFile textFile <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TextFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test.txt&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// invoke file operations directly using methods
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Using methods:&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// invoke file operations indirectly using command objects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Using commands:&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        TextFileOperation openCommand <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> OpenText
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+
+                <div id="social-media-share">
+	<p><i>Sharing is caring!</i></p>
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Facebook. Opens in a new window.">
+	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Module%204&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
+	        title="Share on Twitter. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
+	    </a>
+
+		<a  href="http://www.reddit.com/submit?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Reddit. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/reddit.png>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Pinterest. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/pinterest.png>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on Tumblr. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/tumblr.png>
+	    </a>
+
+		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f
+			&title=Module%204&summary=Model-view-controller%20pattern%20The%20model-view-controller%20%28MVC%29%20pattern%20is%20a%20design%20pattern%20that%20separates%20an%20application%20into%20three%20components%3a%20the%20model%2c%20the%20view%2c%20and%20the%20controller.%20The%20model%20represents%20the%20data%20and%20business%20logic%20of%20the%20application.&source=https://arnab7070.github.io/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
+	    </a>
+
+	    <a  href="mailto:?subject=Module%204&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	        title="Share via Email. Opens in a new window." >
+	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
+	    </a>
+	</div>
+</div>
+
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5">
+    <p>
+        
+            © Copyright 2022 CodeWorld
+        
+    </p>
+</footer>
+
+</body>
+
+</html>

@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jul 2023 18:16:46 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/sections/oops/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Module 4</title>
+      <link>https://arnab7070.github.io/sections/oops/module-4/</link>
+      <pubDate>Fri, 28 Jul 2023 06:38:06 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/oops/module-4/</guid>
+      <description>Model-view-controller pattern The model-view-controller (MVC) pattern is a design pattern that separates an application into three components: the model, the view, and the controller. The model represents the data and business logic of the application.</description>
+    </item>
+    
+    <item>
       <title>Module 3</title>
       <link>https://arnab7070.github.io/sections/oops/module-3/</link>
       <pubDate>Thu, 27 Jul 2023 07:15:40 +0530</pubDate>
