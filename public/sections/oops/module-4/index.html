@@ -3,7 +3,7 @@
 
 <head><title>
     
-    Module 4 | 
+    MVC &amp; Memory Management | 
     
     Code World
 </title>
@@ -31,7 +31,7 @@
 
 
 
-<meta property="og:title" content="Module 4" />
+<meta property="og:title" content="MVC &amp; Memory Management" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arnab7070.github.io/sections/oops/module-4/" /><meta property="article:section" content="sections" />
 <meta property="article:published_time" content="2023-07-28T06:38:06+05:30" />
@@ -41,13 +41,13 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Module 4"/>
+<meta name="twitter:title" content="MVC &amp; Memory Management"/>
 <meta name="twitter:description" content="This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts."/>
 
-<meta itemprop="name" content="Module 4">
+<meta itemprop="name" content="MVC &amp; Memory Management">
 <meta itemprop="description" content="This tutorial teaches you how to implement object-oriented programming in Java. You will learn about the model-view-controller pattern, commands as methods and as objects, and other OOP concepts."><meta itemprop="datePublished" content="2023-07-28T06:38:06+05:30" />
 <meta itemprop="dateModified" content="2023-07-28T06:38:06+05:30" />
-<meta itemprop="wordCount" content="1250">
+<meta itemprop="wordCount" content="1594">
 <meta itemprop="keywords" content="" />
 
 
@@ -294,7 +294,7 @@
             <div class="col-md-12 col-lg-8 px-lg-4">
                 
 
-                <h1 class="title">Module 4</h1>
+                <h1 class="title">MVC &amp; Memory Management</h1>
 
                 <div class="container-fluid px-0 mb-4">
                     <div class="row align-items-end">
@@ -304,7 +304,7 @@
 </span>
                             &centerdot;
                             <span class="time-to-read">
-    7 mins read</span>
+    9 mins read</span>
                         </div>
 
                         <div class="col-md-8 tags ">
@@ -316,7 +316,7 @@
                 
                 <figure>
                     
-                    <img id="cover-image" src=https://arnab7070.github.io/sections/oops/module-4/module4.png alt="Module 4">
+                    <img id="cover-image" src=https://arnab7070.github.io/sections/oops/module-4/module4.png alt="MVC &amp; Memory Management">
                 </figure>
                 
 
@@ -458,10 +458,10 @@
 </span></span></code></pre></div><ul>
 <li>The output of running the Main class will be:</li>
 </ul>
-<pre tabindex="0"><code>Student: 
+<pre tabindex="0"><code>Student:
 Name: Alice
 Roll No: 101
-Student: 
+Student:
 Name: Bob
 Roll No: 101
 </code></pre><h1 id="commands-as-methods-and-as-objects">Commands as methods and as objects</h1>
@@ -470,118 +470,86 @@ Roll No: 101
 <li>A command as a method is a simple way of defining and executing a command. A method is a block of code that performs a specific task and can be invoked by other objects. A method can have parameters and a return value.</li>
 <li>A command as an object is a more advanced way of defining and executing a command. An object is an instance of a class that has fields and methods. A command object is an object that implements a specific interface or abstract class that defines the command&rsquo;s API. A command object can have fields to store the information required for executing the command, such as the receiver object, the method to call, and the method arguments. A command object can also have a method to execute the command, usually called execute or run.</li>
 </ul>
-<h2 id="example-of-commands-as-methods-and-as-objects-in-java">Example of commands as methods and as objects in Java</h2>
-<ul>
-<li>To illustrate how to implement commands as methods and as objects in Java, let&rsquo;s create a simple example of a text file application that can perform operations such as opening, saving, and writing to a text file.</li>
-<li>We will create a TextFile class that represents the receiver of the commands. It will have two fields: name and content. It will also have three methods: open, save, and write. These methods will print some messages to the console to simulate the file operations.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Receiver class
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextFile</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String content<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TextFile</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+<h2 id="example-of-commands-as-methods--as-objects-in-java">Example of commands as methods &amp; as objects in Java</h2>
+<p><strong>1. Commands as Methods</strong></p>
+<p>In Java, a method is a command that tells the computer to perform a certain action. It is a collection of statements that perform some specific task and return the result to the caller. A method can perform some specific task without returning anything.</p>
+<p>Here is an example of a command as a method in Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Method named &#34;printHelloWorld&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printHelloWorld</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, World!&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// methods to perform file operations
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">open</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Opening file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Saving file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        content <span style="color:#f92672">+=</span> text<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Writing &#34;</span> <span style="color:#f92672">+</span> text <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; to file &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><ul>
-<li>To implement commands as methods, we will create a TextFileOperation interface that defines the command&rsquo;s API. It will have one abstract method: execute. This method will take no parameters and return a String value.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Command interface
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">@FunctionalInterface</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TextFileOperation</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    String <span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><ul>
-<li>To implement commands as objects, we will create three classes that implement the TextFileOperation interface: OpenTextFileOperation, SaveTextFileOperation, and WriteTextFileOperation. These classes will have one field: textFile. They will also have constructors that take a TextFile object as a parameter and assign it to the field. They will also override the execute method to invoke the corresponding method on the textFile object and return a String value.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Command implementations
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OpenTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Opened file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SaveTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SaveTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Saved file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WriteTextFileOperation</span> <span style="color:#66d9ef">implements</span> TextFileOperation <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> TextFile textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String text<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// constructor
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">WriteTextFileOperation</span><span style="color:#f92672">(</span>TextFile textFile<span style="color:#f92672">,</span> String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">textFile</span> <span style="color:#f92672">=</span> textFile<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> text<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// override execute method
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Wrote &#34;</span> <span style="color:#f92672">+</span> text <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; to file &#34;</span> <span style="color:#f92672">+</span> textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><ul>
-<li>To test our commands as methods and as objects, we will create a Main class that creates a TextFile object and invokes its methods directly or through command objects.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Main class
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// create a text file object
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        TextFile textFile <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TextFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test.txt&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// invoke file operations directly using methods
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Using methods:&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        textFile<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// invoke file operations indirectly using command objects
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Using commands:&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        TextFileOperation openCommand <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> OpenText
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Call the method named &#34;printHelloWorld&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        printHelloWorld<span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>In the above code, <code>printHelloWorld</code> is a method that commands Java to print &ldquo;Hello, World!&rdquo; to the console.</p>
+<p><strong>2. Commands as Objects</strong></p>
+<p>In some cases, you might want to encapsulate commands as objects. This is often used in design patterns like the Command Pattern, where an object is used to encapsulate all information needed to perform an action or trigger an event at a later time.</p>
+<p>Here&rsquo;s a simple example of a command as an object in Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Command</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorldCommand</span> <span style="color:#66d9ef">implements</span> Command <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">execute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, World!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Command cmd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HelloWorldCommand<span style="color:#f92672">();</span> <span style="color:#75715e">// Object type is interface but constructor is of implemented class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// execute command by encapsulating the implementation of the function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cmd<span style="color:#f92672">.</span><span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>Output</strong></li>
+</ul>
+<pre tabindex="0"><code>Hello, World!
+</code></pre><p>In this code, <code>HelloWorldCommand</code> is a class implementing the <code>Command</code> interface and defining the <code>execute</code> method, which prints &ldquo;Hello, World!&rdquo;. In the <code>main</code> method, we create an instance of <code>HelloWorldCommand</code>, treat it as a <code>Command</code>, and call <code>execute</code>.</p>
+<p>In this way, the command to print &ldquo;Hello, World!&rdquo; is encapsulated within the <code>HelloWorldCommand</code> object. This is an example of a command as an object in Java. It&rsquo;s a higher-level abstraction than a command as a method, and it&rsquo;s a way of using objects to represent real-world actions or events.</p>
+<h2 id="memory-management-in-java">Memory management in JAVA</h2>
+<p>Memory management in Java is primarily managed by the Java Virtual Machine (JVM) and one of its component called the Garbage Collector. It is part of the internal workings of the JVM and is abstracted away from the programmer for the most part, making memory management in Java a largely automatic process.</p>
+<p>In Java, the memory is divided into two parts:</p>
+<ol>
+<li>
+<p><strong>Stack Memory</strong>: Stack memory is used for the execution of a thread. It contains method-specific values that are short-lived. Stack memory is always referenced in LIFO (Last-In-First-Out) order.</p>
+</li>
+<li>
+<p><strong>Heap Memory</strong>: This is the runtime data area from which the memory for all class instances and arrays is allocated. The heap is created on the JVM start-up and shared among all Java Virtual Machine threads.</p>
+</li>
+</ol>
+<p>Here&rsquo;s an overview of how memory management works in Java.</p>
+<p><strong>1. Object creation</strong></p>
+<p>When you create an object in Java (using the <code>new</code> keyword), memory is allocated on the heap to hold the object&rsquo;s instance variables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Person person <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;John Doe&#34;</span><span style="color:#f92672">,</span> 30<span style="color:#f92672">);</span> <span style="color:#75715e">// Allocates memory for a Person object on the heap
+</span></span></span></code></pre></div><p><strong>2. Object use</strong></p>
+<p>As long as an object is being referenced, it remains in memory. The object can be used by accessing its methods and fields through the reference.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>person<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span> <span style="color:#75715e">// Uses the person object
+</span></span></span></code></pre></div><p><strong>3. Garbage collection</strong></p>
+<p>When an object is no longer referenced anywhere, it becomes eligible for garbage collection. The Java Garbage Collector is a program running in the background that looks for unreferenced objects and frees the memory they are using.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>person <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> <span style="color:#75715e">// Makes the person object eligible for garbage collection
+</span></span></span></code></pre></div><p>In this case, the <code>person</code> object is no longer accessible because it&rsquo;s not referenced anywhere, so the garbage collector can free its memory.</p>
+<p><strong>4. Finalization</strong></p>
+<p>Just before an object&rsquo;s memory is reclaimed by the garbage collector, the garbage collector calls the object&rsquo;s <code>finalize()</code> method. This can be used to ensure an object finishes any important tasks before it is destroyed, such as closing open files.</p>
+<p><strong>5. Memory leaks</strong></p>
+<p>Even with automatic garbage collection, memory leaks can still occur in Java. A memory leak happens when an object that is no longer needed is still referenced somewhere, so the garbage collector can&rsquo;t reclaim its memory. Over time, this can lead to a significant amount of memory being used up, eventually causing the application to slow down or crash.</p>
+<p><strong>6. Manual Memory Management</strong></p>
+<p>Although Java handles most of the memory management internally, developers can still have some level of control and optimization over this process:</p>
+<ul>
+<li>
+<p>Developers can manually make an object eligible for garbage collection by setting all references to it to <code>null</code>.</p>
+</li>
+<li>
+<p>Developers can also suggest to the JVM that it might be a good time to run the garbage collector by calling <code>System.gc()</code>. However, it&rsquo;s just a suggestion, and the JVM may choose to ignore it.</p>
+</li>
+</ul>
+<p>In summary, while Java abstracts much of the memory management process, understanding how it works helps you write more efficient code and avoid potential issues like memory leaks.</p>
+
 
                 <div id="social-media-share">
 	<p><i>Sharing is caring!</i></p>
@@ -593,7 +561,7 @@ Roll No: 101
 	        <img src=https://arnab7070.github.io/icons/45px/facebook.png>
 	    </a>
 
-	    <a  href="https://twitter.com/intent/tweet?text=Module%204&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	    <a  href="https://twitter.com/intent/tweet?text=MVC%20%26%20Memory%20Management&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
 	        onclick="socialMediaPopUp(this.href, '', 500, 500); return false;"
 	        title="Share on Twitter. Opens in a new window." >
 	        <img src=https://arnab7070.github.io/icons/45px/twitter.png>
@@ -618,13 +586,13 @@ Roll No: 101
 	    </a>
 
 		<a  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f
-			&title=Module%204&summary=Model-view-controller%20pattern%20The%20model-view-controller%20%28MVC%29%20pattern%20is%20a%20design%20pattern%20that%20separates%20an%20application%20into%20three%20components%3a%20the%20model%2c%20the%20view%2c%20and%20the%20controller.%20The%20model%20represents%20the%20data%20and%20business%20logic%20of%20the%20application.&source=https://arnab7070.github.io/"
+			&title=MVC%20%26%20Memory%20Management&summary=Model-view-controller%20pattern%20The%20model-view-controller%20%28MVC%29%20pattern%20is%20a%20design%20pattern%20that%20separates%20an%20application%20into%20three%20components%3a%20the%20model%2c%20the%20view%2c%20and%20the%20controller.%20The%20model%20represents%20the%20data%20and%20business%20logic%20of%20the%20application.&source=https://arnab7070.github.io/"
 	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
 	        title="Share on LinkedIn. Opens in a new window." >
 	        <img src=https://arnab7070.github.io/icons/45px/linkedin.png>
 	    </a>
 
-	    <a  href="mailto:?subject=Module%204&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
+	    <a  href="mailto:?subject=MVC%20%26%20Memory%20Management&amp;body=Check out this site https%3a%2f%2farnab7070.github.io%2fsections%2foops%2fmodule-4%2f"
 	        title="Share via Email. Opens in a new window." >
 	        <img src=https://arnab7070.github.io/icons/45px/mail.png>
 	    </a>
