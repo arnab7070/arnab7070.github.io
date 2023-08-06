@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Sep 2022 20:44:48 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Scala &amp; Swing GUI</title>
+      <link>https://arnab7070.github.io/sections/oops/module-5/</link>
+      <pubDate>Sun, 06 Aug 2023 20:18:58 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/sections/oops/module-5/</guid>
+      <description>Part 1: Java Generic Types and Collections In Java, generics are used to specify, at compile time, the types of objects that a class can operate on.</description>
+    </item>
+    
+    <item>
       <title>MVC &amp; Memory Management</title>
       <link>https://arnab7070.github.io/sections/oops/module-4/</link>
       <pubDate>Fri, 28 Jul 2023 06:38:06 +0530</pubDate>
