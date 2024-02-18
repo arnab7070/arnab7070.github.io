@@ -6,7 +6,16 @@
     <description>Recent content in C&#43;&#43; on Code World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 09:23:32 +0530</lastBuildDate><atom:link href="https://arnab7070.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command Line Argument in C&#43;&#43;</title>
+      <link>https://arnab7070.github.io/posts/command-line-argument-in-c&#43;&#43;/</link>
+      <pubDate>Sun, 18 Feb 2024 09:23:32 +0530</pubDate>
+      
+      <guid>https://arnab7070.github.io/posts/command-line-argument-in-c&#43;&#43;/</guid>
+      <description>When working with C++ programs, it&amp;rsquo;s often necessary to interact with the command line. Command line arguments allow us to pass inputs to our program when executing it from the terminal.</description>
+    </item>
+    
     <item>
       <title>Sorting Algorithms One Shot</title>
       <link>https://arnab7070.github.io/sections/dsa/sorting-algorithms/</link>
